@@ -1,0 +1,199 @@
+<x-header  class="header color-scheme color-scheme--scheme-2"><h1 class="header__logo">
+        <a href="/"><span class="sr-only">rarabarefoot</span><img src="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=1500" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=250 250w, //www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=375 375w" width="1500" height="660" sizes="125px" class="header__logo-image"></a>
+      </h1>
+    
+<nav class="header__primary-nav " aria-label="Primary navigation">
+        <button type="button" aria-controls="sidebar-menu" class="md:hidden">
+          <span class="sr-only">Navigation menu</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+      <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+    </svg></button><ul class="contents unstyled-list md-max:hidden">
+              <li class="header__primary-nav-item" data-title="THE COLLECTION">
+                <a href="/collections/the-collection" class="block h6" style="padding-right: 15px;">THE COLLECTION</a>
+              </li><li class="header__primary-nav-item" data-title="ACCESSORIES"><a href="#" class="block h6" style="padding-right: 15px;">ACCESSORIES</a></li><li class="header__primary-nav-item" data-title="WHY BAREFOOT?"><a href="/pages/why-barefoot" class="block h6" >WHY BAREFOOT?</a></li></ul></nav><nav class="header__secondary-nav" aria-label="Secondary navigation"><ul class="contents unstyled-list"><li class="header__account-link sm-max:hidden">
+            <a href="https://www.rarabarefoot.in/customer_authentication/redirect?locale=en&region_country=IN">
+              <span class="sr-only">Login</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
+      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+    </svg></a>
+          </li><li class="header__search-link">
+            <a href="/search" aria-controls="header-search-sections--19195979432110__header">
+              <span class="sr-only">Search</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
+      <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+      <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+    </svg></a>
+          </li><li class="relative header__cart-link">
+          <a href="/cart" aria-controls="cart-drawer" data-no-instant>
+            <span class="sr-only">Cart</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24"><path d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><cart-dot class="header__cart-dot  "></cart-dot>
+          </a>
+        </li>
+      </ul>
+    </nav><header-search id="header-search-sections--19195979432110__header" class="header-search">
+  <div class="container">
+    <form id="predictive-search-form" action="/search" method="GET" aria-owns="header-predictive-search" class="header-search__form" role="search">
+      <div class="header-search__form-control"><svg aria-hidden="true" fill="none" focusable="false" width="20" class="icon icon-search" viewBox="0 0 24 24">
+      <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+      <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+    </svg><input type="search" name="q" spellcheck="false" class="header-search__input h5 sm:h4" aria-label="Search" placeholder="Search for...">
+
+        <dialog-close-button class="contents">
+          <button type="button">
+            <span class="sr-only">Close</span><svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </div>
+    </form>
+
+    <predictive-search id="header-predictive-search" class="predictive-search">
+      <div class="predictive-search__content" slot="results"></div>
+    </predictive-search>
+  </div>
+</header-search><template id="header-sidebar-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <dialog-close-button class="contents">
+          <button type="button" part="close-button tap-area" aria-label="Close"><svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="panel-list">
+        <slot name="main-panel"></slot><slot name="collapsible-panel"></slot></div>
+    </div>
+  </div>
+</template>
+
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--scheme-2" template="header-sidebar-template" open-from="left"><div class="header-sidebar__main-panel" slot="main-panel">
+    <div class="header-sidebar__scroller">
+      <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><a href="/collections/the-collection" class="header-sidebar__linklist-button h6">THE COLLECTION</a></li><li><a href="#" class="header-sidebar__linklist-button h6">ACCESSORIES</a></li><li><button type="button" class="header-sidebar__linklist-button h6" aria-controls="header-panel-3" aria-expanded="false">WHY BAREFOOT?<svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-right  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="m3 9 4-4-4-4" stroke="currentColor" stroke-linecap="square"/>
+    </svg></button></li><li><a href="/pages/how-can-we-help" class="header-sidebar__linklist-button h6">Support</a></li></ul>
+    </div><div class="header-sidebar__footer"><a href="https://www.rarabarefoot.in/customer_authentication/redirect?locale=en&region_country=IN" class="text-with-icon smallcaps sm:hidden"><svg aria-hidden="true" fill="none" focusable="false" width="20" class="icon icon-account" viewBox="0 0 24 24">
+      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+    </svg>Login</a></div></div><header-sidebar-collapsible-panel class="header-sidebar__collapsible-panel" slot="collapsible-panel">
+      <div class="header-sidebar__scroller"><div id="header-panel-1" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>Men</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">All Footwear<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/all-footwear-men" class="link-faded-reverse">All Styles</a><a href="/collections/barefoot-training-shoes-men" class="link-faded-reverse">Training / Gym / Exercise</a><a href="/collections/barefoot-running-shoes-men" class="link-faded-reverse">Walk / Jog / Play</a><a href="/collections/barefoot-all-day-wear-walking-shoes-men" class="link-faded-reverse">All Day / Everyday</a></div>
+                        </details>
+                      </accordion-disclosure></li><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">Collections<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/xanadu-barefoot-shoes-men" class="link-faded-reverse">Xanadu</a><a href="/collections/uruk-barefoot-shoes-men" class="link-faded-reverse">Uruk</a><a href="/collections/zanzibar-barefoot-shoes-men" class="link-faded-reverse">Zanzibar</a></div>
+                        </details>
+                      </accordion-disclosure></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"><a href="/pages/about-us" class="v-stack justify-items-center gap-4 sm:gap-5 group"><div class="overflow-hidden"><img src="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=1440" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=315 315w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=630 630w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=945 945w" width="1440" height="809" loading="lazy" sizes="315px" class="zoom-image group-hover:zoom"></div></a></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div><div id="header-panel-2" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>Women</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">All Footwear<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/all-footwear-women" class="link-faded-reverse">All Styles</a><a href="/collections/barefoot-training-shoes-women" class="link-faded-reverse">Training / Gym / Exercise</a><a href="/collections/barefoot-running-shoes-women" class="link-faded-reverse">Walk / Jog / Play</a><a href="/collections/barefoot-all-day-wear-walking-shoes-women" class="link-faded-reverse">All Day / Everyday</a></div>
+                        </details>
+                      </accordion-disclosure></li><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">Collections<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/xanadu-barefoot-shoes-women" class="link-faded-reverse">Xanadu </a><a href="/collections/uruk-barefoot-shoes-women" class="link-faded-reverse">Uruk</a><a href="/collections/zanzibar-barefoot-shoes-women" class="link-faded-reverse">Zanzibar </a></div>
+                        </details>
+                      </accordion-disclosure></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"><a href="/pages/about-us" class="v-stack justify-items-center gap-4 sm:gap-5 group"><div class="overflow-hidden"><img src="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=1440" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=315 315w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=630 630w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=945 945w" width="1440" height="809" loading="lazy" sizes="315px" class="zoom-image group-hover:zoom"></div></a></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div><div id="header-panel-3" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>WHY BAREFOOT?</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><a href="/pages/why-barefoot" class="header-sidebar__linklist-button h6">Why Barefoot?</a></li><li><a href="/pages/about-us" class="header-sidebar__linklist-button h6">About Rara</a></li><li><a href="/pages/community" class="header-sidebar__linklist-button h6">Community</a></li><li><a href="/pages/barefoot-science" class="header-sidebar__linklist-button h6">Barefoot Science</a></li><li><a href="/pages/blogs" class="header-sidebar__linklist-button h6">Blogs</a></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div></div>
+    </header-sidebar-collapsible-panel></header-sidebar></x-header>

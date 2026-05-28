@@ -1,0 +1,6 @@
+=== SEARCHING FOR MARKUP AND SCRIPT IN CATALOG.HTML ===
+Line 208: .product-visual-panel {
+Line 709: .product-visual-panel {
+Line 773: <div class="product-visual-panel">
+Line 895: <script>
+Line 896: document.addEventListener('DOMContentLoaded', () => {

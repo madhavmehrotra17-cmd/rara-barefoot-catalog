@@ -1,0 +1,145 @@
+.head.appendChild(script);
+    }
+
+    function initializeCarousel() {
+      if (!window.jdgmCarouselUtils || !window.jdgmCarouselMode) { setTimeout(initializeCarousel, 50); return; }
+      const buildFunction = shared.carousel_type === 'videos' || shared.carousel_type === 'cards' ? window.jdgmBuildMediaCards : window.jdgmBuildTestimonialCards;
+      if (buildFunction) {
+        window.jdgmCarouselUtils.initCarousel(blockId, settings, averageRating, params, buildFunction);
+      } else {
+        setTimeout(initializeCarousel, 100);
+      }
+    }
+    loadSpecificScript();
+  })();
+</script>
+<!-- END app snippet -->
+
+</div></div>
+  </div>
+</section><section id="shopify-section-template--19195983200430__rich_text_7dCyD8" class="shopify-section shopify-section--rich-text"><div class="color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673  ">
+    <div class="container container--sm">
+      <div class="prose text-center"><h3 class="h3" >JOIN THE BAREFOOT MOVEMENT</h3><div ><p>Find us on Instagram </p></div></div>
+    </div>
+  </div>
+</section><section id="shopify-section-template--19195983200430__1760672834462521d8" class="shopify-section shopify-section--apps"><div class="color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 section-spacing ">
+    <div class="container"><div id="shopify-block-Ac3paVmdHaC94ckhEY__instafeed_app_block_aV9LE4" class="shopify-block shopify-app-block">
+
+<style>
+      div[id*="instafeed_app_block"] {
+        width: 100%;
+      }
+      div.shopify-section:has(> [id*="instafeed_app_block"]) {
+      width: 100%;
+      }
+      body #insta-feed {
+
+          margin-bottom: 0px!important;
+
+          text-align: center;
+      }
+
+</style>
+
+  <div id="insta-feed"></div>
+  <script>
+    if (typeof instafeedLocalTitle === 'undefined') var instafeedLocalTitle = "";
+    
+  </script>
+
+</div></div>
+  </div>
+<style> #shopify-section-template--19195983200430__1760672834462521d8 .color-scheme.color-scheme--scheme-1.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673.section-spacing {padding-top: 0;} </style></section>
+<!-- BEGIN sections: footer-group -->
+<section id="shopify-section-sections--19195979366574__custom_liquid_nFqdke" class="shopify-section shopify-section-group-footer-group shopify-section--custom-liquid"><div class=" color-scheme color-scheme--scheme-843787d1-029f-43f1-bf4f-9e9b55635ec7 color-scheme--bg-77e774e6cc4d94d6a32f6256f02d9552 bordered-section">
+    <div class="">
+      <div class="text-center"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Section</title>
+  <style>
+    .footer-section {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      align-items: center;
+      background-color: #000000;
+    
+      padding: 20px;
+      flex-wrap: wrap; /* mobile responsive */
+    }
+
+    .footer-column {
+      flex: 1;
+      
+      background-color: #000000;
+      border-radius: 20px;
+      min-width: 250px; /* responsive width */
+    }
+
+    .footer-column h3 {
+      font-weight: bold;
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    .footer-column p {
+      font-size: 14px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .footer-column img {
+      height: 30px;
+      width: auto;
+    }
+
+    .footer-links {
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .footer-column h3 a {
+      color: #ffffff;
+     text-decoration: underline;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="footer-section">
+
+    <!-- Column 1 -->
+    <div class="footer-column">
+     
+        <h3>Outside India?<br>Visit
+        <a href="https://www.rarabarefoot.com" target="_blank">rarabarefoot.com</a> </h3>
+     
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-column" style="display: none;">
+      <h3>Trusted Partners</h3>
+      <div style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; margin:5px 0;">
+        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/Dummy_Logo.png?v=1756353914" alt="Razorpay">
+        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/Dummy_Logo.png?v=1756353914" alt="Shiprocket">
+        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/Dummy_Logo.png?v=1756353914" alt="Razorpay">
+        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/Dummy_Logo.png?v=1756353914" alt="Shiprocket">
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-column">
+      
+        <h3>Changed your mind? <br>  Our 
+        <a href="/pages/refund-and-return-policy">returns

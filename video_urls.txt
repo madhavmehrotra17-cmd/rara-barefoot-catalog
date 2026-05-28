@@ -1,0 +1,103 @@
+=== Video elements in index.html ===
+<video-media autoplay class="sm:hidden" style="--aspect-ratio: 0.513">
+<video playsinline="true" class="object-cover sm:hidden" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/101da7209a394c1a9a56008a29672b7c.thumbnail.0000000000_400x.jpg?v=1758876841">
+<video-media autoplay class="hidden sm:block" style="--aspect-ratio: 1.775">
+<video playsinline="true" class="object-cover" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/c061032c765d40feb35bdc389709d537.thumbnail.0000000000_400x.jpg?v=1758629641">
+<video-media autoplay class="sm:hidden" style="--aspect-ratio: 0.513">
+<video playsinline="true" class="object-cover sm:hidden" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/301c560ecc2a454d8eb72d1184a72832.thumbnail.0000000000_400x.jpg?v=1759204929">
+<video-media autoplay class="hidden sm:block" style="--aspect-ratio: 1.775">
+<video playsinline="true" class="object-cover" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/7038a8e7326e4bc289fcd6094fa5e71b.thumbnail.0000000000_400x.jpg?v=1758629641">
+<video-media autoplay class="sm:hidden" style="--aspect-ratio: 0.517">
+<video playsinline="true" class="object-cover sm:hidden" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/d656bd3a1abc4a4fa1508c21606ccfe2.thumbnail.0000000000_400x.jpg?v=1759139084">
+<video-media autoplay class="hidden sm:block" style="--aspect-ratio: 1.775">
+<video playsinline="true" class="object-cover" muted="muted" loop="loop" preload="metadata" poster="//www.rarabarefoot.in/cdn/shop/files/preview_images/6d70e342a9c24bb49618e76342757e72.thumbnail.0000000000_400x.jpg?v=1759139180">
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/101da7209a394c1a9a56008a29672b7c/101da7209a394c1a9a56008a29672b7c.HD-720p-4.5Mbps-58309404.mp4?v=0"
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/c061032c765d40feb35bdc389709d537/c061032c765d40feb35bdc389709d537.HD-1080p-7.2Mbps-58077564.mp4?v=0"
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/301c560ecc2a454d8eb72d1184a72832/301c560ecc2a454d8eb72d1184a72832.HD-720p-1.6Mbps-58538317.mp4?v=0"
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/7038a8e7326e4bc289fcd6094fa5e71b/7038a8e7326e4bc289fcd6094fa5e71b.HD-1080p-7.2Mbps-58077563.mp4?v=0"
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/d656bd3a1abc4a4fa1508c21606ccfe2/d656bd3a1abc4a4fa1508c21606ccfe2.HD-1080p-7.2Mbps-58480989.mp4?v=0"
+<source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/6d70e342a9c24bb49618e76342757e72/6d70e342a9c24bb49618e76342757e72.HD-1080p-7.2Mbps-58481150.mp4?v=0"
+
+=== Video elements in why-barefoot.html ===
+
+=== Video elements in barefoot-science.html ===
+
+=== Video elements in product.html ===
+<video-slider-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh class="ai-video-slider-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh" >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<video
+                class="ai-video-slider__video-ar29lzlndmfruass0oaigenblocke9e3da4g3mehh"
+                muted
+                autoplay
+                loop
+                controls
+                playsinline
+                preload="metadata"
+              >
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/1df57c82405a46979a24bf3379862e6b/1df57c82405a46979a24bf3379862e6b.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/1df57c82405a46979a24bf3379862e6b/1df57c82405a46979a24bf3379862e6b.HD-1080p-2.5Mbps-76111439.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/a1d54b3271b14578ac5a797f253ecbe9/a1d54b3271b14578ac5a797f253ecbe9.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/a1d54b3271b14578ac5a797f253ecbe9/a1d54b3271b14578ac5a797f253ecbe9.HD-720p-1.6Mbps-76111466.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/f9b0c838c17747e3a7a91a303a2ca92c/f9b0c838c17747e3a7a91a303a2ca92c.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/f9b0c838c17747e3a7a91a303a2ca92c/f9b0c838c17747e3a7a91a303a2ca92c.HD-720p-1.6Mbps-76112645.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/07ffec8ee19a4fb6aad3d34fbd0f7040/07ffec8ee19a4fb6aad3d34fbd0f7040.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/07ffec8ee19a4fb6aad3d34fbd0f7040/07ffec8ee19a4fb6aad3d34fbd0f7040.HD-720p-1.6Mbps-76111465.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/2ba6e9a1f2954633b73175851ba4c441/2ba6e9a1f2954633b73175851ba4c441.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/2ba6e9a1f2954633b73175851ba4c441/2ba6e9a1f2954633b73175851ba4c441.HD-720p-1.6Mbps-76111463.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/0808fd405b484813889675a37502bfea/0808fd405b484813889675a37502bfea.SD-480p-1.0Mbps-76111462.mp4?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/bf3286f12afd46558766a801622c17e1/bf3286f12afd46558766a801622c17e1.m3u8?v=0"
+<source src="//www.rarabarefoot.in/cdn/shop/videos/c/vp/bf3286f12afd46558766a801622c17e1/bf3286f12afd46558766a801622c17e1.HD-720p-1.6Mbps-76111461.mp4?v=0"
+

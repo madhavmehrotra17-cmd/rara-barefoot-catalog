@@ -1,0 +1,29 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/catalog.html"
+    },
+    {
+      "source": "/collections/*women*",
+      "destination": "/womens.html"
+    },
+    {
+      "source": "/collections/:path*",
+      "destination": "/mens.html"
+    },
+    {
+      "source": "/pages/about-us",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/pages/:page",
+      "destination": "/:page.html"
+    },
+    {
+      "source": "/cart",
+      "destination": "/cart.html"
+    }
+  ]
+}

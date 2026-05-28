@@ -1,0 +1,3019 @@
+﻿<!doctype html>
+
+<html lang="en" dir="ltr">
+  <head>
+    
+      <script async crossorigin fetchpriority="high" src="https://www.rarabarefoot.in/cdn/shopifycloud/importmap-polyfill/es-modules-shim.2.4.0.js"></script>
+<script type="text/javascript">
+        function loadClarity() {
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "tnkmyc2e1r");
+        }
+        let clarityLoaded = false;
+        const startClarity = () => {
+          if(!clarityLoaded) {
+            clarityLoaded = true;
+            loadClarity();
+            ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt => 
+              window.removeEventListener(evt, startClarity)
+            );
+          }
+        };
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt => 
+          window.addEventListener(evt, startClarity, {once: true, passive: true})
+        );
+        setTimeout(startClarity, 5000);
+      </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Detect visitor country
+  fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+      const country = data.country_code;
+      const currentHost = window.location.hostname;
+
+      // Skip popup if user already made a choice
+      const geoChoice = localStorage.getItem('geo_choice');
+      if (geoChoice === 'stay' || geoChoice === 'redirected') return;
+
+      // India store (www.rarabarefoot.in)
+      if (currentHost.includes('www.rarabarefoot.in')) {
+        if (country !== 'IN') {
+          showGeoPopup(
+            'You’re visiting from outside India. Would you like to visit our Global store instead?',
+            'Continue',
+            'Global Store',
+            'https://www.rarabarefoot.com'
+          );
+        }
+      }
+
+      // Global / UAE store (www.rarabarefoot.com)
+      else if (currentHost.includes('www.rarabarefoot.com')) {
+        if (country === 'IN') {
+          showGeoPopup(
+            'You’re visiting from India. Would you like to visit our India store?',
+            'Continue',
+            'India Store',
+            'https://www.rarabarefoot.in'
+          );
+        }
+      }
+    })
+    .catch(err => console.error('Geo check failed:', err));
+
+  // Popup creation function
+  function showGeoPopup(message, stayBtnText, redirectBtnText, redirectUrl) {
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999999;
+    `;
+
+    const popup = document.createElement('div');
+    popup.style.cssText = `
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      font-family: Arial, sans-serif;
+    `;
+
+    popup.innerHTML = `
+      <p style="font-size:16px; color:#333; margin-bottom:25px;">${message}</p>
+      <div style="display:flex; justify-content:center; gap:10px;">
+        <button id="stay-btn" 
+          style="padding:10px 20px; background:#f3f3f3; border:1px solid #ccc; cursor:pointer;">
+          ${stayBtnText}
+        </button>
+        <a id="redirect-btn" href="${redirectUrl}" 
+          style="display:inline-block; padding:10px 20px; background:#000; color:#fff; text-decoration:none;">
+          ${redirectBtnText}
+        </a>
+      </div>
+    `;
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    // "Continue" button
+    popup.querySelector('#stay-btn').addEventListener('click', () => {
+      localStorage.setItem('geo_choice', 'stay');
+      overlay.remove();
+    });
+
+    // "Redirect" button
+    popup.querySelector('#redirect-btn').addEventListener('click', () => {
+      localStorage.setItem('geo_choice', 'redirected');
+    });
+  }
+});
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
+
+    <title>HOW CAN WE HELP</title><link rel="canonical" href="https://www.rarabarefoot.in/pages/how-can-we-help"><link rel="shortcut icon" href="https://www.rarabarefoot.in/cdn/shop/files/favicon.png?v=1743759330&width=96">
+      <link rel="apple-touch-icon" href="https://www.rarabarefoot.in/cdn/shop/files/favicon.png?v=1743759330&width=180"><link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin><link rel="preload" href="https://www.rarabarefoot.in/cdn/fonts/anton/anton_n4.2ba6159dc1abf4f060e423ec24adc22041130b7f.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.rarabarefoot.in/cdn/fonts/geist/geist_n4.6e27f20c83b0a07405328f98ff3b0be957c5d6d5.woff2" as="font" type="font/woff2" crossorigin><meta property="og:type" content="website">
+  <meta property="og:title" content="HOW CAN WE HELP"><meta property="og:url" content="https://www.rarabarefoot.in/pages/how-can-we-help">
+<meta property="og:site_name" content="rarabarefoot"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="HOW CAN WE HELP">
+  <meta name="twitter:description" content="HOW CAN WE HELP"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.rarabarefoot.in"
+      },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "HOW CAN WE HELP",
+            "item": "https://www.rarabarefoot.in/pages/how-can-we-help"
+          }]
+  }
+</script><style>/* Typography (heading) */
+  @font-face {
+  font-family: Anton;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.rarabarefoot.in/cdn/fonts/anton/anton_n4.2ba6159dc1abf4f060e423ec24adc22041130b7f.woff2") format("woff2"),
+       url("//www.rarabarefoot.in/cdn/fonts/anton/anton_n4.4dfcf4cc9b33342f25e44f2b47f32840ec097e13.woff") format("woff");
+}
+
+/* Typography (body) */
+  @font-face {
+  font-family: Geist;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.rarabarefoot.in/cdn/fonts/geist/geist_n4.6e27f20c83b0a07405328f98ff3b0be957c5d6d5.woff2") format("woff2"),
+       url("//www.rarabarefoot.in/cdn/fonts/geist/geist_n4.492f36219dd328eb9d6fa578986db9fe6d514f67.woff") format("woff");
+}
+
+@font-face {
+  font-family: Geist;
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.rarabarefoot.in/cdn/fonts/geist/geist_n7.d1a55eaf394973a6f8fe773d87de2e2f51331d2a.woff2") format("woff2"),
+       url("//www.rarabarefoot.in/cdn/fonts/geist/geist_n7.69b158278bc5ac2dd4016704355834ad3509f9f6.woff") format("woff");
+}
+
+:root {
+    /* Container */
+    --container-max-width: 100%;
+    --container-xxs-max-width: 27.5rem; /* 440px */
+    --container-xs-max-width: 42.5rem; /* 680px */
+    --container-sm-max-width: 61.25rem; /* 980px */
+    --container-md-max-width: 71.875rem; /* 1150px */
+    --container-lg-max-width: 78.75rem; /* 1260px */
+    --container-xl-max-width: 85rem; /* 1360px */
+    --container-gutter: 1.25rem;
+
+    --section-vertical-spacing: 2.5rem;
+    --section-vertical-spacing-tight:2.5rem;
+
+    --section-stack-gap:2.25rem;
+    --section-stack-gap-tight:2.25rem;
+
+    /* Form settings */
+    --form-gap: 1.25rem; /* Gap between fieldset and submit button */
+    --fieldset-gap: 1rem; /* Gap between each form input within a fieldset */
+    --form-control-gap: 0.625rem; /* Gap between input and label (ignored for floating label) */
+    --checkbox-control-gap: 0.75rem; /* Horizontal gap between checkbox and its associated label */
+    --input-padding-block: 0.65rem; /* Vertical padding for input, textarea and native select */
+    --input-padding-inline: 0.8rem; /* Horizontal padding for input, textarea and native select */
+    --checkbox-size: 0.875rem; /* Size (width and height) for checkbox */
+
+    /* Other sizes */
+    --sticky-area-height: calc(var(--announcement-bar-is-sticky, 0) * var(--announcement-bar-height, 0px) + var(--header-is-sticky, 0) * var(--header-is-visible, 1) * var(--header-height, 0px));
+
+    /* RTL support */
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+
+    /**
+     * ---------------------------------------------------------------------
+     * TYPOGRAPHY
+     * ---------------------------------------------------------------------
+     */
+
+    /* Font properties */
+    --heading-font-family: Anton, sans-serif;
+    --heading-font-weight: 400;
+    --heading-font-style: normal;
+    --heading-text-transform: uppercase;
+    --heading-letter-spacing: 0.0em;
+    --text-font-family: Geist, sans-serif;
+    --text-font-weight: 400;
+    --text-font-style: normal;
+    --text-letter-spacing: 0.0em;
+    --button-font: var(--heading-font-style) var(--heading-font-weight) var(--text-sm) / 1.65 var(--heading-font-family);
+    --button-text-transform: uppercase;
+    --button-letter-spacing: 0.18em;
+
+    /* Font sizes */--text-heading-size-factor: 1.4;
+    --text-h1: max(0.6875rem, clamp(1.375rem, 1.146341463414634rem + 0.975609756097561vw, 2rem) * var(--text-heading-size-factor));
+    --text-h2: max(0.6875rem, clamp(1.25rem, 1.0670731707317074rem + 0.7804878048780488vw, 1.75rem) * var(--text-heading-size-factor));
+    --text-h3: max(0.6875rem, clamp(1.125rem, 1.0335365853658536rem + 0.3902439024390244vw, 1.375rem) * var(--text-heading-size-factor));
+    --text-h4: max(0.6875rem, clamp(1rem, 0.9542682926829268rem + 0.1951219512195122vw, 1.125rem) * var(--text-heading-size-factor));
+    --text-h5: calc(0.875rem * var(--text-heading-size-factor));
+    --text-h6: calc(0.75rem * var(--text-heading-size-factor));
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.0rem;
+    --text-xl: 1.125rem;
+
+    /* Rounded variables (used for border radius) */
+    --rounded-full: 9999px;
+    --button-border-radius: 0.0rem;
+    --input-border-radius: 0.0rem;
+
+    /* Box shadow */
+    --shadow-sm: 0 2px 8px rgb(0 0 0 / 0.05);
+    --shadow: 0 5px 15px rgb(0 0 0 / 0.05);
+    --shadow-md: 0 5px 30px rgb(0 0 0 / 0.05);
+    --shadow-block: px px px rgb(var(--text-primary) / 0.0);
+
+    /**
+     * ---------------------------------------------------------------------
+     * OTHER
+     * ---------------------------------------------------------------------
+     */
+
+    --checkmark-svg-url: url(//www.rarabarefoot.in/cdn/shop/t/5/assets/checkmark.svg?v=77552481021870063511759487063);
+    --cursor-zoom-in-svg-url: url(//www.rarabarefoot.in/cdn/shop/t/5/assets/cursor-zoom-in.svg?v=179346033183326186621759487063);
+  }
+
+  [dir="rtl"]:root {
+    /* RTL support */
+    --transform-logical-flip: -1;
+    --transform-origin-start: right;
+    --transform-origin-end: left;
+  }
+
+  @media screen and (min-width: 700px) {
+    :root {
+      /* Typography (font size) */
+      --text-xs: 0.75rem;
+      --text-sm: 0.8125rem;
+      --text-base: 0.875rem;
+      --text-lg: 1.0rem;
+      --text-xl: 1.25rem;
+
+      /* Spacing settings */
+      --container-gutter: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    :root {
+      /* Spacing settings */
+      --container-gutter: 3rem;
+
+      --section-vertical-spacing: 4rem;
+      --section-vertical-spacing-tight: 4rem;
+
+      --section-stack-gap:3rem;
+      --section-stack-gap-tight:3rem;
+    }
+  }:root {/* Overlay used for modal */
+    --page-overlay: 0 0 0 / 0.4;
+
+    /* We use the first scheme background as default */
+    --page-background: ;
+
+    /* Product colors */
+    --on-sale-text: 0 0 0;
+    --on-sale-badge-background: 0 0 0;
+    --on-sale-badge-text: 255 255 255;
+    --sold-out-badge-background: 239 239 239;
+    --sold-out-badge-text: 0 0 0 / 0.65;
+    --custom-badge-background: 28 28 28;
+    --custom-badge-text: 255 255 255;
+    --star-color: 28 28 28;
+
+    /* Status colors */
+    --success-background: 212 227 203;
+    --success-text: 48 122 7;
+    --warning-background: 253 241 224;
+    --warning-text: 237 138 0;
+    --error-background: 243 204 204;
+    --error-text: 203 43 43;
+  }.color-scheme--scheme-1 {
+      /* Color settings */--accent: 28 28 28;
+      --text-color: 28 28 28;
+      --background: 255 255 255 / 1.0;
+      --background-without-opacity: 255 255 255;
+      --background-gradient: ;--border-color: 221 221 221;/* Button colors */
+      --button-background: 28 28 28;
+      --button-text-color: 255 255 255;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 28 28 28;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673) + .shopify-section:has(.section-spacing.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-2 {
+      /* Color settings */--accent: 0 0 0;
+      --text-color: 0 0 0;
+      --background: 255 255 255 / 1.0;
+      --background-without-opacity: 255 255 255;
+      --background-gradient: ;--border-color: 217 217 217;/* Button colors */
+      --button-background: 0 0 0;
+      --button-text-color: 255 255 255;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 0 0 0;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673) + .shopify-section:has(.section-spacing.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-3 {
+      /* Color settings */--accent: 255 255 255;
+      --text-color: 255 255 255;
+      --background: 44 44 44 / 1.0;
+      --background-without-opacity: 44 44 44;
+      --background-gradient: ;--border-color: 76 76 76;/* Button colors */
+      --button-background: 255 255 255;
+      --button-text-color: 44 44 44;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 44 44 44;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-40f1358015aee8bc393f8b1f8c5b60cd) + .shopify-section:has(.section-spacing.color-scheme--bg-40f1358015aee8bc393f8b1f8c5b60cd:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-4 {
+      /* Color settings */--accent: 255 255 255;
+      --text-color: 0 0 0;
+      --background: 0 0 0 / 0.0;
+      --background-without-opacity: 0 0 0;
+      --background-gradient: ;--border-color: 0 0 0;/* Button colors */
+      --button-background: 255 255 255;
+      --button-text-color: 28 28 28;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 28 28 28;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-3671eee015764974ee0aef1536023e0f) + .shopify-section:has(.section-spacing.color-scheme--bg-3671eee015764974ee0aef1536023e0f:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-843787d1-029f-43f1-bf4f-9e9b55635ec7 {
+      /* Color settings */--accent: 255 255 255;
+      --text-color: 255 255 255;
+      --background: 0 0 0 / 1.0;
+      --background-without-opacity: 0 0 0;
+      --background-gradient: ;--border-color: 38 38 38;/* Button colors */
+      --button-background: 255 255 255;
+      --button-text-color: 0 0 0;
+
+      /* Circled buttons */
+      --circle-button-background: 0 0 0;
+      --circle-button-text-color: 255 255 255;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-77e774e6cc4d94d6a32f6256f02d9552) + .shopify-section:has(.section-spacing.color-scheme--bg-77e774e6cc4d94d6a32f6256f02d9552:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-1c877ce0-280d-4945-a9a8-4a2954d85b07 {
+      /* Color settings */--accent: 255 255 255;
+      --text-color: 255 255 255;
+      --background: 44 44 44 / 1.0;
+      --background-without-opacity: 44 44 44;
+      --background-gradient: ;--border-color: 76 76 76;/* Button colors */
+      --button-background: 255 255 255;
+      --button-text-color: 0 0 0;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 0 0 0;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-40f1358015aee8bc393f8b1f8c5b60cd) + .shopify-section:has(.section-spacing.color-scheme--bg-40f1358015aee8bc393f8b1f8c5b60cd:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-d3d04cd9-3f34-4250-80e4-7d3279f60422 {
+      /* Color settings */--accent: 0 0 0;
+      --text-color: 0 0 0;
+      --background: 191 191 191 / 1.0;
+      --background-without-opacity: 191 191 191;
+      --background-gradient: ;--border-color: 162 162 162;/* Button colors */
+      --button-background: 0 0 0;
+      --button-text-color: 255 255 255;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 28 28 28;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-f5beea70983ae00e059a4d3204eb63f6) + .shopify-section:has(.section-spacing.color-scheme--bg-f5beea70983ae00e059a4d3204eb63f6:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--scheme-a5a1fce0-0055-47bd-9f4c-88f810827848 {
+      /* Color settings */--accent: 255 255 255;
+      --text-color: 255 255 255;
+      --background: 0 0 0 / 0.0;
+      --background-without-opacity: 0 0 0;
+      --background-gradient: ;--border-color: 255 255 255;/* Button colors */
+      --button-background: 255 255 255;
+      --button-text-color: 0 0 0;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 28 28 28;
+    }.shopify-section:has(.section-spacing.color-scheme--bg-3671eee015764974ee0aef1536023e0f) + .shopify-section:has(.section-spacing.color-scheme--bg-3671eee015764974ee0aef1536023e0f:not(.bordered-section)) .section-spacing {
+      padding-block-start: 0;
+    }.color-scheme--dialog {
+      /* Color settings */--accent: 0 0 0;
+      --text-color: 0 0 0;
+      --background: 255 255 255 / 1.0;
+      --background-without-opacity: 255 255 255;
+      --background-gradient: ;--border-color: 217 217 217;/* Button colors */
+      --button-background: 0 0 0;
+      --button-text-color: 255 255 255;
+
+      /* Circled buttons */
+      --circle-button-background: 255 255 255;
+      --circle-button-text-color: 0 0 0;
+    }
+</style><script>
+  // This allows to expose several variables to the global scope, to be used in scripts
+  window.themeVariables = {
+    settings: {
+      showPageTransition: null,
+      pageType: "page",
+      moneyFormat: "₹ {{amount}}",
+      moneyWithCurrencyFormat: "₹ {{amount}}",
+      currencyCodeEnabled: false,
+      cartType: "drawer",
+      staggerMenuApparition: true
+    },
+
+    strings: {
+      addedToCart: "Added to your cart!",
+      closeGallery: "Close gallery",
+      zoomGallery: "Zoom picture",
+      errorGallery: "Image cannot be loaded",
+      shippingEstimatorNoResults: "Sorry, we do not ship to your address.",
+      shippingEstimatorOneResult: "There is one shipping rate for your address:",
+      shippingEstimatorMultipleResults: "There are several shipping rates for your address:",
+      shippingEstimatorError: "One or more error occurred while retrieving shipping rates:",
+      next: "Next",
+      previous: "Previous"
+    },
+
+    mediaQueries: {
+      'sm': 'screen and (min-width: 700px)',
+      'md': 'screen and (min-width: 1000px)',
+      'lg': 'screen and (min-width: 1150px)',
+      'xl': 'screen and (min-width: 1400px)',
+      '2xl': 'screen and (min-width: 1600px)',
+      'sm-max': 'screen and (max-width: 699px)',
+      'md-max': 'screen and (max-width: 999px)',
+      'lg-max': 'screen and (max-width: 1149px)',
+      'xl-max': 'screen and (max-width: 1399px)',
+      '2xl-max': 'screen and (max-width: 1599px)',
+      'motion-safe': '(prefers-reduced-motion: no-preference)',
+      'motion-reduce': '(prefers-reduced-motion: reduce)',
+      'supports-hover': 'screen and (pointer: fine)',
+      'supports-touch': 'screen and (hover: none)'
+    }
+  };</script><script type="importmap">{
+        "imports": {
+          "vendor": "//www.rarabarefoot.in/cdn/shop/t/5/assets/vendor.min.js?v=166833309358212501051759487063",
+          "theme": "//www.rarabarefoot.in/cdn/shop/t/5/assets/theme.js?v=90049659455851710971759487063",
+          "photoswipe": "//www.rarabarefoot.in/cdn/shop/t/5/assets/photoswipe.min.js?v=13374349288281597431759487063"
+        }
+      }
+    </script>
+
+    <script type="module" src="https://www.rarabarefoot.in/cdn/shop/t/5/assets/vendor.min.js?v=166833309358212501051759487063"></script>
+    <script type="module" src="https://www.rarabarefoot.in/cdn/shop/t/5/assets/theme.js?v=90049659455851710971759487063"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('click', function(e) {
+          const quickAddBtn = e.target.closest('.product-card__quick-add-button');
+          if (quickAddBtn) {
+            setTimeout(function() {
+              const modals = document.querySelectorAll('.quick-buy-modal');
+              modals.forEach(function(modal) {
+                modal.querySelectorAll('.variant-picker__option input:checked').forEach(function(item) {
+                  item.checked = false;
+                });
+                modal.querySelectorAll('.buy-buttons button').forEach(function(btn) {
+                  btn.disabled = true;
+                });
+                modal.querySelectorAll('.buy-buttons button[type=submit]').forEach(function(btn) {
+                  btn.textContent = 'Select Size';
+                });
+                modal.querySelectorAll('.buy-buttons button.shopify-payment-button__button').forEach(function(btn) {
+                  btn.style.display = 'none';
+                });
+              });
+            }, 1000);
+          }
+
+          const variantInput = e.target.closest('.quick-buy-modal input[name^="product-form-"]');
+          if (variantInput) {
+            const blockItem = variantInput.closest('.product-info__block-item');
+            if (blockItem) {
+              const checkedCount = blockItem.querySelectorAll('input[name^="product-form-"]:checked').length;
+              const totalOptions = blockItem.querySelectorAll('fieldset.variant-picker__option').length;
+              const productInfo = variantInput.closest('.product-info');
+              
+              if (productInfo) {
+                const buyButtons = productInfo.querySelectorAll('.buy-buttons button');
+                const submitBtn = productInfo.querySelector('.buy-buttons button[type=submit]');
+                const paymentBtn = productInfo.querySelector('.buy-buttons button.shopify-payment-button__button');
+                
+                if (checkedCount !== totalOptions) {
+                  buyButtons.forEach(btn => btn.disabled = true);
+                  if (paymentBtn) paymentBtn.style.display = 'none';
+                  if (submitBtn) submitBtn.textContent = 'Select Size';
+                } else {
+                  buyButtons.forEach(btn => btn.disabled = false);
+                  if (submitBtn) submitBtn.textContent = 'Add To Cart';
+                  if (paymentBtn) paymentBtn.style.display = '';
+                }
+              }
+            }
+          }
+        });
+      });
+    </script>
+
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="JPqXgQIAKpo5sBwD65yfs8bT0ZYJP60ivAkdSr4APUA">
+<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/68852940974/digital_wallets/dialog">
+<script async="async" src="/checkouts/internal/preloads.js?locale=en-IN"></script>
+<script id="shopify-features" type="application/json">{"accessToken":"94798152d37290dedb434190bdc6159e","betas":["rich-media-storefront-analytics"],"domain":"www.rarabarefoot.in","predictiveSearch":true,"shopId":68852940974,"locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "rarabarefoot.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"INR","rate":"1.0"};
+Shopify.country = "IN";
+Shopify.theme = {"name":"fastrrv3\u003e Copy of Prestige","id":146763514030,"schema_name":"Prestige","schema_version":"10.6.0","theme_store_id":855,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "www.rarabarefoot.in/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";
+Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";
+Shopify.SignInWithShop = Shopify.SignInWithShop || {};
+Shopify.SignInWithShop.User = Shopify.SignInWithShop.User || {};
+Shopify.SignInWithShop.User.recognized = false;</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  window.Shopify.SignInWithShop = window.Shopify.SignInWithShop || {};
+  window.Shopify.SignInWithShop.eligible = true;
+</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"page"}</script>
+<script defer="defer" async type="module" src="https://www.rarabarefoot.in/cdn/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"></script>
+<script type="module">
+  await import("//www.rarabarefoot.in/cdn/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js");
+
+  window.Shopify.SignInWithShop?.initShopCartSync?.({"fedCMEnabled":true,"windoidEnabled":true});
+
+</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"shop-cash-offers":["modules/v2/loader.shop-cash-offers.en.esm.js"],"checkout-modal":["modules/v2/loader.checkout-modal.en.esm.js"],"init-windoid":["modules/v2/loader.init-windoid.en.esm.js"],"init-fed-cm":["modules/v2/loader.init-fed-cm.en.esm.js"],"shop-button":["modules/v2/loader.shop-button.en.esm.js"],"init-shop-user-recognition":["modules/v2/loader.init-shop-user-recognition.en.esm.js"],"shop-toast-manager":["modules/v2/loader.shop-toast-manager.en.esm.js"],"init-shop-cart-sync":["modules/v2/loader.init-shop-cart-sync.en.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/loader.init-shop-email-lookup-coordinator.en.esm.js"],"shop-cart-sync":["modules/v2/loader.shop-cart-sync.en.esm.js"],"avatar":["modules/v2/loader.avatar.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/loader.init-customer-accounts-sign-up.en.esm.js"],"pay-button":["modules/v2/loader.pay-button.en.esm.js"],"shop-user-recognition":["modules/v2/loader.shop-user-recognition.en.esm.js"],"shop-login-button":["modules/v2/loader.shop-login-button.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/loader.init-shop-for-new-customer-accounts.en.esm.js"],"init-customer-accounts":["modules/v2/loader.init-customer-accounts.en.esm.js"],"shop-login":["modules/v2/loader.shop-login.en.esm.js"],"shop-follow-button":["modules/v2/loader.shop-follow-button.en.esm.js"],"lead-capture":["modules/v2/loader.lead-capture.en.esm.js"],"payment-terms":["modules/v2/loader.payment-terms.en.esm.js"]};
+</script>
+<script id="__st">var __st={"a":68852940974,"offset":19800,"reqid":"0061161c-0f98-4785-a7c6-cd6f90fb0ee1-1779280641","pageurl":"www.rarabarefoot.in\/pages\/how-can-we-help","s":"pages-105299542190","u":"8c6b5909187f","p":"page","rtyp":"page","rid":105299542190};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="form-persister">!function(){'use strict';const t='contact',e='new_comment',n=[[t,t],['blogs',e],['comments',e],[t,'customer']],o='password',r='form_key',c=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',o],s=()=>{try{return window.sessionStorage}catch{return}},i='__shopify_v',u=t=>t.elements[r],a=function(){const t=[...n].map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(',');var e;return e=t,()=>e?[...document.querySelectorAll(e)].map((t=>t.form)):[]}();function m(t){const e=u(t);a().includes(t)&&(!e||!e.value)&&function(t){try{if(!s())return;!function(t){const e=s();if(!e)return;const n=u(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){u(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:r})),t.elements[r].value=e}(t,e),function(t,e){const n=s();if(!n)return;const r=[...t.querySelectorAll(`input[type='${o}']`)].map((({name:t})=>t)),u=[...c,...r],a={};for(const[o,c]of new FormData(t).entries())u.includes(o)||(a[o]=c);n.setItem(e,JSON.stringify({[i]:1,action:t.action,data:a}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(t)}const f=t=>{if('true'===t.dataset.persistBound)return;const e=function(t,e){const n=function(t){return'function'==typeof t.submit?t.submit:HTMLFormElement.prototype.submit}(t).bind(t);return function(){let t;return()=>{t||(t=!0,(()=>{try{e(),n()}catch(t){(t=>{console.error('form submit failed',t)})(t)}})(),setTimeout((()=>t=!1),250))}}()}(t,(()=>{m(t)}));!function(t,e){if('function'==typeof t.submit&&'function'==typeof e)try{t.submit=e}catch{}}(t,e),t.addEventListener('submit',(t=>{t.preventDefault(),e()})),t.dataset.persistBound='true'};!function(){function t(t){const e=(t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form})(t);e&&m(e)}document.addEventListener('submit',t),document.addEventListener('DOMContentLoaded',(()=>{const e=a();for(const t of e)f(t);var n;n=document.body,new window.MutationObserver((t=>{for(const e of t)if('childList'===e.type&&e.addedNodes.length)for(const t of e.addedNodes)1===t.nodeType&&'FORM'===t.tagName&&a().includes(t)&&f(t)})).observe(n,{childList:!0,subtree:!0,attributes:!1}),document.removeEventListener('submit',t)}))}()}();</script>
+<script integrity="sha256-JjoPp5ZfB1sSAs5SQaol1x1GgvveM+BgmRzyDexInEQ=" data-source-attribution="shopify.loadfeatures" defer="defer" src="https://www.rarabarefoot.in/cdn/shopifycloud/storefront/assets/storefront/load_feature-1bd60354.js" crossorigin="anonymous"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://www.rarabarefoot.in/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+
+<script id="shopify-cfh-end">window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+<link href="https://www.rarabarefoot.in/cdn/shop/t/5/assets/theme.css?v=18484539365778151311776251561" rel="stylesheet" type="text/css" media="all" /><script>
+  function getUserTimezone() {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+  function renderButton(showShiprocketCheckout) {
+    let modifiedCSS = "";
+    if (showShiprocketCheckout) {
+      modifiedCSS = `
+        button[name="checkout"]{display:none !important;}
+        .shopify-payment-button__button.shopify-payment-button__button--unbranded{display:none !important;}
+      `;
+    } else {
+      modifiedCSS = `
+        .shiprocket-headless{display:none !important;}
+      `;
+    }
+    const styleElement = document.createElement("style");
+    styleElement.textContent = modifiedCSS;
+    document.head.appendChild(styleElement);
+  }
+  function checkAndSetButtonVisibility() {
+    const indiaTimezones = ["Asia/Kolkata", "Asia/Calcutta"];
+    const userTimezone = getUserTimezone();
+    const isIndia = indiaTimezones.includes(userTimezone);
+    renderButton(isIndia);
+  }
+  checkAndSetButtonVisibility();
+</script>
+
+    <script type="application/javascript">
+checkoutBuyer = "https://fastrr-boost-ui.pickrr.com/";
+</script>
+<input type="hidden" value="www.rarabarefoot.in" id="sellerDomain"/>
+<link rel="stylesheet" href="https://fastrr-boost-ui.pickrr.com/assets/styles/shopify.css">
+<script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shopify.js" defer></script>
+<script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shiprocketMarketing.js"></script>
+<input type="hidden" value="rz" id="template"/>
+<!-- <input type="hidden" value="percent" id="discountType"/>
+<input type="hidden" value="5" id="discValue"/> -->
+<style>	
+  .sr-headless-checkout {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0px;
+    height: 45px;
+    letter-spacing: 1px;
+    background-color:rgb(0,0,0) ;
+     }
+
+     .shiprocket-headless{
+width:100% !important;
+}
+
+/* .sr-discount-label{
+  font-size:0px !important;
+}
+ .sr-discount-label:before{
+    content:"EXTRA 5% OFF on PERFUMES";
+    font-size: 9px;
+    color: #000;
+    text-transform: none;
+    top: -8px;
+    left: 6px;
+    background-color: #53FF73;
+    border-radius: 3px;
+    padding: 0 10px;
+} */
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function toggleShiprocketButton() {
+    // Select both buttons
+    const selectSizeBtn = document.querySelector('button[data-select-size="true"], button.button--outline.w-full');
+    const shiprocketDiv = document.querySelector('.shiprocket-headless[data-type="product"]');
+    const shiprocketBtn = shiprocketDiv ? shiprocketDiv.querySelector('.sr-headless-checkout') : null;
+
+    if (!shiprocketDiv || !shiprocketBtn) return;
+
+    // Check if the Shopify button is disabled or has data-select-size="true"
+    const isDisabled = selectSizeBtn && (selectSizeBtn.hasAttribute('disabled') || selectSizeBtn.getAttribute('data-select-size') === 'true');
+
+    if (isDisabled) {
+      // Disable Shiprocket button
+      shiprocketBtn.style.opacity = "0.5";
+      shiprocketBtn.style.cursor = "not-allowed";
+      shiprocketBtn.style.pointerEvents = "none";
+      shiprocketBtn.setAttribute("disabled", "true");
+
+      // Optional: visually dim the parent div too
+      shiprocketDiv.style.opacity = "0.6";
+    } else {
+      // Enable Shiprocket button
+      shiprocketBtn.style.opacity = "1";
+      shiprocketBtn.style.cursor = "pointer";
+      shiprocketBtn.style.pointerEvents = "auto";
+      shiprocketBtn.removeAttribute("disabled");
+
+      // Restore parent div visibility
+      shiprocketDiv.style.opacity = "1";
+    }
+  }
+
+  // Run once initially
+  toggleShiprocketButton();
+
+  // Observe DOM changes — helps when variant/size buttons update dynamically
+  const observer = new MutationObserver(toggleShiprocketButton);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Also check when any button is clicked (helps when size selection triggers state change)
+  document.body.addEventListener("click", function () {
+    setTimeout(toggleShiprocketButton, 200);
+  });
+});
+</script>
+
+<meta name="p:domain_verify" content="ae15433149ece288d7adce5fa0490b01">
+  <!-- BEGIN app block: shopify://apps/findter-filter-search/blocks/search-filters-core/bf706e6d-709f-4687-a2e2-1fbe1b007cc7 --><link rel='preconnect' href='https://cdn.shopify.com' crossorigin>
+<link rel='dns-prefetch' href='https://cdn.shopify.com'>
+<link href="https://cdn.shopify.com/extensions/019e4498-3123-7d42-9c93-cdb29df212fa/findter-snf-485/assets/fdt-base.css" as="style" rel="preload">
+<link href="https://cdn.shopify.com/extensions/019e4498-3123-7d42-9c93-cdb29df212fa/findter-snf-485/assets/fdt-base.css" rel="stylesheet" type="text/css" media="all" />
+<style id='fdt-custom-css'>
+body:not(.findter-init) #fdt-grid-container {
+display: block;
+min-height: 1200px;
+}
+
+</style>
+
+<link href='https://cdn.shopify.com/extensions/019e4498-3123-7d42-9c93-cdb29df212fa/findter-snf-485/assets/fdt-card-styling.css' rel='stylesheet' media='print' onload="this.media='all'"><style data-shopify>:root {
+--fdt-product-image-radius: 4px;
+}</style><script>
+window.templates = window.templates || {};
+window.fdtCssClass = window.fdtCssClass || {};
+window.fdtFilters = [];
+window.fdtPrefilter = {};
+window.fdtSort = window.fdtSort || '';
+window.fdtQuery = window.fdtQuery || '';
+window.fdtPage = { current: 1 };
+window.fdtToggleOptions = {};
+window.fdtLimit = 16;
+window.fdtSuggestionSize = 5;
+window.fdtSuggestionMobileSize = 10;
+window.rdsFocusedInput = '';
+window.fdtMeta = {
+layout: 'vertical',
+pagination: 'show_more',
+image_ratio: '3-4',
+zoom_in: true,
+show_second_image: true,
+show_vendor: true,
+show_button_quick_add: true,
+mainContentSelector: '',
+showCurrencyCode: true,
+moneyFormatWithCurrency: "₹ {{amount}}",
+moneyFormat: "₹ {{amount}}",
+locale: 'en',
+priceLocaleOptions: {},
+showSavingDisplay: false,
+currency: 'INR',
+currentCurrency: "INR",
+mobileColumns: 2,
+pageWidth: 0,
+newThreshold: 1,
+formWrapper: "product-form",
+symbol_currency: '₹'
+};
+window.fdtFeatures = {};
+window.fdtOptionFilterer = {
+availability: false,
+priceRange: false,
+};
+const fdtGridCols = 3;
+const fdtSidebarFactor = window.fdtMeta.layout === 'vertical' ? ' * 0.75' : '';
+window.fdtMediaConfig = {
+sizes: [
+`(min-width: 1024px) calc((100vw - 10rem)${fdtSidebarFactor} / ${fdtGridCols})`,
+`(min-width: 768px) calc((100vw - 4rem)${fdtSidebarFactor} / ${fdtGridCols})`,
+`calc((100vw - 2rem) / ${window.fdtMeta.mobileColumns})`
+],
+widths: [200, 380, 560, 740, 920, 1100, 1316, 1532, 1820]
+};
+window.fdtSliderSymbol = {
+priceRange: '₹'
+}
+window.fdtSliderStep = {
+priceRange: 0.1
+}
+AbortSignal.timeout ??= function timeout(ms) {
+const ctrl = new AbortController()
+setTimeout(() => ctrl.abort(), ms)
+return ctrl.signal
+}
+</script>
+
+<!-- BEGIN app snippet: compatible -->
+<!-- END app snippet --><!-- BEGIN app snippet: variables --><script>
+window.rdSearchFiltersString = {
+filter: {
+header: `Filter by`,
+tree: {
+collectionSearch: {
+label: `Search`,
+placeholder: `Search in this collection`
+},
+searchWithinFilter: {
+placeholder: `Search filter value`,
+no_match: `No matching values`
+},
+viewItems: {
+label: `View Items`,
+},
+from: {
+label: `From`,
+},
+to: {
+label: `To`,
+},
+above: {
+label: `Above [price]`,
+},
+under: {
+label: `Under [price]`,
+}
+},
+sort: {
+label: `Sort`,
+},
+clearAll: {
+label: `Clear all`,
+},
+},
+sort: {
+label: `Sort by`,
+options: {
+relevance: `Relevance`,
+priceAsc: `Price low to high`,
+priceDesc: `Price high to low`,
+newest: `What&#39;s New?`,
+old_to_new: `Old to New`,
+best_selling: `Best selling`,
+},
+},
+toolbar: {
+count: {
+one: `[count] product`,
+other: `[count] products`,
+},
+filter: {
+label: `Filter by`,
+},
+filterSort: {
+label: `Filter and sort`,
+},
+},
+results: {
+one: `[count] result found.`,
+other: `[count] results found.`,
+price: {
+fromPriceHtml: `From [price]`,
+},
+},
+noSearchResult: {
+showAll: {
+label: `Show all product`,
+},
+header: {
+label: `Sorry, nothing matches your search`,
+},
+description: {
+label: `But don&#39;t give up – check the spelling or try less specific search terms.`,
+},
+descriptionMobile: {
+label: `Please check the spelling or try less specific search terms`,
+},
+},
+loading: {
+label: `Loading...`,
+},
+showMore: {
+label: `+ Show more`,
+description: {
+one: `You have viewed [count] product. Click Show more to see more products`,
+other: `You have viewed [count] products. Click Show more to see more products`,
+},
+descriptionMobile: {
+one: `You have viewed [count] product`,
+other: `You have viewed [count] products`,
+},
+},
+showPrevious: {
+label: `+ Show previous page`,
+},
+filters: {
+availability: {
+in_stock: `In Stock`,
+out_of_stock: `Out of Stock`
+}
+}
+};
+window.rdSearchSuggestionString = {
+recentSearches: {
+header: `Recent searches`,
+},
+popularSearches: {
+header: `Popular searches`,
+},
+searchSuggestionProductResults: {
+header: `Products`,
+},
+viewAll: {
+label: `Search for “[terms]”`,
+},
+noSearchResult: {
+label: `Search for <span class='search-filters__search-suggestion-search-terms'>“[terms]”</span>`,
+},
+};
+
+window.rdGeneralString = {
+tag: {
+sale: `Sale`,
+new: `New`,
+oos: `Sold out`
+},
+search: {
+placeholder: `Search`,
+search: `Search`,
+reset: `Reset`,
+close: ``,
+},
+button: {
+addToCart: `Add to cart`,
+soldOut: `Sold out`,
+viewFullDetail: `View full detail`,
+chooseOptions: `Choose options`,
+}
+};
+
+window.rdRoutes = {
+search_url: `/search`,
+};
+</script>
+<!-- END app snippet --><!-- BEGIN app snippet: image-template --><script>
+window.templates.ImageTemplate = (product, loading) => {
+const show_second_image = window.fdtMeta.show_second_image;
+let image = '';
+let width = 'auto';
+let height = 'auto';
+let alt = product.title;
+let secondImage = '';
+let secondWidth = 'auto';
+let secondHeight = 'auto';
+let secondAlt = product.title;
+if (product.featuredMedia?.image?.url?.length > 0) {
+image = product.featuredMedia.image.url;
+height = product.featuredMedia.image.height;
+width = product.featuredMedia.image.width;
+alt = product.featuredMedia.alt;
+} else {
+const firstMedia = (product.media ?? []).find(media => media.mediaContentType === 'IMAGE');
+if (firstMedia?.image?.url?.length > 0) {
+image = firstMedia.image.url;
+height = firstMedia.image.height;
+width = firstMedia.image.width;
+alt = firstMedia.image.altText;
+}
+}
+if (show_second_image) {
+const imageMedias = (product.media ?? []).filter(media => media.mediaContentType === 'IMAGE');
+if (imageMedias.length >= 2) {
+const secondMedia = imageMedias[1];
+if (secondMedia?.image?.url?.length > 0) {
+secondImage = secondMedia.image.url;
+secondWidth = secondMedia.image.width;
+secondHeight = secondMedia.image.height;
+secondAlt = secondMedia.image.altText || product.title;
+}
+}
+}
+const html = `
+<img id="product-image-${product.id}"
+srcset="${image?.length > 0 && width !== 'auto' && window.fdtMediaConfig.widths.filter(widthConfig => widthConfig < width)
+.map(widthConfig => `${image}&width=${widthConfig} ${widthConfig}w`)
+.concat(`${image}&width=${width} ${width}w`)
+.join(', ')}"
+src="${image?.length > 0 && image + '&width=' + width}"
+alt="${alt}"
+class="search-filters__product-image-img  fdt-motion-reduce"
+${loading === 'lazy' ? `loading="lazy" decoding="async"` : `loading="eager" decoding="sync" fetchpriority="high"`}
+sizes="${window.fdtMediaConfig.sizes.join(', ')}"
+width="${width}"
+height="${height}"
+>
+${secondImage ? `
+<img id="product-second-image-${product.id}"
+srcset="${secondWidth !== 'auto' && window.fdtMediaConfig.widths.filter(widthConfig => widthConfig < secondWidth)
+.map(widthConfig => `${secondImage}&width=${widthConfig} ${widthConfig}w`)
+.concat(`${secondImage}&width=${secondWidth} ${secondWidth}w`)
+.join(', ')}"
+src="${secondImage + '&width=' + secondWidth}"
+alt="${secondAlt}"
+class="search-filters__product-image-img img--second fdt-motion-reduce"
+${loading === 'lazy' ? `loading="lazy" decoding="async"` : `loading="eager" decoding="sync" fetchpriority="high"`}
+sizes="${window.fdtMediaConfig.sizes.join(', ')}"
+width="${secondWidth}"
+height="${secondHeight}"
+>
+` : ''}
+`;
+return window.templates.HelperTemplate.stripNewLines(html);
+};
+</script><!-- END app snippet --><!-- BEGIN app snippet: price-template --><script>
+window.templates.PriceTemplate = product => {
+const { parseRangeValue, formatPrice, meta, stripNewLines } = window.templates.HelperTemplate;
+
+const minPrice = product?.priceMin || 0;
+const maxPrice = product?.priceMax || 0;
+let compareAtPriceMin = product?.compareAtPriceMin || 0;
+
+let saleAmount = 0;
+let compareAtPriceWithFormat = '';
+
+if (compareAtPriceMin > minPrice) {
+compareAtPriceWithFormat = formatPrice(compareAtPriceMin);
+saleAmount = compareAtPriceMin - minPrice;
+}
+
+const priceMinWithFormat = formatPrice(minPrice);
+let priceValueWithFormat = priceMinWithFormat;
+
+if (minPrice < maxPrice) {
+priceValueWithFormat = window.rdSearchFiltersString.results.price.fromPriceHtml.replace('[price]', priceMinWithFormat);
+}
+
+let savingPriceWithFormat = '';
+if (meta && meta.showSavingDisplay !== false && saleAmount !== 0) {
+savingPriceWithFormat = formatPrice(saleAmount);
+}
+
+const htmlTag = window.fdtFeatures?.market_currency ? 'fdt-price-card' : 'div';
+
+const html = `<${htmlTag} class="search-filters__product-price-wrapper" data-product="${product.id}">
+<span aria-hidden="true" class="search-filters__product-price-content search-filters__product-price-content--text-align-left">
+<span class="${compareAtPriceWithFormat !== '' ? `` : 'fdt-hidden '}search-filters__format-currency search-filters__format-currency--price-compare search-filters__product-price--compare">
+<span class="search-filters__format-currency">${compareAtPriceWithFormat}</span>
+</span>
+<span class="search-filters__product-price--main ${product.onSale ? 'search-filters__product-price--sale' : 'search-filters__product-price--default'}">
+<span class="search-filters__format-currency">${priceValueWithFormat}</span>
+</span>
+<span aria-hidden="true" class="${savingPriceWithFormat !== '' ? `` : 'fdt-hidden '}search-filters__product-price--saving">
+<span class="search-filters__format-currency">${savingPriceWithFormat}</span>
+</span>
+</span>
+</${htmlTag}>
+`;
+
+return stripNewLines(html);
+};
+</script>
+<!-- END app snippet --><!-- BEGIN app snippet: sale-badge-template --><script>
+window.fdtCssClass.Badges = {
+sale: 'top left',
+sale_percent: 'top left',
+new: 'top left',
+oos: 'top left'
+}
+window.fdtMeta.formatSalePercent = window.fdtMeta.formatSalePercent || {
+round: true
+}
+window.templates.CustomBadgeTemplate = window.templates.CustomBadgeTemplate || (product => {
+return ``;
+});
+window.templates.SaleBadgeTemplate = (product) => {
+const { stripNewLines } = window.templates.HelperTemplate;
+
+const html = product?.onSale ? `
+<div class="search-filters__sale-badge badge-text ${window.fdtCssClass.Badges.sale}">
+${window.rdGeneralString.tag.sale}
+</div>
+` : '';
+
+return stripNewLines(html);
+};
+window.templates.NewBadgeTemplate = window.templates.NewBadgeTemplate || (product => {
+const published_at = new Date(product.publishedAt);
+const isNew = (published_at.getTime() - (new Date()).getTime())/86400000 < window.fdtMeta.newThreshold;
+return isNew ? `
+<div class="search-filters__new-badge badge-text ${window.fdtCssClass.Badges.new}">
+${window.rdGeneralString.tag.new}
+</div>
+` : '';
+});
+window.templates.StockBadgeTemplate = window.templates.StockBadgeTemplate || (product => {
+return product.availability === 'out_of_stock' ? `
+<div class="search-filters__stock-badge badge-text ${window.fdtCssClass.Badges.oos}">
+${window.rdGeneralString.tag.oos}
+</div>
+` : '';
+});
+window.templates.SalePercentBadgeTemplate = window.templates.SalePercentBadgeTemplate || (product => {
+const percent = window.fdtMeta.formatSalePercent?.round
+? Math.round(product.sale_percent)
+: product.sale_percent;
+
+return product.sale_percent > 0 ? `
+<div class="search-filters__sale-percent-badge badge-text ${window.fdtCssClass.Badges.sale_percent}">
+${percent}%
+</div>
+` : '';
+});
+</script>
+<!-- END app snippet --><script src='https://cdn.shopify.com/extensions/019e4498-3123-7d42-9c93-cdb29df212fa/findter-snf-485/assets/app.js' defer></script>
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea -->
+<script type="text/javascript">
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=shopify";
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+
+    c.Shopify.loadFeatures([{ name: "consent-tracking-api", version: "0.1" }], error => {
+      if (error) {
+        console.error("Error loading Shopify features:", error);
+        return;
+      }
+
+      c[a]('consentv2', {
+        ad_Storage: c.Shopify.customerPrivacy.marketingAllowed() ? "granted" : "denied",
+        analytics_Storage: c.Shopify.customerPrivacy.analyticsProcessingAllowed() ? "granted" : "denied",
+        source: 101,
+      });
+    });
+
+    l.addEventListener("visitorConsentCollected", function (e) {
+      c[a]('consentv2', {
+        ad_Storage: e.detail.marketingAllowed ? "granted" : "denied",
+        analytics_Storage: e.detail.analyticsAllowed ? "granted" : "denied",
+        source: 101,
+      });
+    });
+  })(window, document, "clarity", "script", "tped2b01ey");
+</script>
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5 -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var instafeedScript = document.createElement('script');
+      instafeedScript.async = true;
+      instafeedScript.src = "https:\/\/cdn.nfcube.com\/instafeed-b2b2b7b2680a30d092bb62a60dc511ea.js";
+      document.body.appendChild(instafeedScript);
+    });
+  </script>
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24 --><script
+    id='bss-pl-config-data'
+	data-nosnippet
+>
+	let TAE_StoreId = "67538";
+	if (typeof BSS_PL == 'undefined' || TAE_StoreId !== "") {
+  		var BSS_PL = {};
+		BSS_PL.storeId = 67538;
+		BSS_PL.currentPlan = "free";
+		BSS_PL.apiServerProduction = "https://product-labels.tech-arms.io";
+		BSS_PL.publicAccessToken = "fa1d6d4ef70278971940d7a277607357";
+		BSS_PL.customerTags = "null";
+		BSS_PL.customerId = "null";
+		BSS_PL.storeIdCustomOld = 10678;
+		BSS_PL.storeIdOldWIthPriority = 12200;
+		BSS_PL.storeIdOptimizeAppendLabel = 59637
+		BSS_PL.optimizeCodeIds = "optimize_append_label"; 
+		BSS_PL.extendedFeatureIds = null;
+		BSS_PL.integration = {"laiReview":{"status":0,"config":[]}};
+		BSS_PL.settingsData  = {};
+		BSS_PL.configProductMetafields = [];
+		BSS_PL.configVariantMetafields = [];
+		
+		BSS_PL.configData = [].concat();
+
+		BSS_PL.configDataBanner = [].concat();
+
+		BSS_PL.configDataPopup = [].concat();
+
+		BSS_PL.configDataLabelGroup = [].concat();
+
+		BSS_PL.collectionID = ``;
+		BSS_PL.collectionHandle = ``;
+		BSS_PL.collectionTitle = ``;
+
+		BSS_PL.conditionConfigData = [].concat();
+	}
+</script>
+
+    <script id='fixBugForStore67538' data-nosnippet>
+		
+function bssFixSupportAppendHtmlLabel($, BSS_PL, parent, page, htmlLabel) {
+  let appended = false;
+  // Write code here
+  if ($(parent).is(".product-gallery__image-list .product-gallery__media")) {
+    $(parent).append(htmlLabel)
+    appended = true
+  }
+  return appended;
+}
+
+function bssFixSupportProductParent($, page, parents, itemHandle) {
+  return parents.filter(function () {
+                        return !(
+                            $(this).is('[class*="ai-related-products-grid"]')
+                        );
+                    });
+}
+
+function bssFixSupportMainLabelRunScript($, BSS_PL) {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .bss_pb_img img,
+    .bss_pl_img img,
+    .bss_pb_img .bss_parent_text,
+    .bss_pl_img .bss_parent_text {
+      display: block !important;
+    }
+
+    .product-gallery__media:has(.bss_pl_img){
+      position: relative
+    }
+  `;
+  document.head.append(style);
+}
+
+    </script>
+
+<style>
+
+</style>
+
+<script data-nosnippet>
+    function bssLoadScripts(src, callback, isDefer = false) {
+        const scriptTag = document.createElement('script');
+        document.head.appendChild(scriptTag);
+        scriptTag.src = src;
+        if (isDefer) {
+            scriptTag.defer = true;
+        } else {
+            scriptTag.async = true;
+        }
+        if (callback) {
+            scriptTag.addEventListener('load', function () {
+                callback();
+            });
+        }
+    }
+    const scriptUrls = [
+        "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-helper.js",
+        "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-config-run-scripts.js",
+    ];
+    Promise.all(scriptUrls.map((script) => new Promise((resolve) => bssLoadScripts(script, resolve)))).then((res) => {
+        console.log('BSS scripts loaded');
+        window.bssScriptsLoaded = true;
+    });
+
+	function bssInitScripts() {
+		if (BSS_PL.configData.length) {
+			const enabledFeature = [
+				{ type: 1, script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-label.js" },
+				{ type: 2, badge: [0, 7, 8], script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-product-name.js" },
+				{ type: 2, badge: [1, 11], script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-product-image.js" },
+				{ type: 2, badge: 2, script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-custom-selector.js" },
+				{ type: 2, badge: [3, 9, 10], script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-price.js" },
+				{ type: 2, badge: 4, script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-add-to-cart-btn.js" },
+				{ type: 2, badge: 5, script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-quantity-box.js" },
+				{ type: 2, badge: 6, script: "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-init-for-badge-buy-it-now-btn.js" }
+			]
+				.filter(({ type, badge }) => BSS_PL.configData.some(item => item.label_type === type && (badge === undefined || (Array.isArray(badge) ? badge.includes(item.badge_type) : item.badge_type === badge))) || (type === 1 && BSS_PL.configDataLabelGroup && BSS_PL.configDataLabelGroup.length))
+				.map(({ script }) => script);
+				
+            enabledFeature.forEach((src) => bssLoadScripts(src));
+
+            if (enabledFeature.length) {
+                const src = "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-product-label-js.js";
+                bssLoadScripts(src);
+            }
+        }
+
+        if (BSS_PL.configDataBanner && BSS_PL.configDataBanner.length) {
+            const src = "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-product-label-banner.js";
+            bssLoadScripts(src);
+        }
+
+        if (BSS_PL.configDataPopup && BSS_PL.configDataPopup.length) {
+            const src = "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-product-label-popup.js";
+            bssLoadScripts(src);
+        }
+
+        if (window.location.search.includes('bss-pl-custom-selector')) {
+            const src = "https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-product-label-custom-position.js";
+            bssLoadScripts(src, null, true);
+        }
+    }
+    bssInitScripts();
+</script>
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea -->
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8 --><!-- Start of Judge.me Core -->
+
+<link rel="dns-prefetch" href="https://cdn.judge.me">
+<link rel="dns-prefetch" href="https://cdn1.judge.me">
+<link rel="dns-prefetch" href="https://api.judge.me">
+
+<script data-cfasync='false' class='jdgm-settings-script'>window.jdgmSettings={"pagination":5,"disable_web_reviews":false,"badge_no_review_text":"No reviews","badge_n_reviews_text":"{{ n }} review/reviews","badge_star_color":"#000000","hide_badge_preview_if_no_reviews":true,"badge_hide_text":false,"enforce_center_preview_badge":false,"widget_title":"Customer Reviews","widget_open_form_text":"Write a review","widget_close_form_text":"Cancel review","widget_refresh_page_text":"Refresh page","widget_summary_text":"Based on {{ number_of_reviews }} review/reviews","widget_no_review_text":"Be the first to write a review","widget_name_field_text":"Display name","widget_verified_name_field_text":"Verified Name (public)","widget_name_placeholder_text":"Display name","widget_required_field_error_text":"This field is required.","widget_email_field_text":"Email address","widget_verified_email_field_text":"Verified Email (private, can not be edited)","widget_email_placeholder_text":"Your email address","widget_email_field_error_text":"Please enter a valid email address.","widget_rating_field_text":"Rating","widget_review_title_field_text":"Review Title","widget_review_title_placeholder_text":"Give your review a title","widget_review_body_field_text":"Review content","widget_review_body_placeholder_text":"Start writing here...","widget_pictures_field_text":"Picture/Video (optional)","widget_submit_review_text":"Submit Review","widget_submit_verified_review_text":"Submit Verified Review","widget_submit_success_msg_with_auto_publish":"Thank you! Please refresh the page in a few moments to see your review. You can remove or edit your review by logging into \u003ca href='https://judge.me/login' target='_blank' rel='nofollow noopener'\u003eJudge.me\u003c/a\u003e","widget_submit_success_msg_no_auto_publish":"Thank you! Your review will be published as soon as it is approved by the shop admin. You can remove or edit your review by logging into \u003ca href='https://judge.me/login' target='_blank' rel='nofollow noopener'\u003eJudge.me\u003c/a\u003e","widget_show_default_reviews_out_of_total_text":"Showing {{ n_reviews_shown }} out of {{ n_reviews }} reviews.","widget_show_all_link_text":"Show all","widget_show_less_link_text":"Show less","widget_author_said_text":"{{ reviewer_name }} said:","widget_days_text":"{{ n }} days ago","widget_weeks_text":"{{ n }} week/weeks ago","widget_months_text":"{{ n }} month/months ago","widget_years_text":"{{ n }} year/years ago","widget_yesterday_text":"Yesterday","widget_today_text":"Today","widget_replied_text":"\u003e\u003e {{ shop_name }} replied:","widget_read_more_text":"Read more","widget_reviewer_name_as_initial":"","widget_rating_filter_color":"#fbcd0a","widget_rating_filter_see_all_text":"See all reviews","widget_sorting_most_recent_text":"Most Recent","widget_sorting_highest_rating_text":"Highest Rating","widget_sorting_lowest_rating_text":"Lowest Rating","widget_sorting_with_pictures_text":"Only Pictures","widget_sorting_most_helpful_text":"Most Helpful","widget_open_question_form_text":"Ask a question","widget_reviews_subtab_text":"Reviews","widget_questions_subtab_text":"Questions","widget_question_label_text":"Question","widget_answer_label_text":"Answer","widget_question_placeholder_text":"Write your question here","widget_submit_question_text":"Submit Question","widget_question_submit_success_text":"Thank you for your question! We will notify you once it gets answered.","widget_star_color":"#000000","verified_badge_text":"Verified","verified_badge_bg_color":"","verified_badge_text_color":"","verified_badge_placement":"left-of-reviewer-name","widget_review_max_height":"","widget_hide_border":false,"widget_social_share":false,"widget_thumb":false,"widget_review_location_show":false,"widget_location_format":"","all_reviews_include_out_of_store_products":true,"all_reviews_out_of_store_text":"(out of store)","all_reviews_pagination":100,"all_reviews_product_name_prefix_text":"about","enable_review_pictures":true,"enable_question_anwser":false,"widget_theme":"default","review_date_format":"mm/dd/yyyy","default_sort_method":"pictures-first","widget_product_reviews_subtab_text":"Product Reviews","widget_shop_reviews_subtab_text":"Shop Reviews","widget_other_products_reviews_text":"Reviews for other products","widget_store_reviews_subtab_text":"Store reviews","widget_product_variant_reference_text":"Review for","widget_no_store_reviews_text":"This store hasn't received any reviews yet","widget_web_restriction_product_reviews_text":"This product hasn't received any reviews yet","widget_no_items_text":"No items found","widget_show_more_text":"Show more","widget_write_a_store_review_text":"Write a Store Review","widget_product_and_store_reviews_text":"Product and store reviews","widget_reviews_in_collection_text":"Reviews in this collection","widget_other_languages_heading":"Reviews in Other Languages","widget_translate_review_text":"Translate review to {{ language }}","widget_translating_review_text":"Translating...","widget_show_original_translation_text":"Show original ({{ language }})","widget_translate_review_failed_text":"Review couldn't be translated.","widget_translate_review_retry_text":"Retry","widget_translate_review_try_again_later_text":"Try again later","show_product_url_for_grouped_product":false,"widget_sorting_pictures_first_text":"Pictures First","show_pictures_on_all_rev_page_mobile":false,"show_pictures_on_all_rev_page_desktop":false,"floating_tab_hide_mobile_install_preference":false,"floating_tab_button_name":"★ Reviews","floating_tab_title":"Let customers speak for us","floating_tab_button_color":"","floating_tab_button_background_color":"","floating_tab_url":"","floating_tab_url_enabled":false,"floating_tab_tab_style":"text","all_reviews_text_badge_text":"Customers rate us {{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5 based on {{ shop.metafields.judgeme.all_reviews_count }} reviews.","all_reviews_text_badge_text_branded_style":"{{ shop.metafields.judgeme.all_reviews_rating | round: 1 }} out of 5 stars based on {{ shop.metafields.judgeme.all_reviews_count }} reviews","is_all_reviews_text_badge_a_link":false,"show_stars_for_all_reviews_text_badge":false,"all_reviews_text_badge_url":"","all_reviews_text_style":"branded","all_reviews_text_color_style":"judgeme_brand_color","all_reviews_text_color":"#108474","all_reviews_text_show_jm_brand":false,"featured_carousel_show_header":true,"featured_carousel_title":"Let customers speak for us","testimonials_carousel_title":"Customers are saying","videos_carousel_title":"Real customer stories","cards_carousel_title":"Customers are saying","featured_carousel_count_text":"from {{ n }} reviews","featured_carousel_add_link_to_all_reviews_page":false,"featured_carousel_url":"","featured_carousel_show_images":true,"featured_carousel_autoslide_interval":5,"featured_carousel_arrows_on_the_sides":true,"featured_carousel_height":250,"featured_carousel_width":80,"featured_carousel_image_size":0,"featured_carousel_image_height":250,"featured_carousel_arrow_color":"#eeeeee","verified_count_badge_style":"branded","verified_count_badge_orientation":"horizontal","verified_count_badge_color_style":"judgeme_brand_color","verified_count_badge_color":"#108474","is_verified_count_badge_a_link":false,"verified_count_badge_url":"","verified_count_badge_show_jm_brand":true,"widget_rating_preset_default":5,"widget_first_sub_tab":"product-reviews","widget_show_histogram":true,"widget_histogram_use_custom_color":false,"widget_pagination_use_custom_color":false,"widget_star_use_custom_color":false,"widget_verified_badge_use_custom_color":false,"widget_write_review_use_custom_color":false,"picture_reminder_submit_button":"Upload Pictures","enable_review_videos":true,"mute_video_by_default":true,"widget_sorting_videos_first_text":"Videos First","widget_review_pending_text":"Pending","featured_carousel_items_for_large_screen":3,"social_share_options_order":"Facebook,Twitter","remove_microdata_snippet":true,"disable_json_ld":false,"enable_json_ld_products":false,"preview_badge_show_question_text":false,"preview_badge_no_question_text":"No questions","preview_badge_n_question_text":"{{ number_of_questions }} question/questions","qa_badge_show_icon":false,"qa_badge_position":"same-row","remove_judgeme_branding":false,"widget_add_search_bar":false,"widget_search_bar_placeholder":"Search","widget_sorting_verified_only_text":"Verified only","featured_carousel_theme":"focused","featured_carousel_show_rating":true,"featured_carousel_show_title":true,"featured_carousel_show_body":true,"featured_carousel_show_date":false,"featured_carousel_show_reviewer":true,"featured_carousel_show_product":false,"featured_carousel_header_background_color":"#108474","featured_carousel_header_text_color":"#ffffff","featured_carousel_name_product_separator":"reviewed","featured_carousel_full_star_background":"#108474","featured_carousel_empty_star_background":"#dadada","featured_carousel_vertical_theme_background":"#f9fafb","featured_carousel_verified_badge_enable":true,"featured_carousel_verified_badge_color":"#108474","featured_carousel_border_style":"round","featured_carousel_review_line_length_limit":3,"featured_carousel_more_reviews_button_text":"Read more reviews","featured_carousel_view_product_button_text":"View product","all_reviews_page_load_reviews_on":"scroll","all_reviews_page_load_more_text":"Load More Reviews","disable_fb_tab_reviews":false,"enable_ajax_cdn_cache":false,"widget_advanced_speed_features":5,"widget_public_name_text":"displayed publicly like","default_reviewer_name":"John Smith","default_reviewer_name_has_non_latin":true,"widget_reviewer_anonymous":"Anonymous","medals_widget_title":"Judge.me Review Medals","medals_widget_background_color":"#f9fafb","medals_widget_position":"footer_all_pages","medals_widget_border_color":"#f9fafb","medals_widget_verified_text_position":"left","medals_widget_use_monochromatic_version":false,"medals_widget_elements_color":"#108474","show_reviewer_avatar":true,"widget_invalid_yt_video_url_error_text":"Not a YouTube video URL","widget_max_length_field_error_text":"Please enter no more than {0} characters.","widget_show_country_flag":false,"widget_show_collected_via_shop_app":true,"widget_verified_by_shop_badge_style":"light","widget_verified_by_shop_text":"Verified by Shop","widget_show_photo_gallery":true,"widget_load_with_code_splitting":true,"widget_ugc_install_preference":false,"widget_ugc_title":"Made by us, Shared by you","widget_ugc_subtitle":"Tag us to see your picture featured in our page","widget_ugc_arrows_color":"#ffffff","widget_ugc_primary_button_text":"Buy Now","widget_ugc_primary_button_background_color":"#108474","widget_ugc_primary_button_text_color":"#ffffff","widget_ugc_primary_button_border_width":"0","widget_ugc_primary_button_border_style":"none","widget_ugc_primary_button_border_color":"#108474","widget_ugc_primary_button_border_radius":"25","widget_ugc_secondary_button_text":"Load More","widget_ugc_secondary_button_background_color":"#ffffff","widget_ugc_secondary_button_text_color":"#108474","widget_ugc_secondary_button_border_width":"2","widget_ugc_secondary_button_border_style":"solid","widget_ugc_secondary_button_border_color":"#108474","widget_ugc_secondary_button_border_radius":"25","widget_ugc_reviews_button_text":"View Reviews","widget_ugc_reviews_button_background_color":"#ffffff","widget_ugc_reviews_button_text_color":"#108474","widget_ugc_reviews_button_border_width":"2","widget_ugc_reviews_button_border_style":"solid","widget_ugc_reviews_button_border_color":"#108474","widget_ugc_reviews_button_border_radius":"25","widget_ugc_reviews_button_link_to":"judgeme-reviews-page","widget_ugc_show_post_date":true,"widget_ugc_max_width":"800","widget_rating_metafield_value_type":true,"widget_primary_color":"#000000","widget_enable_secondary_color":false,"widget_secondary_color":"#edf5f5","widget_summary_average_rating_text":"{{ average_rating }} out of 5","widget_media_grid_title":"Customer photos \u0026 videos","widget_media_grid_see_more_text":"See more","widget_round_style":false,"widget_show_product_medals":true,"widget_verified_by_judgeme_text":"Verified by Judge.me","widget_show_store_medals":true,"widget_verified_by_judgeme_text_in_store_medals":"Verified by Judge.me","widget_media_field_exceed_quantity_message":"Sorry, we can only accept {{ max_media }} for one review.","widget_media_field_exceed_limit_message":"{{ file_name }} is too large, please select a {{ media_type }} less than {{ size_limit }}MB.","widget_review_submitted_text":"Review Submitted!","widget_question_submitted_text":"Question Submitted!","widget_close_form_text_question":"Cancel","widget_write_your_answer_here_text":"Write your answer here","widget_enabled_branded_link":true,"widget_show_collected_by_judgeme":false,"widget_reviewer_name_color":"","widget_write_review_text_color":"","widget_write_review_bg_color":"","widget_collected_by_judgeme_text":"collected by Judge.me","widget_pagination_type":"standard","widget_load_more_text":"Load More","widget_load_more_color":"#108474","widget_full_review_text":"Full Review","widget_read_more_reviews_text":"Read More Reviews","widget_read_questions_text":"Read Questions","widget_questions_and_answers_text":"Questions \u0026 Answers","widget_verified_by_text":"Verified by","widget_verified_text":"Verified","widget_number_of_reviews_text":"{{ number_of_reviews }} reviews","widget_back_button_text":"Back","widget_next_button_text":"Next","widget_custom_forms_filter_button":"Filters","custom_forms_style":"horizontal","widget_show_review_information":false,"how_reviews_are_collected":"How reviews are collected?","widget_show_review_keywords":false,"widget_gdpr_statement":"How we use your data: We'll only contact you about the review you left, and only if necessary. By submitting your review, you agree to Judge.me's \u003ca href='https://judge.me/terms' target='_blank' rel='nofollow noopener'\u003eterms\u003c/a\u003e, \u003ca href='https://judge.me/privacy' target='_blank' rel='nofollow noopener'\u003eprivacy\u003c/a\u003e and \u003ca href='https://judge.me/content-policy' target='_blank' rel='nofollow noopener'\u003econtent\u003c/a\u003e policies.","widget_multilingual_sorting_enabled":false,"widget_translate_review_content_enabled":false,"widget_translate_review_content_method":"manual","popup_widget_review_selection":"automatically_with_pictures","popup_widget_round_border_style":true,"popup_widget_show_title":true,"popup_widget_show_body":true,"popup_widget_show_reviewer":false,"popup_widget_show_product":true,"popup_widget_show_pictures":true,"popup_widget_use_review_picture":true,"popup_widget_show_on_home_page":true,"popup_widget_show_on_product_page":true,"popup_widget_show_on_collection_page":true,"popup_widget_show_on_cart_page":true,"popup_widget_position":"bottom_left","popup_widget_first_review_delay":5,"popup_widget_duration":5,"popup_widget_interval":5,"popup_widget_review_count":5,"popup_widget_hide_on_mobile":true,"review_snippet_widget_round_border_style":true,"review_snippet_widget_card_color":"#FFFFFF","review_snippet_widget_slider_arrows_background_color":"#FFFFFF","review_snippet_widget_slider_arrows_color":"#000000","review_snippet_widget_star_color":"#108474","show_product_variant":false,"all_reviews_product_variant_label_text":"Variant: ","widget_show_verified_branding":true,"widget_ai_summary_title":"Customers say","widget_ai_summary_disclaimer":"AI-powered review summary based on recent customer reviews","widget_show_ai_summary":false,"widget_show_ai_summary_bg":false,"write_review_button_visibility":"everyone","store_summary_widget_heading":"Customers rate this store","store_summary_widget_button_text":"View customer reviews","store_summary_widget_button_theme_text":"See AI reviews summary","widget_show_review_title_input":true,"redirect_reviewers_invited_via_email":"external_form","request_store_review_after_product_review":true,"request_review_other_products_in_order":true,"review_form_color_scheme":"default","review_form_corner_style":"square","review_form_star_color":{},"review_form_text_color":"#333333","review_form_background_color":"#ffffff","review_form_field_background_color":"#fafafa","review_form_button_color":{},"review_form_button_text_color":"#ffffff","review_form_modal_overlay_color":"#000000","review_content_screen_title_text":"How would you rate this product?","review_content_introduction_text":"We would love it if you would share a bit about your experience.","store_review_form_title_text":"How would you rate this store?","store_review_form_introduction_text":"We would love it if you would share a bit about your experience.","show_review_guidance_text":true,"one_star_review_guidance_text":"Poor","five_star_review_guidance_text":"Great","customer_information_screen_title_text":"About you","customer_information_introduction_text":"Please tell us more about you.","custom_questions_screen_title_text":"Your experience in more detail","custom_questions_introduction_text":"Here are a few questions to help us understand more about your experience.","review_submitted_screen_title_text":"Thanks for your review!","review_submitted_screen_thank_you_text":"We are processing it and it will appear on the store soon.","review_submitted_screen_email_verification_text":"Please confirm your email by clicking the link we just sent you. This helps us keep reviews authentic.","confirm_email_screen_title_text":"Confirm your email","confirm_email_screen_message_text":"To help keep reviews authentic, we'll send you a secure link to continue writing your review. It only takes a moment.","check_email_screen_title_text":"Check your email","check_email_screen_message_text":"We sent you an email to {{ email }}. Click the button on the email to continue.","check_email_screen_resend_message_text":"Email resent!","check_email_resend_hint_text":"Didn't get the email? Check your spam folder or [resend the email].","verification_email_rate_limit_error_text":"You've reached the limit for review attempts on this product. Please check your inbox or try again later.","review_submitted_request_store_review_text":"Would you like to share your experience of shopping with us?","review_submitted_review_other_products_text":"Would you like to review these products?","store_review_screen_title_text":"Would you like to share your experience of shopping with us?","store_review_introduction_text":"We value your feedback and use it to improve. Please share any thoughts or suggestions you have.","reviewer_media_screen_title_picture_text":"Share a picture","reviewer_media_introduction_picture_text":"Upload a photo to support your review.","reviewer_media_screen_title_video_text":"Share a video","reviewer_media_introduction_video_text":"Upload a video to support your review.","reviewer_media_screen_title_picture_or_video_text":"Share a picture or video","reviewer_media_introduction_picture_or_video_text":"Upload a photo or video to support your review.","reviewer_media_youtube_url_text":"Paste your Youtube URL here","advanced_settings_next_step_button_text":"Next","advanced_settings_close_review_button_text":"Close","modal_write_review_flow":true,"write_review_flow_required_text":"Required","write_review_flow_privacy_message_text":"We respect your privacy.","write_review_flow_anonymous_text":"Post review as anonymous","write_review_flow_visibility_text":"This won't be visible to other customers.","write_review_flow_multiple_selection_help_text":"Select as many as you like","write_review_flow_single_selection_help_text":"Select one option","write_review_flow_required_field_error_text":"This field is required","write_review_flow_invalid_email_error_text":"Please enter a valid email address","write_review_flow_max_length_error_text":"Max. {{ max_length }} characters.","write_review_flow_media_upload_text":"\u003cb\u003eClick to upload\u003c/b\u003e or drag and drop","write_review_flow_gdpr_statement":"We'll only contact you about your review if necessary. By submitting your review, you agree to our \u003ca href='https://judge.me/terms' target='_blank' rel='nofollow noopener'\u003eterms and conditions\u003c/a\u003e and \u003ca href='https://judge.me/privacy' target='_blank' rel='nofollow noopener'\u003eprivacy policy\u003c/a\u003e.","rating_only_reviews_enabled":true,"show_negative_reviews_help_screen":false,"new_review_flow_help_screen_rating_threshold":3,"negative_review_resolution_screen_title_text":"Tell us more","negative_review_resolution_text":"Your experience matters to us. If there were issues with your purchase, we're here to help. Feel free to reach out to us, we'd love the opportunity to make things right.","negative_review_resolution_button_text":"Contact us","negative_review_resolution_proceed_with_review_text":"Leave a review","negative_review_resolution_subject":"Issue with purchase from {{ shop_name }}.{{ order_name }}","preview_badge_collection_page_install_status":false,"widget_review_custom_css":"","preview_badge_custom_css":"","preview_badge_stars_count":"5-stars","featured_carousel_custom_css":"","floating_tab_custom_css":"","all_reviews_widget_custom_css":"","medals_widget_custom_css":"","verified_badge_custom_css":"","all_reviews_text_custom_css":"","transparency_badges_collected_via_store_invite":false,"transparency_badges_from_another_provider":false,"transparency_badges_collected_from_store_visitor":false,"transparency_badges_collected_by_verified_review_provider":false,"transparency_badges_earned_reward":false,"transparency_badges_collected_via_store_invite_text":"Review collected via store invitation","transparency_badges_from_another_provider_text":"Review collected from another provider","transparency_badges_collected_from_store_visitor_text":"Review collected from a store visitor","transparency_badges_written_in_google_text":"Review written in Google","transparency_badges_written_in_etsy_text":"Review written in Etsy","transparency_badges_written_in_shop_app_text":"Review written in Shop App","transparency_badges_earned_reward_text":"Review earned a reward for future purchase","product_review_widget_per_page":10,"widget_store_review_label_text":"Review about the store","checkout_comment_extension_title_on_product_page":"Customer Comments","checkout_comment_extension_num_latest_comment_show":5,"checkout_comment_extension_format":"name_and_timestamp","checkout_comment_customer_name":"last_initial","checkout_comment_comment_notification":true,"preview_badge_collection_page_install_preference":false,"preview_badge_home_page_install_preference":false,"preview_badge_product_page_install_preference":false,"review_widget_install_preference":"","review_carousel_install_preference":false,"floating_reviews_tab_install_preference":"none","verified_reviews_count_badge_install_preference":false,"all_reviews_text_install_preference":false,"review_widget_best_location":false,"judgeme_medals_install_preference":false,"review_widget_revamp_enabled":false,"review_widget_qna_enabled":false,"review_widget_header_theme":"minimal","review_widget_widget_title_enabled":true,"review_widget_header_text_size":"medium","review_widget_header_text_weight":"regular","review_widget_average_rating_style":"compact","review_widget_bar_chart_enabled":true,"review_widget_bar_chart_type":"numbers","review_widget_bar_chart_style":"standard","review_widget_expanded_media_gallery_enabled":false,"review_widget_show_review_highlights":false,"review_widget_show_review_keywords_in_gray":false,"review_widget_reviews_section_theme":"standard","review_widget_image_style":"thumbnails","review_widget_review_image_ratio":"square","review_widget_stars_size":"medium","review_widget_verified_badge":"standard_text","review_widget_review_title_text_size":"medium","review_widget_review_text_size":"medium","review_widget_review_text_length":"medium","review_widget_number_of_columns_desktop":3,"review_widget_carousel_transition_speed":5,"review_widget_custom_questions_answers_display":"always","review_widget_card_section_size":"small","review_widget_button_text_color":"#FFFFFF","review_widget_text_color":"#000000","review_widget_lighter_text_color":"#7B7B7B","review_widget_corner_styling":"soft","review_widget_review_word_singular":"review","review_widget_review_word_plural":"reviews","review_widget_voting_label":"Helpful?","review_widget_shop_reply_label":"Reply from {{ shop_name }}:","review_widget_filters_title":"Filters","review_widget_filter_rating_title":"Rating","review_widget_filter_keyword_title":"Keyword","review_widget_clear_filters_text":"Clear filters","review_widget_expand_more_text":"More","review_widget_review_highlights_title":"Review highlights","qna_widget_question_word_singular":"Question","qna_widget_question_word_plural":"Questions","qna_widget_answer_reply_label":"Answer from {{ answerer_name }}:","qna_content_screen_title_text":"Ask a question about this product","qna_widget_question_required_field_error_text":"Please enter your question.","qna_widget_flow_gdpr_statement":"We'll only contact you about your question if necessary. By submitting your question, you agree to our \u003ca href='https://judge.me/terms' target='_blank' rel='nofollow noopener'\u003eterms and conditions\u003c/a\u003e and \u003ca href='https://judge.me/privacy' target='_blank' rel='nofollow noopener'\u003eprivacy policy\u003c/a\u003e.","qna_widget_question_submitted_text":"Thanks for your question!","qna_widget_close_form_text_question":"Close","qna_widget_question_submit_success_text":"We’ll notify you by email when your question is answered.","all_reviews_widget_v2025_enabled":false,"all_reviews_widget_v2025_header_theme":"default","all_reviews_widget_v2025_widget_title_enabled":true,"all_reviews_widget_v2025_header_text_size":"medium","all_reviews_widget_v2025_header_text_weight":"regular","all_reviews_widget_v2025_average_rating_style":"compact","all_reviews_widget_v2025_bar_chart_enabled":true,"all_reviews_widget_v2025_bar_chart_type":"numbers","all_reviews_widget_v2025_bar_chart_style":"standard","all_reviews_widget_v2025_expanded_media_gallery_enabled":false,"all_reviews_widget_v2025_show_store_medals":true,"all_reviews_widget_v2025_show_photo_gallery":true,"all_reviews_widget_v2025_show_review_keywords":false,"all_reviews_widget_v2025_show_ai_summary":false,"all_reviews_widget_v2025_show_ai_summary_bg":false,"all_reviews_widget_v2025_show_review_highlights":false,"all_reviews_widget_v2025_show_review_keywords_in_gray":false,"all_reviews_widget_v2025_add_search_bar":false,"all_reviews_widget_v2025_default_sort_method":"most-recent","all_reviews_widget_v2025_reviews_per_page":10,"all_reviews_widget_v2025_reviews_section_theme":"default","all_reviews_widget_v2025_image_style":"thumbnails","all_reviews_widget_v2025_review_image_ratio":"square","all_reviews_widget_v2025_stars_size":"medium","all_reviews_widget_v2025_verified_badge":"standard_text","all_reviews_widget_v2025_review_title_text_size":"medium","all_reviews_widget_v2025_review_text_size":"medium","all_reviews_widget_v2025_review_text_length":"medium","all_reviews_widget_v2025_number_of_columns_desktop":3,"all_reviews_widget_v2025_carousel_transition_speed":5,"all_reviews_widget_v2025_custom_questions_answers_display":"always","all_reviews_widget_v2025_review_dates":false,"all_reviews_widget_v2025_card_section_size":"small","all_reviews_widget_v2025_show_product_variant":false,"all_reviews_widget_v2025_show_reviewer_avatar":true,"all_reviews_widget_v2025_reviewer_name_as_initial":"","all_reviews_widget_v2025_review_location_show":false,"all_reviews_widget_v2025_location_format":"","all_reviews_widget_v2025_show_country_flag":false,"all_reviews_widget_v2025_widget_thumb":false,"all_reviews_widget_v2025_verified_by_shop_badge_style":"light","all_reviews_widget_v2025_social_share":false,"all_reviews_widget_v2025_social_share_options_order":"Facebook,Twitter,LinkedIn,Pinterest","all_reviews_widget_v2025_pagination_type":"standard","all_reviews_widget_v2025_button_text_color":"#FFFFFF","all_reviews_widget_v2025_text_color":"#000000","all_reviews_widget_v2025_lighter_text_color":"#7B7B7B","all_reviews_widget_v2025_corner_styling":"soft","all_reviews_widget_v2025_title":"Customer reviews","all_reviews_widget_v2025_ai_summary_title":"Customers say about this store","all_reviews_widget_v2025_no_review_text":"Be the first to write a review","all_reviews_widget_v2025_review_highlights_title":"Review highlights","reviews_grid_widget_show_sample_reviews":false,"reviews_grid_widget_review_selection":"all","reviews_grid_widget_select_products":[],"reviews_grid_widget_show_media_only":false,"reviews_grid_widget_display_order":"media_first","reviews_grid_widget_columns_desktop":3,"reviews_grid_widget_rows_desktop":3,"reviews_grid_widget_columns_mobile":2,"reviews_grid_widget_rows_mobile":6,"reviews_grid_widget_show_stars":true,"reviews_grid_widget_show_reviewer_name":true,"reviews_grid_widget_show_review_title_on_hover_desktop":true,"reviews_grid_widget_corner_styling":"soft","reviews_grid_widget_card_spacing":"medium","reviews_grid_widget_header_text_color":"#000000","reviews_grid_widget_star_and_reviewer_name_color":"#F9F9F9","reviews_grid_widget_overlay_and_background_color":"#000000","reviews_grid_widget_content_color":"#F9F9F9","reviews_grid_widget_header_text":"From our customers","reviews_grid_widget_show_average_rating":true,"platform":"shopify","branding_url":"https://app.judge.me/reviews","branding_text":"Powered by Judge.me","locale":"en","reply_name":"rarabarefoot","widget_version":"3.0","footer":true,"autopublish":false,"review_dates":true,"enable_custom_form":false,"shop_locale":"en","enable_multi_locales_translations":true,"show_review_title_input":true,"review_verification_email_status":"always","require_verification_before_submit":false,"customer_account_validation_enabled":true,"can_be_branded":true,"reply_name_text":"rarabarefoot"};</script> <style class='jdgm-settings-style'>.jdgm-xx{left:0}:root{--jdgm-primary-color: #000;--jdgm-secondary-color: rgba(0,0,0,0.1);--jdgm-star-color: #000;--jdgm-write-review-text-color: white;--jdgm-write-review-bg-color: #000000;--jdgm-paginate-color: #000;--jdgm-border-radius: 0;--jdgm-reviewer-name-color: #000000}.jdgm-histogram__bar-content{background-color:#000}.jdgm-rev[data-verified-buyer=true] .jdgm-rev__icon.jdgm-rev__icon:after,.jdgm-rev__buyer-badge.jdgm-rev__buyer-badge{color:white;background-color:#000}.jdgm-review-widget--small .jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"See more"}@media only screen and (min-width: 768px){.jdgm-gallery.jdgm-gallery .jdgm-gallery__thumbnail-link:nth-child(8) .jdgm-gallery__thumbnail-wrapper.jdgm-gallery__thumbnail-wrapper:before{content:"See more"}}.jdgm-preview-badge .jdgm-star.jdgm-star{color:#000000}.jdgm-prev-badge[data-average-rating='0.00']{display:none !important}.jdgm-author-all-initials{display:none !important}.jdgm-author-last-initial{display:none !important}.jdgm-rev-widg__title{visibility:hidden}.jdgm-rev-widg__summary-text{visibility:hidden}.jdgm-prev-badge__text{visibility:hidden}.jdgm-rev__prod-link-prefix:before{content:'about'}.jdgm-rev__variant-label:before{content:'Variant: '}.jdgm-rev__out-of-store-text:before{content:'(out of store)'}@media only screen and (min-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}@media only screen and (max-width: 768px){.jdgm-rev__pics .jdgm-rev_all-rev-page-picture-separator,.jdgm-rev__pics .jdgm-rev__product-picture{display:none}}.jdgm-preview-badge[data-template="product"]{display:none !important}.jdgm-preview-badge[data-template="collection"]{display:none !important}.jdgm-preview-badge[data-template="index"]{display:none !important}.jdgm-review-widget[data-from-snippet="true"]{display:none !important}.jdgm-verified-count-badget[data-from-snippet="true"]{display:none !important}.jdgm-carousel-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-all-reviews-text[data-from-snippet="true"]{display:none !important}.jdgm-medals-section[data-from-snippet="true"]{display:none !important}.jdgm-ugc-media-wrapper[data-from-snippet="true"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_via_store_invitation"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_another_provider"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_collected_from_store_visitor"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_written_in_etsy"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_written_in_google_business"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_written_in_shop_app"]{display:none !important}.jdgm-rev__transparency-badge[data-badge-type="review_earned_for_future_purchase"]{display:none !important}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card{border-radius:8px;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__cards-container .jdgm-rev-snippet-card__rev-rating .jdgm-star{color:#108474}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn{border-radius:50%;background:#fff}.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__prev-btn>svg,.jdgm-review-snippet-widget .jdgm-rev-snippet-widget__next-btn>svg{fill:#000}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jm-mfp-content,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__icon,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__pic-img,.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev__reply{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev[data-verified-buyer="true"] .jdgm-full-rev__icon::after{border-radius:8px}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-rev__buyer-badge{border-radius:calc( 8px / 2 )}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__replier::before{content:'rarabarefoot'}.jdgm-full-rev-modal.rev-snippet-widget .jm-mfp-container .jdgm-full-rev .jdgm-full-rev__product-button{border-radius:calc( 8px * 6 )}
+</style> <style class='jdgm-settings-style'></style>
+
+  <style class='jdgm-miracle-styles'>
+  @-webkit-keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@font-face{font-family:'JudgemeStar';src:url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAA0AAAAABrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAEgAAAABoAAAAcbyQ+3kdERUYAAARgAAAAHgAAACAAMwAGT1MvMgAAAZgAAABGAAAAVi+vS9xjbWFwAAAB8AAAAEAAAAFKwBMjvmdhc3AAAARYAAAACAAAAAj//wADZ2x5ZgAAAkAAAAEJAAABdH33LXtoZWFkAAABMAAAAC0AAAA2BroQKWhoZWEAAAFgAAAAHAAAACQD5QHQaG10eAAAAeAAAAAPAAAAFAYAAABsb2NhAAACMAAAAA4AAAAOAO4AeG1heHAAAAF8AAAAHAAAACAASgAvbmFtZQAAA0wAAADeAAABkorWfVZwb3N0AAAELAAAACkAAABEp3ubLXgBY2BkYADhPPP4OfH8Nl8ZuJkYQODS2fRrCPr/aSYGxq1ALgcDWBoAO60LkwAAAHgBY2BkYGDc+v80gx4TAwgASaAICmABAFB+Arl4AWNgZGBgYGPQYWBiAAIwyQgWc2AAAwAHVQB6eAFjYGRiYJzAwMrAwejDmMbAwOAOpb8ySDK0MDAwMbByMsCBAAMCBKS5pjA4PGB4wMR44P8BBj3GrQymQGFGkBwAjtgK/gAAeAFjYoAAEA1jAwAAZAAHAHgB3crBCcAwDEPRZydkih567CDdf4ZskmLwFBV8xBfCaC4BXkOUmx4sU0h2ngNb9V0vQCxaRKIAevT7fGWuBrEAAAAAAAAAAAA0AHgAugAAeAF9z79Kw1AUx/FzTm7un6QmJtwmQ5Bg1abgEGr/BAqlU6Gju+Cgg1MkQ/sA7Vj7BOnmO/gUvo2Lo14NqIO6/IazfD8HEODtmQCfoANwNsyp2/GJt3WKQrd1NLiYYWx2PBqOsmJMEOznPOTzfSCrhAtbbLdmeFLJV9eKd63WLrZcIcuaEVdssWCKM6pLCfTVOYbz/0pNSMSZKLIZpvh78sAUH6PlMrreTCabP9r+Z/puPZ2ur/RqpQHgh+MIegCnXeM4MRAPjYN//5tj4ZtTjkFqEdmeMShlEJ7tVAly2TAkx6R68Fl4E/aVvn8JqHFQ4JS1434gXKcuL31dDhzs3YbsEOAd/IU88gAAAHgBfY4xTgMxEEVfkk0AgRCioKFxQYd2ZRtpixxgRU2RfhU5q5VWseQ4JdfgAJyBlmNwAM7ABRhZQ0ORwp7nr+eZAa54YwYg9zm3ynPOeFRe8MCrciXOh/KSS76UV5L/iDmrLiS5AeU519wrL3jmSbkS5115yR2fyivJv9kx0ZMZ2RLZw27q87iNQi8EBo5FSPIMw3HqBboi5lKTGAGDp8FKXWP+t9TU01Lj5His1Ba6uM9dTEMwvrFmbf5GC/q2drW3ruXUhhsCiQOjznFlCzYhHUZp4xp76vsvQh89CQAAeAFjYGJABowM6IANLMrEyMTIzMjCXpyRWJBqZshWXJJYBKOMAFHFBucAAAAAAAAB//8AAngBY2BkYGDgA2IJBhBgAvKZGViBJAuYxwAABJsAOgAAeAFjYGBgZACCk535hiD60tn0azAaAEqpB6wAAA==") format("woff");font-weight:normal;font-style:normal}.jdgm-star{font-family:'JudgemeStar';display:inline !important;text-decoration:none !important;padding:0 4px 0 0 !important;margin:0 !important;font-weight:bold;opacity:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.jdgm-star:hover{opacity:1}.jdgm-star:last-of-type{padding:0 !important}.jdgm-star.jdgm--on:before{content:"\e000"}.jdgm-star.jdgm--off:before{content:"\e001"}.jdgm-star.jdgm--half:before{content:"\e002"}.jdgm-widget *{margin:0;line-height:1.4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch}.jdgm-hidden{display:none !important;visibility:hidden !important}.jdgm-temp-hidden{display:none}.jdgm-spinner{width:40px;height:40px;margin:auto;border-radius:50%;border-top:2px solid #eee;border-right:2px solid #eee;border-bottom:2px solid #eee;border-left:2px solid #ccc;-webkit-animation:jdgm-spin 0.8s infinite linear;animation:jdgm-spin 0.8s infinite linear}.jdgm-spinner:empty{display:block}.jdgm-prev-badge{display:block !important}
+
+</style>
+
+<script data-cfasync='false' class='jdgm-script'>
+!function(e){window.jdgm=window.jdgm||{},jdgm.CDN_HOST="https://cdnwidget.judge.me/",jdgm.CDN_HOST_ALT="https://cdn2.judge.me/cdn/widget_frontend/",jdgm.API_HOST="https://api.judge.me/",jdgm.CDN_BASE_URL="https://cdn.shopify.com/extensions/019e4051-3d07-7f41-bd3e-0e4b08acf15c/judgeme-525/assets/",jdgm.CDN_API_HOST="https://cdn.judge.me/",
+jdgm.docReady=function(d){(e.attachEvent?"complete"===e.readyState:"loading"!==e.readyState)?
+setTimeout(d,0):e.addEventListener("DOMContentLoaded",d)},jdgm.loadCSS=function(d,t,o,a){
+!o&&jdgm.loadCSS.requestedUrls.indexOf(d)>=0||(jdgm.loadCSS.requestedUrls.push(d),
+(a=e.createElement("link")).rel="stylesheet",a.class="jdgm-stylesheet",a.media="nope!",
+a.href=d,a.onload=function(){this.media="all",t&&setTimeout(t)},e.body.appendChild(a))},
+jdgm.loadCSS.requestedUrls=[],jdgm.loadJS=function(e,d){var t=new XMLHttpRequest;
+t.onreadystatechange=function(){4===t.readyState&&(Function(t.response)(),d&&d(t.response))},
+t.open("GET",e),t.onerror=function(){if(e.indexOf(jdgm.CDN_HOST)===0&&jdgm.CDN_HOST_ALT!==jdgm.CDN_HOST){var f=e.replace(jdgm.CDN_HOST,jdgm.CDN_HOST_ALT);jdgm.loadJS(f,d)}},t.send()},jdgm.docReady((function(){(window.jdgmLoadCSS||e.querySelectorAll(
+".jdgm-widget, .jdgm-all-reviews-page").length>0)&&(jdgmSettings.widget_load_with_code_splitting?
+parseFloat(jdgmSettings.widget_version)>=3?jdgm.loadCSS(jdgm.CDN_BASE_URL+"widget_v3_base.css"):
+jdgm.loadCSS(jdgm.CDN_BASE_URL+"widget_base.css"):jdgm.loadCSS(jdgm.CDN_BASE_URL+"shopify_v2.css")
+)}))}(document);
+</script>
+<noscript><link rel="stylesheet" type="text/css" media="all" href="https://cdn.shopify.com/extensions/019e4051-3d07-7f41-bd3e-0e4b08acf15c/judgeme-525/assets/shopify_v2.css"></noscript>
+
+<!-- BEGIN app snippet: theme_fix_tags --><script>
+  (function() {
+    var jdgmThemeFixes = null;
+    if (!jdgmThemeFixes) return;
+    var thisThemeFix = jdgmThemeFixes[Shopify.theme.id];
+    if (!thisThemeFix) return;
+
+    if (thisThemeFix.html) {
+      document.addEventListener("DOMContentLoaded", function() {
+        var htmlDiv = document.createElement('div');
+        htmlDiv.classList.add('jdgm-theme-fix-html');
+        htmlDiv.innerHTML = thisThemeFix.html;
+        document.body.append(htmlDiv);
+      });
+    };
+
+    if (thisThemeFix.css) {
+      var styleTag = document.createElement('style');
+      styleTag.classList.add('jdgm-theme-fix-style');
+      styleTag.innerHTML = thisThemeFix.css;
+      document.head.append(styleTag);
+    };
+
+    if (thisThemeFix.js) {
+      var scriptTag = document.createElement('script');
+      scriptTag.classList.add('jdgm-theme-fix-script');
+      scriptTag.innerHTML = thisThemeFix.js;
+      document.head.append(scriptTag);
+    };
+  })();
+</script>
+<!-- END app snippet -->
+<!-- End of Judge.me Core -->
+
+<!-- END app block --><script src="https://cdn.shopify.com/extensions/019e4527-5a46-75d0-94b8-a128c10742a1/lb-upsell-358/assets/lb-selleasy.js" type="text/javascript" defer="defer"></script>
+<script src="https://cdn.shopify.com/extensions/019e445c-8490-7c39-8588-a29cc919e8eb/omnisend-52/assets/omnisend-in-shop.js" type="text/javascript" defer="defer"></script>
+<link href="https://cdn.shopify.com/extensions/019e4395-f9de-70ac-84a1-4e09beb56b5c/product-labels-by-bss-610/assets/bss-pl-style.min.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.shopify.com/extensions/019e4051-3d07-7f41-bd3e-0e4b08acf15c/judgeme-525/assets/loader.js" type="text/javascript" defer="defer"></script>
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {try {var session_token_from_headers = performance.getEntriesByType('navigation')[0].serverTiming.find(x => x.name == '_s').description;} catch {var session_token_from_headers = undefined;}var session_cookie_matches = document.cookie.match(/_shopify_s=([^;]*)/);var session_token_from_cookie = session_cookie_matches && session_cookie_matches.length === 2 ? session_cookie_matches[1] : "";var session_token = session_token_from_headers || session_token_from_cookie || "";function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 68852940974,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token,page_type: "page"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script>
+  window.__TREKKIE_SHIM_QUEUE = window.__TREKKIE_SHIM_QUEUE || [];
+</script>
+<script id="web-pixels-manager-setup">(function(){var wpmLoader=function(){"use strict";return function(e,d,r,n){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};if(!Boolean(null==(i=null==(a=window.Shopify)?void 0:a.analytics)?void 0:i.replayQueue)){var a,i;window.Shopify=window.Shopify||{};var t=window.Shopify;t.analytics=t.analytics||{};var s=t.analytics;s.replayQueue=[],s.publish=function(e,d,r){return s.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var l,u,c,m,p,f,h,g,y,w,v,b,S,P=(u=(l={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/}).modern,c=l.legacy,(m=navigator.userAgent).match(u)?"modern":m.match(c)?"legacy":"unknown"),C="modern"===P?"modern":"legacy",_=(null!=n?n:{modern:"",legacy:""})[C],O=[(p={baseUrl:d,hashVersion:r,buildTarget:C}).baseUrl,"/wpm","/b",p.hashVersion,"modern"===p.buildTarget?"m":"l",".js"].join(""),U=(f={version:r,bundleTarget:P,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint},h=f.version,g=f.bundleTarget,y=f.surface,w=f.pageUrl,v=f.monorailEndpoint,{emit:function(e){var d=e.status,r=e.errorMsg,n=(new Date).getTime(),o=JSON.stringify({metadata:{event_sent_at_ms:n},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:h,bundle_target:g,page_url:w,status:d,surface:y,error_msg:r},metadata:{event_created_at_ms:n}}]});if(!v)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(v,o)}catch(e){}var a=new XMLHttpRequest;try{return a.open("POST",v,!0),a.setRequestHeader("Content-Type","text/plain"),a.send(o),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}});try{o.browserTarget=P,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,a=e.onerror,i=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,i&&(l.integrity=i,l.crossOrigin="anonymous"),s)for(var m in s)if(Object.prototype.hasOwnProperty.call(s,m))try{l.dataset[m]=s[m]}catch(e){}if(o&&l.addEventListener("load",o),a&&l.addEventListener("error",a),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:O,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null==(d=null==(e=window.Shopify)?void 0:e.analytics)?void 0:d.initialized)}()){var d=window.webPixelsManager.init(e)||void 0;if(d){var r=window.Shopify.analytics;r.replayQueue.forEach(function(e){var r=e[0],n=e[1],o=e[2];d.publishCustomEvent(r,n,o)}),r.replayQueue=[],r.publish=d.publishCustomEvent,r.visitor=d.visitor,r.initialized=!0}}},onerror:function(){return U.emit({status:"failed",errorMsg:"".concat(O," has failed to load")})},sri:(b=_,S=/^sha384-[A-Za-z0-9+/=]+$/,"string"==typeof b&&S.test(b)?_:""),scriptDataAttributes:o}),U.emit({status:"loading"})}catch(e){U.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}}}();wpmLoader({shopId: 68852940974,storefrontBaseUrl: "https://www.rarabarefoot.in",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["2dca8a86","d5bdd5d0","5acaffe6"],webPixelsConfigList: [{"id":"1878818990","configuration":"{\"shop\":\"rarabarefoot.myshopify.com\",\"endpoint\":\"https:\\\/\\\/analytics.flintverse.bsscommerce.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"138baf5d883b295bb21b45affcb950f9","type":"APP","apiClientId":258085584897,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":[],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1580400814","configuration":"{\"accountID\":\"rarabarefoot.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"5759672e7cde57b66acfb16697e8a212","type":"APP","apiClientId":36115447809,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1538195630","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"c8487c7c444b18c27bae9204744ebff8","type":"APP","apiClientId":30400643073,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1477247150","configuration":"{\"accountID\":\"selleasy-metrics-track\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"a451bb5b79c95ec6981bec9c1b10ec34","type":"APP","apiClientId":5519923,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_email","read_customer_name","read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1463156910","configuration":"{\"projectId\":\"tped2b01ey\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"ee6b6e3b9753873d6a9bf4fb40951aba","type":"APP","apiClientId":240074326017,"privacyPurposes":[],"capabilities":["advanced_dom_events"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1442906286","configuration":"{\"config\":\"{\\\"google_tag_ids\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\",\\\"GT-55B3GPMZ\\\"],\\\"target_country\\\":\\\"ZZ\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/lefGCMyR26gbEIPkx9dB\\\"]},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/GwRECKDt46gbEIPkx9dB\\\"]},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/pg4xCNWR26gbEIPkx9dB\\\",\\\"MC-6RK691J580\\\"]},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/dosmCMmR26gbEIPkx9dB\\\",\\\"MC-6RK691J580\\\"]},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/vp5ICNKR26gbEIPkx9dB\\\",\\\"MC-6RK691J580\\\"]},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/pbLWCKPt46gbEIPkx9dB\\\"]},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":[\\\"G-0QBFEQQ2N4\\\",\\\"AW-17631932931\\\/iIubCM-R26gbEIPkx9dB\\\"]}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"f15305aac1e98c5c26a7c80e7bc37bde","type":"APP","apiClientId":1780363,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted","enabledFlags":["9a3ed68a"]},{"id":"1429897390","configuration":"{\"pixel_id\":\"1091229589760209\",\"pixel_type\":\"facebook_pixel\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"d72ab942028ee4f6bccc581083be605e","type":"APP","apiClientId":2329312,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted","enabledFlags":["9a3ed68a"]},{"id":"1396768942","configuration":"{\"apiURL\":\"https:\/\/api.omnisend.com\",\"appURL\":\"https:\/\/app.omnisend.com\",\"brandID\":\"68cbc1c7fead5d997ff2a4cc\",\"trackingURL\":\"https:\/\/wt.omnisendlink.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"e61689cef92d72f1e6007a9dd29969ad","type":"APP","apiClientId":186001,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"1235452078","configuration":"{\"webPixelName\":\"Judge.me\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"34ad157958823915625854214640f0bf","type":"APP","apiClientId":683015,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0460","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0460","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"rarabarefoot","paymentSettings":{"currencyCode":"INR"},"myshopifyDomain":"rarabarefoot.myshopify.com","countryCode":"IN","storefrontUrl":"https:\/\/www.rarabarefoot.in"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"products":null,"purchasingCompany":null,"page":null},},"https://www.rarabarefoot.in/cdn","7a919571w0b784b64p16d009bem0237e62e",{"modern":"","legacy":""},{"trekkieShim":true,"pageType":"page","resourceId":"105299542190","shopId":"68852940974","storefrontBaseUrl":"https:\/\/www.rarabarefoot.in","extensionBaseUrl":"https:\/\/extensions.shopifycdn.com\/cdn\/shopifycloud\/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"2dca8a86\", \"d5bdd5d0\", \"5acaffe6\"]","isMerchantRequest":"false","hashVersion":"7a919571w0b784b64p16d009bem0237e62e","publish":"custom","events":"[[\"page_viewed\",{}]]"});})();</script><script>
+  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = 'INR';
+  var meta = {"page":{"pageType":"page","resourceType":"page","resourceId":105299542190,"requestId":"0061161c-0f98-4785-a7c6-cd6f90fb0ee1-1779280641"}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }
+</script>
+<script class="analytics">
+  (function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    window.ShopifyAnalytics.lib.trekkie = window.trekkie;
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        if (window.__TREKKIE_SHIM_QUEUE && (method == 'track' || method == 'page')) {
+          try {
+            window.__TREKKIE_SHIM_QUEUE.push({
+              from: 'trekkie-stub',
+              method: method,
+              args: args.slice(1)
+            });
+          } catch (e) {
+            // no-op
+          }
+        }
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.onerror = function(e) {
+  var scriptFallback = document.createElement('script');
+  scriptFallback.type = 'text/javascript';
+  scriptFallback.onerror = function(error) {
+          var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 68852940974,
+      theme_id: 146763514030,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//www.rarabarefoot.in/cdn/s/trekkie.storefront.2aca6cb2c1aba778eb370d48aa89866e7dbe9588.min.js"});
+
+  };
+  scriptFallback.async = true;
+  scriptFallback.src = '//www.rarabarefoot.in/cdn/s/trekkie.storefront.2aca6cb2c1aba778eb370d48aa89866e7dbe9588.min.js';
+  first.parentNode.insertBefore(scriptFallback, first);
+};
+script.async = true;
+script.src = '//www.rarabarefoot.in/cdn/s/trekkie.storefront.2aca6cb2c1aba778eb370d48aa89866e7dbe9588.min.js';
+first.parentNode.insertBefore(script, first);
+
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":68852940974,"isMerchantRequest":null,"themeId":146763514030,"themeCityHash":"12994853469864102122","contentLanguage":"en","currency":"INR","eventMetadataId":"02ce2b13-a210-4747-8515-315eb0cc9cf3"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain","enabledBetaFlags":["b5387b81","d5bdd5d0"]},"Session Attribution":{},"S2S":{"facebookCapiEnabled":true,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"pageType":"page","resourceType":"page","resourceId":105299542190,"requestId":"0061161c-0f98-4785-a7c6-cd6f90fb0ee1-1779280641","shopifyEmitted":true});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+    var eventsListenerScript = document.createElement('script');
+    eventsListenerScript.async = true;
+    eventsListenerScript.src = "//www.rarabarefoot.in/cdn/shopifycloud/storefront/assets/shop_events_listener-3da45d37.js";
+    document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+})();</script>
+<script
+  defer
+  src="https://www.rarabarefoot.in/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.5.0.min.js"
+  data-application="storefront-renderer"
+  data-shop-id="68852940974"
+  data-render-region="gcp-asia-southeast1"
+  data-page-type="page"
+  data-theme-instance-id="146763514030"
+  data-theme-name="Prestige"
+  data-theme-version="10.6.0"
+  data-monorail-region="shop_domain"
+  data-resource-timing-sampling-rate="10"
+  data-shs="true"
+  data-shs-beacon="true"
+  data-shs-export-with-fetch="true"
+  data-shs-logs-sample-rate="1"
+  data-shs-beacon-endpoint="https://www.rarabarefoot.in/api/collect"
+></script>
+
+<style id="premium-footer-styles">
+           5. INSTAGRAM FEED SECTION (HORIZONTAL GRID OF 5 ROW)
+           ========================================================================= */
+        .instagram-feed-section {
+            width: 100%;
+            background-color: #000000;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0;
+            margin: 0;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2px; /* Very subtle 2px gap to define each square beautifully */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .instagram-item {
+            position: relative;
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Force perfect squares */
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Hover Overlay */
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(46, 98, 142, 0.65); /* Rich transparent Uruk Blue matching brand */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 2;
+        }
+
+        /* SVG Instagram Camera Icon in White */
+        .instagram-icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+            transform: scale(0.8);
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Hover Tactile Interactions */
+        .instagram-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-item:hover .instagram-icon-svg {
+            transform: scale(1);
+        }
+
+        /* Responsive Adapters */
+        @media (max-width: 1024px) {
+            .instagram-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Footer Info Bar (Black banner with links) */
+        .footer-info-bar {
+            background-color: #000000;
+            padding: 35px 8%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .info-bar-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .info-bar-title {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: none;
+            font-family: var(--font-main);
+        }
+
+        .info-bar-link {
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            letter-spacing: 0.03em;
+            transition: color 0.25s ease;
+            font-family: var(--font-main);
+        }
+
+        .info-bar-link:hover {
+            color: var(--uruk-blue);
+        }
+
+        @media (max-width: 768px) {
+            .footer-info-bar {
+                flex-direction: column;
+                gap: 24px;
+                padding: 25px 4%;
+            }
+        }
+
+        /* ==========================================================================
+           6. PREMIUM BRAND FOOTER SECTION (CHARCOAL LUXURY VIBE)
+           ========================================================================= */
+        .premium-footer {
+            background-color: #111111; /* Solid charcoal matching website's elegant, high-contrast dark elements */
+            color: #ffffff;
+            padding: 80px 6% 40px 6%;
+            font-family: var(--font-main);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.8fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Column 1: Logo & Socials */
+        .footer-brand-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .footer-brand-logo img {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: brightness(0) invert(1); /* Render white logo on dark background */
+        }
+
+        .footer-social-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social-label {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.05rem;
+            letter-spacing: 0.12em;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease;
+        }
+
+        .footer-social-icons a:hover {
+            transform: scale(1.15);
+        }
+
+        .footer-social-icons img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        /* Links Columns (Collections, Help, Company) */
+        .footer-links-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-links-column h4 {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links-list a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s ease, padding-left 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-links-list a:hover {
+            color: #ffffff;
+            padding-left: 2px;
+        }
+
+        /* Column 5: Contact Info & Address */
+        .footer-contact-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-contact-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .footer-contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .footer-contact-row img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer-contact-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        .footer-contact-text a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-contact-text a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Bottom Row: Divider & Copyright */
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            max-width: 1300px;
+            margin-inline: auto;
+        }
+
+        .footer-copyright {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .footer-copyright a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        .footer-copyright a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Breakpoint handling for mobile/tablets */
+        @media (max-width: 1024px) {
+            .premium-footer {
+                padding: 60px 4% 30px 4%;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            .footer-brand-column {
+                grid-column: span 2;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-contact-column {
+                grid-column: span 2;
+            }
+            .footer-bottom {
+                margin-top: 40px;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-brand-column, .footer-contact-column {
+                grid-column: span 1;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .footer-brand-logo img {
+                height: 80px;
+            }
+            .footer-links-column {
+                gap: 12px;
+            }
+        }
+</style>
+<style id="ultimate-fix">
+
+/* 1. Safe Gradient Background (Strictly behind image) */
+.card__media, .product-card__media, .card-wrapper .media {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0) 45%) !important;
+}
+
+/* 2. Remove all overlays that could cover the product */
+.card__media::before, .product-card__media::before, .card-wrapper .media::before,
+.card__media::after, .product-card__media::after, .card-wrapper .media::after {
+    display: none !important;
+    background: transparent !important;
+}
+
+/* 3. Ensure product image is completely unmodified and on top */
+.card__media img, .product-card__media img, .card-wrapper .media img {
+    position: relative !important;
+    z-index: 2 !important;
+    mix-blend-mode: normal !important;
+    background: transparent !important;
+    opacity: 1; /* prevent hover script from hiding it completely */
+}
+
+</style>
+</head>
+
+  <body class="features--button-transition  color-scheme color-scheme--scheme-2"><template id="drawer-default-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <slot name="header"></slot>
+
+        <dialog-close-button style="display: contents">
+          <button type="button" part="close-button tap-area" aria-label="Close"><svg aria-hidden="true" focusable="false" fill="none" width="14" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="body">
+        <slot></slot>
+      </div>
+
+      <footer part="footer">
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </div>
+</template><template id="modal-default-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <slot name="header"></slot>
+
+        <dialog-close-button style="display: contents">
+          <button type="button" part="close-button tap-area" aria-label="Close"><svg aria-hidden="true" focusable="false" fill="none" width="14" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="body">
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</template><template id="popover-default-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <slot name="header"></slot>
+
+        <dialog-close-button style="display: contents">
+          <button type="button" part="close-button tap-area" aria-label="Close"><svg aria-hidden="true" focusable="false" fill="none" width="14" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="body">
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</template><template id="header-search-default-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <slot></slot>
+    </div>
+  </div>
+</template><template id="video-media-default-template">
+  <slot></slot>
+
+  <svg part="play-button" fill="none" width="48" height="48" viewBox="0 0 48 48">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0s24 10.745 24 24Zm-18 0-9-6.6v13.2l9-6.6Z" fill="var(--play-button-background, #ffffff)"/>
+  </svg>
+</template><loading-bar class="loading-bar" aria-hidden="true"></loading-bar>
+    <a href="#main" allow-hash-change class="skip-to-content sr-only">Skip to content</a>
+
+    <span id="header-scroll-tracker" style="position: absolute; width: 1px; height: 1px; top: var(--header-scroll-tracker-offset, 10px); left: 0;"></span><!-- BEGIN sections: header-group -->
+<aside id="shopify-section-sections--19195979432110__announcement-bar" class="shopify-section shopify-section-group-header-group shopify-section--announcement-bar"><style>
+    :root {
+      --announcement-bar-is-sticky: 0;--header-scroll-tracker-offset: var(--announcement-bar-height);}#shopify-section-sections--19195979432110__announcement-bar {
+      --announcement-bar-font-size: 0.625rem;
+    }
+
+    @media screen and (min-width: 999px) {
+      #shopify-section-sections--19195979432110__announcement-bar {
+        --announcement-bar-font-size: 0.9375rem;
+      }
+    }
+  </style>
+
+  <height-observer variable="announcement-bar">
+    <div class="announcement-bar color-scheme color-scheme--scheme-3"><announcement-bar-carousel allow-swipe autoplay="5" id="carousel-sections--19195979432110__announcement-bar" class="announcement-bar__carousel"><p class="prose heading is-selected" >COD Available | 7 Days returns & exchange</p></announcement-bar-carousel></div>
+  </height-observer>
+
+  <script>
+    document.documentElement.style.setProperty('--announcement-bar-height', `${document.getElementById('shopify-section-sections--19195979432110__announcement-bar').clientHeight.toFixed(2)}px`);
+  </script><style> @media (max-width: 780px) {#shopify-section-sections--19195979432110__announcement-bar .heading {font-size: 8px; }} #shopify-section-sections--19195979432110__announcement-bar .heading {font-family: "Geist";} </style></aside><section id="shopify-section-sections--19195979432110__custom_liquid_r7AL7G" class="shopify-section shopify-section-group-header-group shopify-section--custom-liquid"><div class=" color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 ">
+    <div class="">
+      <div class="text-end"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+
+    .top-header-content {
+          padding-left: 30px;
+          padding-right: 30px;
+          background: #f7f7f7;
+          display: flex;
+          justify-content: flex-end;
+          list-style-type: none;
+          margin-bottom: 0;
+          padding: 10px 50px;
+      }
+      ul {
+        margin: 0;
+      }
+      .top-header-content>li:first-child {
+          border-left: none;
+          padding-right: 10px;
+      }
+      .top-header-content>li {
+          font-weight: 400;
+font-size: 18px;
+          letter-spacing: 2px;
+          font-family: "Anton", sans-serif;
+          padding-left: 10px;
+          margin: 0;
+          text-transform: uppercase;
+          border-left: 2px solid #222121;
+          cursor: pointer;
+      }
+      .top-header-content li {
+      line-height: 21.4px;
+      }
+  
+      li {
+      display: list-item;
+      text-align: -webkit-match-parent;
+      unicode-bidi: isolate;
+      }
+
+  </style>
+</head>
+  <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+    <ul class="top-header-content">
+      <li class="top-header-links top-link top-help-links help-menu">
+        <a href="/pages/help">Help</a></li>
+      <li class="top-links" style="padding-right: 10px;"><a href="/pages/barefoot-science">Barefoot Science</a></li>
+      <li class="top-links" style="padding-right: 10px;"><a href="/pages/blogs">Blog</a></li>
+      <li class="top-links"><a href="/pages/community">COMMUNITY</a></li>
+    </ul>
+  </div>
+</div>
+    </div>
+  </div>
+<style> #shopify-section-sections--19195979432110__custom_liquid_r7AL7G .section-spacing {padding-block-start: 0px; padding-block-end: 0px;} @media only screen and (max-width: 700px) {#shopify-section-sections--19195979432110__custom_liquid_r7AL7G {display: none; }} </style></section><header id="shopify-section-sections--19195979432110__header" class="shopify-section shopify-section-group-header-group shopify-section--header"><style>
+  :root {
+    --header-is-sticky: 1;
+  }
+
+  #shopify-section-sections--19195979432110__header {
+    --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+    --header-padding-block: 1rem;
+    --header-transparent-header-text-color: 255 255 255;
+    --header-separation-border-color: 0 0 0 / 0.15;
+
+    position: relative;
+    z-index: 4;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-sections--19195979432110__header {
+      --header-padding-block: 1.6rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-sections--19195979432110__header {}
+  }#shopify-section-sections--19195979432110__header {
+      position: sticky;
+      top: 0;
+    }
+
+    .shopify-section--announcement-bar ~ #shopify-section-sections--19195979432110__header {
+      
+      top: 40px;
+
+    }#shopify-section-sections--19195979432110__header {
+      --header-logo-width: 85px;
+    }
+
+    @media screen and (min-width: 700px) {
+      #shopify-section-sections--19195979432110__header {
+        --header-logo-width: 125px;
+      }
+    }</style>
+
+<height-observer variable="header">
+  <x-header  class="header color-scheme color-scheme--scheme-2">
+      <a href="/" class="header__logo"><span class="sr-only">rarabarefoot</span><img src="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=1500" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=250 250w, //www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&amp;width=375 375w" width="1500" height="660" sizes="125px" class="header__logo-image"></a>
+    
+<nav class="header__primary-nav " aria-label="Primary navigation">
+        <button type="button" aria-controls="sidebar-menu" class="md:hidden">
+          <span class="sr-only">Navigation menu</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+      <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+    </svg></button><ul class="contents unstyled-list md-max:hidden">
+              <li class="header__primary-nav-item" data-title="THE COLLECTION">
+                <a href="/collections/the-collection" class="block h6" style="font-weight: 700; padding-right: 15px;">THE COLLECTION</a>
+              </li><li class="header__primary-nav-item" data-title="WHY BAREFOOT?"><a href="/pages/why-barefoot" class="block h6" >WHY BAREFOOT?</a></li></ul></nav><nav class="header__secondary-nav" aria-label="Secondary navigation"><ul class="contents unstyled-list"><li class="header__account-link sm-max:hidden">
+            <a href="https://www.rarabarefoot.in/customer_authentication/redirect?locale=en&region_country=IN">
+              <span class="sr-only">Login</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
+      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+    </svg></a>
+          </li><li class="header__search-link">
+            <a href="/search" aria-controls="header-search-sections--19195979432110__header">
+              <span class="sr-only">Search</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
+      <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+      <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+    </svg></a>
+          </li><li class="relative header__cart-link">
+          <a href="/cart" aria-controls="cart-drawer" data-no-instant>
+            <span class="sr-only">Cart</span><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24"><path d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><cart-dot class="header__cart-dot  "></cart-dot>
+          </a>
+        </li>
+      </ul>
+    </nav><header-search id="header-search-sections--19195979432110__header" class="header-search">
+  <div class="container">
+    <form id="predictive-search-form" action="/search" method="GET" aria-owns="header-predictive-search" class="header-search__form" role="search">
+      <div class="header-search__form-control"><svg aria-hidden="true" fill="none" focusable="false" width="20" class="icon icon-search" viewBox="0 0 24 24">
+      <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+      <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+    </svg><input type="search" name="q" spellcheck="false" class="header-search__input h5 sm:h4" aria-label="Search" placeholder="Search for...">
+
+        <dialog-close-button class="contents">
+          <button type="button">
+            <span class="sr-only">Close</span><svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </div>
+    </form>
+
+    <predictive-search id="header-predictive-search" class="predictive-search">
+      <div class="predictive-search__content" slot="results"></div>
+    </predictive-search>
+  </div>
+</header-search><template id="header-sidebar-template">
+  <div part="base">
+    <div part="overlay"></div>
+
+    <div part="content">
+      <header part="header">
+        <dialog-close-button class="contents">
+          <button type="button" part="close-button tap-area" aria-label="Close"><svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+      <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+
+  </button>
+        </dialog-close-button>
+      </header>
+
+      <div part="panel-list">
+        <slot name="main-panel"></slot><slot name="collapsible-panel"></slot></div>
+    </div>
+  </div>
+</template>
+
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--scheme-2" template="header-sidebar-template" open-from="left"><div class="header-sidebar__main-panel" slot="main-panel">
+    <div class="header-sidebar__scroller">
+      <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><a href="/collections/the-collection" class="header-sidebar__linklist-button h6">THE COLLECTION</a></li><li><a href="#" class="header-sidebar__linklist-button h6">ACCESSORIES</a></li><li><button type="button" class="header-sidebar__linklist-button h6" aria-controls="header-panel-3" aria-expanded="false">WHY BAREFOOT?<svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-right  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="m3 9 4-4-4-4" stroke="currentColor" stroke-linecap="square"/>
+    </svg></button></li><li><a href="/pages/how-can-we-help" class="header-sidebar__linklist-button h6">Support</a></li></ul>
+    </div><div class="header-sidebar__footer"><a href="https://www.rarabarefoot.in/customer_authentication/redirect?locale=en&region_country=IN" class="text-with-icon smallcaps sm:hidden"><svg aria-hidden="true" fill="none" focusable="false" width="20" class="icon icon-account" viewBox="0 0 24 24">
+      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+    </svg>Login</a></div></div><header-sidebar-collapsible-panel class="header-sidebar__collapsible-panel" slot="collapsible-panel">
+      <div class="header-sidebar__scroller"><div id="header-panel-1" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>Men</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">All Footwear<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/all-footwear-men" class="link-faded-reverse">All Styles</a><a href="/collections/barefoot-training-shoes-men" class="link-faded-reverse">Training / Gym / Exercise</a><a href="/collections/barefoot-running-shoes-men" class="link-faded-reverse">Walk / Jog / Play</a><a href="/collections/barefoot-all-day-wear-walking-shoes-men" class="link-faded-reverse">All Day / Everyday</a></div>
+                        </details>
+                      </accordion-disclosure></li><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">Collections<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/xanadu-barefoot-shoes-men" class="link-faded-reverse">Xanadu</a><a href="/collections/uruk-barefoot-shoes-men" class="link-faded-reverse">Uruk</a><a href="/collections/zanzibar-barefoot-shoes-men" class="link-faded-reverse">Zanzibar</a></div>
+                        </details>
+                      </accordion-disclosure></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"><a href="/pages/about-us" class="v-stack justify-items-center gap-4 sm:gap-5 group"><div class="overflow-hidden"><img src="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=1440" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=315 315w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=630 630w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=945 945w" width="1440" height="809" loading="lazy" sizes="315px" class="zoom-image group-hover:zoom"></div></a></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div><div id="header-panel-2" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>Women</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">All Footwear<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/all-footwear-women" class="link-faded-reverse">All Styles</a><a href="/collections/barefoot-training-shoes-women" class="link-faded-reverse">Training / Gym / Exercise</a><a href="/collections/barefoot-running-shoes-women" class="link-faded-reverse">Walk / Jog / Play</a><a href="/collections/barefoot-all-day-wear-walking-shoes-women" class="link-faded-reverse">All Day / Everyday</a></div>
+                        </details>
+                      </accordion-disclosure></li><li><accordion-disclosure>
+                        <details class="accordion__disclosure group" >
+                          <summary class="header-sidebar__linklist-button h6">Collections<span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
+                          </summary>
+
+                          <div class="header-sidebar__nested-linklist"><a href="/collections/xanadu-barefoot-shoes-women" class="link-faded-reverse">Xanadu </a><a href="/collections/uruk-barefoot-shoes-women" class="link-faded-reverse">Uruk</a><a href="/collections/zanzibar-barefoot-shoes-women" class="link-faded-reverse">Zanzibar </a></div>
+                        </details>
+                      </accordion-disclosure></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"><a href="/pages/about-us" class="v-stack justify-items-center gap-4 sm:gap-5 group"><div class="overflow-hidden"><img src="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=1440" alt="" srcset="https://www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=315 315w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=630 630w, //www.rarabarefoot.in/cdn/shop/files/rara_main_menu.png?v=1756192426&amp;width=945 945w" width="1440" height="809" loading="lazy" sizes="315px" class="zoom-image group-hover:zoom"></div></a></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div><div id="header-panel-3" class="header-sidebar__sub-panel" hidden>
+              <button type="button" class="header-sidebar__back-button link-faded is-divided text-with-icon h6 md:hidden" data-action="close-panel"><svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-left  icon--direction-aware" viewBox="0 0 10 10">
+      <path d="M7 1 3 5l4 4" stroke="currentColor" stroke-linecap="square"/>
+    </svg>WHY BAREFOOT?</button>
+
+              <ul class="header-sidebar__linklist divide-y unstyled-list" role="list"><li><a href="/pages/why-barefoot" class="header-sidebar__linklist-button h6">Why Barefoot?</a></li><li><a href="/pages/about-us" class="header-sidebar__linklist-button h6">About Rara</a></li><li><a href="/pages/community" class="header-sidebar__linklist-button h6">Community</a></li><li><a href="/pages/barefoot-science" class="header-sidebar__linklist-button h6">Barefoot Science</a></li><li><a href="/pages/blogs" class="header-sidebar__linklist-button h6">Blogs</a></li></ul><div class="header-sidebar__promo scroll-area bleed md:unbleed"><div class="mega-menu-scroll-wrapper"></div>
+
+<style>
+ .mega-menu-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .mega-menu-scroll-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .mega-menu-scroll-wrapper > * {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  </style>
+
+</div></div></div>
+    </header-sidebar-collapsible-panel></header-sidebar></x-header>
+</height-observer>
+
+<script>
+  document.documentElement.style.setProperty('--header-height', `${document.getElementById('shopify-section-sections--19195979432110__header').clientHeight.toFixed(2)}px`);
+</script>
+
+<style> #shopify-section-sections--19195979432110__header {--header-padding-block: 0.2rem;} #shopify-section-sections--19195979432110__header .h6 {font-size: 21px !important; font-weight: 400; letter-spacing: 3px; font-family: "Anton";} #shopify-section-sections--19195979432110__header .header__primary-nav {column-gap: 1.3rem;} #shopify-section-sections--19195979432110__header .overflow-hidden {max-width: 80%;} </style></header><section id="shopify-section-sections--19195979432110__custom_liquid_3EXEat" class="shopify-section shopify-section-group-header-group shopify-section--custom-liquid"><div class=" color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 ">
+    <div class="">
+      <div class="text-start"><div class="deloitte-header">
+  <a href="https://www.rarabarefoot.in/pages/deloitte" class="deloitte-logo">
+    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/2_-_Copy.png?v=1747043318" alt="">
+  </a>
+</div>
+<style>
+  .deloitte-header{
+    display: none;
+    width: 100%;
+  }
+  
+  .deloitte-logo{
+    width: 10%;
+    display:block;
+  }
+ .deloitte-logo img{
+    width: 100%;
+    margin: 20px 0 20px 40px;
+  }
+.sticky-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999999;
+    background: white;
+}
+@media(max-width:780px){
+  .deloitte-logo{
+    width: 25%;
+    display:block;
+  }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const targetSection = document.querySelector(
+    "section#shopify-section-sections--19195979432110__custom_liquid_3EXEat"
+  );
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      targetSection.classList.add("sticky-active");
+    } else {
+      targetSection.classList.remove("sticky-active");
+    }
+  });
+});
+</script></div>
+    </div>
+  </div>
+</section>
+<!-- END sections: header-group --><!-- BEGIN sections: overlay-group -->
+<section id="shopify-section-sections--19195980415150__cart-drawer" class="shopify-section shopify-section-group-overlay-group shopify-section--cart-drawer"><cart-drawer id="cart-drawer" class="cart-drawer drawer drawer--center-body color-scheme color-scheme--scheme-2" initial-focus="false" handle-editor-events>
+  <p class="h4" slot="header">Cart  </p><p class="h5 text-center">Your cart is empty</p></cart-drawer>
+
+</section>
+<!-- END sections: overlay-group --><main id="main" class="anchor">
+      <section id="shopify-section-template--19195983462574__main" class="shopify-section shopify-section--main-page"><div class="section-spacing section-spacing--tight color-scheme color-scheme--scheme-2 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673">
+  <div class="container container--md">
+    <div class="section-stack"><div class="section-header justify-self-center text-center">
+          <h1 class="h2">HOW CAN WE HELP</h1>
+        </div></div>
+  </div>
+</div>
+</section><section id="shopify-section-template--19195983462574__custom_liquid_d3iDwe" class="shopify-section shopify-section--custom-liquid"><div class="section-spacing color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 bordered-section">
+    <div class="container">
+      <div class="text-start"><div class="featured-topics">
+  <h2>Featured Topics</h2>
+  <div class="topics-grid">
+  <div class="topic-card"><a href="/">All Products</a></div>
+  <div class="topic-card"><a href="/pages/refund-and-return-policy">Refund & Return Policy</a></div>
+  <div class="topic-card"><a href="/pages/why-barefoot">Why Barefoot?</a></div>
+  <div class="topic-card"><a href="/pages/barefoot-footwear-guide">Everything Barefoot</a></div>
+  
+  <div class="topic-card"><a href="/pages/about-us">About RARA</a></div>
+<div class="topic-card"><a href="https://www.instagram.com/rarabarefoot" target="_blank"> <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"/>
+<path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"/>
+</svg> Our Instagram</a></div>
+</div>
+
+</div>
+<style>
+.topic-card a {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+svg:hover{
+    color: white;
+}
+
+  .featured-topics {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  
+}
+
+.featured-topics h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.topic-card {
+  background-color: #f6f6f6;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+  background-color: #000;
+  color: #fff;
+}
+.topic-card:hover svg path {
+    fill: #fff; /* change to your desired hover color */
+}
+</style></div>
+    </div>
+  </div>
+</section><section id="shopify-section-template--19195983462574__custom_liquid_jCUCPW" class="shopify-section shopify-section--custom-liquid"><div class="section-spacing color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 bordered-section">
+    <div class="container">
+      <div class="text-start"><style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+  }
+
+  .contact-section {
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    color: white;
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-section h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-box {
+    background-color: white;
+    color: #333;
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .contact-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .contact-box p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .contact-box strong {
+    color: #222;
+    font-weight: 600;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .social-icons a {
+    color: #000000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    color: #000000;
+    transform: scale(1.1);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 40px 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    .contact-box {
+      min-width: 100%;
+    }
+  }
+
+  i.fa\.fa-twitter {
+    font-family: sans-serif;
+  }
+
+  i.fa\.fa-twitter::before {
+    content: "𝕏";
+    font-size: 1.2em;
+  }
+</style>
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+
+    <!-- WhatsApp -->
+    <div class="contact-box">
+      <h3>WhatsApp</h3>
+      <div>
+        <p style="display: flex;gap: 5px;align-items: center;"><img
+            src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301"
+            width="20px" height="20px"><strong>+91 81300 96761</strong></p>
+        <!-- <p style="display: flex;gap: 5px;align-items: center;"><img
+            src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/phone-call_1.png?v=1761113594" width="20px"
+            height="20px"><strong>+91 81300 96783</strong></p> -->
+      </div>
+      <p>Questions about your order, our products, or just want to say hi? Drop us a message.</p>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-box">
+      <h3>Email</h3>
+      <p><strong>care@rarabarefoot.in</strong></p>
+      <p>You can reach us here anytime. We usually respond within 24–48 hours.</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="contact-box">
+      <h3>Engage</h3>
+      <p>Reach out to us through your favorite social channels.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/rarabarefoot" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/rarabarefoot" target="_blank"><img style="width: 21px;"
+            src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/logo-x-modern-2023-7cbd.png?v=1759204384"
+            alt=""></a>
+        <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+    </div>
+  </div>
+</section>
+            <div class="scroll-4-media-container">
+                <img src="https://www.rarabarefoot.in/cdn/shop/files/Untitled_design_1.gif?v=1757417106" alt="The Barefoot Movement Community Grid" class="scroll-4-gif">
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM FEED SECTION (HORIZONTAL GRID OF 5 ROW) -->
+    <section class="instagram-feed-section">
+        <div class="instagram-grid">
+            <a href="https://www.instagram.com/rarabarefoot/" target="_blank" class="instagram-item">
+                <img src="/insta-1.png" alt="Rara Barefoot Instagram Post 1">
+                <div class="instagram-overlay">
+                    <svg class="instagram-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/rarabarefoot/" target="_blank" class="instagram-item">
+                <img src="/insta-2.png" alt="Rara Barefoot Instagram Post 2">
+                <div class="instagram-overlay">
+                    <svg class="instagram-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/rarabarefoot/" target="_blank" class="instagram-item">
+                <img src="/insta-3.png" alt="Rara Barefoot Instagram Post 3">
+                <div class="instagram-overlay">
+                    <svg class="instagram-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/rarabarefoot/" target="_blank" class="instagram-item">
+                <img src="/insta-4.png" alt="Rara Barefoot Instagram Post 4">
+                <div class="instagram-overlay">
+                    <svg class="instagram-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/rarabarefoot/" target="_blank" class="instagram-item">
+                <img src="/insta-5.png" alt="Rara Barefoot Instagram Post 5">
+                <div class="instagram-overlay">
+                    <svg class="instagram-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER INFO BAR (EDITORIAL LINKS IN BLACK ROW) -->
+    <div class="footer-info-bar">
+        <div class="info-bar-item">
+            <span class="info-bar-title">Outside India?</span>
+            <a href="https://www.rarabarefoot.com/" target="_blank" class="info-bar-link">Visit rarabarefoot.com</a>
+        </div>
+        <div class="info-bar-item">
+            <span class="info-bar-title">Changed your mind?</span>
+            <a href="/pages/refund-and-return-policy" class="info-bar-link">Our returns are hassle-free</a>
+        </div>
+    </div>
+
+    <!-- PREMIUM BRAND FOOTER (CHARCOAL LUXURY VIBE) -->
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <!-- Column 1: Logo & Socials -->
+            <div class="footer-brand-column">
+                <div class="footer-brand-logo">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/NEW_ra_LOGO_2.png?v=1756875469" alt="Rara Barefoot Logo">
+                </div>
+                <div class="footer-social-wrapper">
+                    <span class="footer-social-label">FOLLOW US:</span>
+                    <div class="footer-social-icons">
+                        <a href="https://x.com/rarabarefoot" target="_blank" aria-label="Follow us on X">
+                            <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/x-removebg-preview.png?v=1749284179" alt="X (Twitter)">
+                        </a>
+                        <a href="https://www.instagram.com/rarabarefoot" target="_blank" aria-label="Follow us on Instagram">
+                            <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/insta01-removebg-preview.png?v=1749284179" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank" aria-label="Follow us on Facebook">
+                            <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/facebook01-removebg-preview.png?v=1749284179" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank" aria-label="Follow us on LinkedIn">
+                            <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/linkedin.png?v=1759217170" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Collections -->
+            <div class="footer-links-column">
+                <h4>Collections</h4>
+                <ul class="footer-links-list">
+                    <li><a href="/collections/the-collection">THE COLLECTION</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Help -->
+            <div class="footer-links-column">
+                <h4>HELP</h4>
+                <ul class="footer-links-list">
+                    <li><a href="/pages/how-can-we-help">Help Centre</a></li>
+                    <li><a href="/pages/why-barefoot">Why Barefoot?</a></li>
+                    <li><a href="/pages/blogs">Blogs</a></li>
+                    <li><a href="/pages/barefoot-science">Barefoot Science</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Company -->
+            <div class="footer-links-column">
+                <h4>COMPANY</h4>
+                <ul class="footer-links-list">
+                    <li><a href="/pages/about-us">About Us</a></li>
+                    <li><a href="/pages/grievance-redressal-process">Grievance Redressal</a></li>
+                    <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/pages/terms-conditions">Terms Of Use</a></li>
+                    <li><a href="/pages/refund-and-return-policy">Refund and Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Contact Info -->
+            <div class="footer-contact-column">
+                <div class="footer-contact-rows">
+                    <!-- WhatsApp -->
+                    <div class="footer-contact-row">
+                        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301" alt="WhatsApp Icon">
+                        <div class="footer-contact-text">
+                            <a href="https://wa.me/918130096761" target="_blank">+91 81300 96761</a>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="footer-contact-row">
+                        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/email.png?v=1754449301" alt="Email Icon">
+                        <div class="footer-contact-text">
+                            <a href="mailto:care@rarabarefoot.in">care@rarabarefoot.in</a>
+                        </div>
+                    </div>
+                    <!-- GPS / Address -->
+                    <div class="footer-contact-row">
+                        <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/gps.png?v=1754449301" alt="GPS Icon">
+                        <div class="footer-contact-text">
+                            AP2GP Pvt. Ltd.<br>
+                            NO 17, 2ND FLOOR, 7TH MAIN ROAD, II STAGE, INDIRANAGAR, Bengaluru - 560038
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2026 - <a href="/">RARABAREFOOT</a> POWERED BY SHOPIFY
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+    </div>
+  </div>
+</section><section id="shopify-section-sections--19195979366574__custom_liquid_EJBwRq" class="shopify-section shopify-section-group-footer-group shopify-section--custom-liquid"><div class=" color-scheme color-scheme--scheme-1 color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 bordered-section">
+    <div class="">
+      <div class="text-center"><div class="divider-footer">
+</div></div>
+    </div>
+  </div>
+<style> #shopify-section-sections--19195979366574__custom_liquid_EJBwRq .divider-footer {margin: 5px;} </style></section><footer id="shopify-section-sections--19195979366574__footer" class="shopify-section shopify-section-group-footer-group shopify-section--footer"><style>
+  #shopify-section-sections--19195979366574__footer {
+    --footer-content-justify-items: space-between;
+  }
+</style><div class="footer color-scheme color-scheme--scheme-843787d1-029f-43f1-bf4f-9e9b55635ec7 color-scheme--bg-77e774e6cc4d94d6a32f6256f02d9552 bordered-section">
+  <div class="container">
+    <div class="footer__inner"><div class="footer__block-list"><div class="footer__block footer__block--liquid" ><div class="liquid"><div style="display: flex;  gap: 20px; flex-direction: column;">
+    <div>
+    <img class="foter-logo-image" src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/NEW_ra_LOGO_2.png?v=1756875469" alt="Certified B Corporation" style="height: 100px; max-width: 100%;">
+  </div>
+
+  <!-- Follow Us + Icons -->
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <span style=" font-size: 18px; color: #fff; font-family:'Anton';">FOLLOW US:</span>
+
+    <!-- X/Twitter -->
+    <a href="https://x.com/rarabarefoot" target="_blank" style="color: #fff;">
+      <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/x-removebg-preview.png?v=1749284179" alt="X" style="width: 35px; height: 35px;">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/rarabarefoot" target="_blank" style="color: #fff;">
+      <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/insta01-removebg-preview.png?v=1749284179" alt="Instagram" style="width: 35px; height: 35px;">
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank" style="color: #fff;">
+      <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/facebook01-removebg-preview.png?v=1749284179" alt="Facebook" style="width: 35px; height: 35px;">
+    </a>
+
+    <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank" style="color: #fff;">
+     <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/linkedin.png?v=1759217170" alt="" style="width: 35px; height: 35px;">
+    </a>
+  </div>
+
+  <!-- Certified B Corporation Image -->
+
+</div>
+
+<style>
+.footer__block.footer__block--liquid {
+    max-width: 275px;
+}
+</style></div></div><div class="footer__block footer__block--links" ><div class="v-stack gap-4 sm:gap-5"><p class="h6">Collections</p><ul class="v-stack gap-2.5 unstyled-list" role="list"><li>
+                            <a href="/collections/the-collection" class="link-faded">THE COLLECTION</a>
+                          </li></ul>
+                    </div></div><div class="footer__block footer__block--links" ><div class="v-stack gap-4 sm:gap-5"><p class="h6">HELP</p><ul class="v-stack gap-2.5 unstyled-list" role="list"><li>
+                            <a href="/pages/how-can-we-help" class="link-faded">Help Centre</a>
+                          </li><li>
+                            <a href="/pages/why-barefoot" class="link-faded">Why Barefoot?</a>
+                          </li><li>
+                            <a href="/pages/blogs" class="link-faded">Blogs</a>
+                          </li><li>
+                            <a href="/pages/barefoot-science" class="link-faded">Barefoot Science</a>
+                          </li></ul>
+                    </div></div><div class="footer__block footer__block--links" ><div class="v-stack gap-4 sm:gap-5"><p class="h6">COMPANY</p><ul class="v-stack gap-2.5 unstyled-list" role="list"><li>
+                            <a href="/pages/about-us" class="link-faded">About Us</a>
+                          </li><li>
+                            <a href="/pages/grievance-redressal-process" class="link-faded">Grievance Redressal</a>
+                          </li><li>
+                            <a href="/pages/privacy-policy" class="link-faded">Privacy Policy</a>
+                          </li><li>
+                            <a href="/pages/terms-conditions" class="link-faded">Terms Of Use</a>
+                          </li><li>
+                            <a href="/pages/refund-and-return-policy" class="link-faded">Refund and Return Policy</a>
+                          </li></ul>
+                    </div></div><div class="footer__block footer__block--liquid" ><div class="liquid"><style>
+  .contact-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .contact-row img {
+    font-size: 22px;
+    margin-right: 15px;
+    color: #555;
+    text-align: center;
+  }
+
+  .contact-row img {
+    max-width: 30px;
+  }
+
+  .contact-text {
+    word-break: break-word;
+
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .deloit-footer-logo h2 {
+    font-weight: normal !important;
+    color: white !important;
+    display: none;
+    font-size: 32px;
+  }
+</style>
+<div class="deloit-footer-logo">
+  <h2>EVOLUTION. NOW IN YOUR SIZE</h2>
+</div>
+<div class="contact-container-1">
+  <div class="contact-row">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301"
+      width="30px" height="30px">
+    <div class="contact-text">+91 81300 96761</div>
+  </div>
+  <!-- <div class="contact-row">
+    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/phone-call_1.png?v=1761113594" width="30px"
+      height="30px">
+    <div class="contact-text">+91 81300 96783</div>
+  </div> -->
+
+  <div class="contact-row">
+    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/email.png?v=1754449301" width="30px" height="30px">
+    <div class="contact-text">care@rarabarefoot.in</div>
+  </div>
+  <div class="contact-row">
+    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/gps.png?v=1754449301" width="30px" height="30px">
+    <div class="contact-text">AP2GP Pvt. Ltd. <br>NO 17, 2ND FLOOR, 7TH MAIN ROAD, II STAGE, INDIRANAGAR, Bengaluru - 560038<div>
+  </div>
+</div></div></div></div><div class="footer__aside"><p class="heading text-subdued text-xxs">© 2026 - rarabarefoot <a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></p></div>
+    </div>
+  </div>
+</div>
+
+<style> #shopify-section-sections--19195979366574__footer h2, #shopify-section-sections--19195979366574__footer h6 {font-family: "Anton";} </style></footer>
+<!-- END sections: footer-group --></main>
+    
+    <!-- Begin Shopify–payment-cart JavaScript -->
+<script type="text/javascript">
+
+  var mid = '7401';
+
+</script>
+<script src="https://checkout-merchant.snapmint.com/js/v1/7401" defer></script>
+<!-- End Shopify-payment JavaScript -->
+  <style> .button {font-family: "Anton"; letter-spacing: 2px; font-weight: 400;} .shopify-payment-button__button {font-family: "Anton"; letter-spacing: 2px; font-weight: 400; font-size: 22px;} .shopify-payment-button__button--unbranded {padding: 0px;} aside {z-index: 1; position: relative;} </style>
+
+</body>
+</html>

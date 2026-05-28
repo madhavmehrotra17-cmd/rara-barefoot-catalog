@@ -1,0 +1,2387 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Premium Barefoot Catalog | Rara Barefoot Shoes</title>
+    <meta name="description" content="Explore our high-performance barefoot shoes. Designed for natural movement, strength, and premium style.">
+    
+    <!-- Google Fonts for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Reset & Global Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html, body {
+        background-color: #f1f1f1 !important;
+        font-family: 'Roboto Mono', monospace;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        height: 100vh !important;
+        overflow: hidden !important; /* Force completely unscrollable page boundaries */
+      }
+
+      main {
+        height: 100vh !important;
+        overflow-y: scroll !important; /* Viewport scroll container */
+        scroll-behavior: smooth;
+        background-color: #f1f1f1 !important; /* Fallback baseline background */
+      }
+
+      /* Premium Clean Norda Header Style */
+      .header-custom-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 18px 6%; /* Luxury breathing padding */
+        background-color: rgba(241, 241, 241, 0.25) !important; /* Premium E-commerce translucent light gray */
+        backdrop-filter: blur(16px); /* High-fidelity frosted glass effect */
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; /* Thin clean divider */
+        box-sizing: border-box;
+        min-height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      .logo-custom {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-start;
+      }
+
+      .logo-custom a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .header__logo-image-custom {
+        height: 48px; /* Clean premium size */
+        width: auto;
+        display: block;
+      }
+
+      .nav-center-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        gap: 36px; /* Generous spacing */
+      }
+
+      .nav-right-custom {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        gap: 32px;
+      }
+
+      .nav-link-custom {
+        font-family: 'Inter', sans-serif;
+        font-size: 13.5px;
+        font-weight: 700; /* Bold font weight */
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 0.08em; /* Clean tracking */
+        text-decoration: none;
+        transition: opacity 0.25s ease, color 0.25s ease;
+      }
+
+      .nav-link-custom:hover {
+        color: #095492; /* Touch of premium brand blue on hover */
+        opacity: 0.8;
+      }
+
+      /* MORE Dropdown Custom CSS */
+      .dropdown-custom-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-trigger-custom {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .dropdown-menu-custom {
+        position: absolute;
+        top: 100%;
+        right: 0; /* Align dropdown to the right of More link */
+        background-color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        padding: 12px 0;
+        margin: 12px 0 0 0;
+        list-style: none;
+        min-width: 180px;
+        z-index: 100000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                    visibility 0.25s;
+      }
+
+      /* Top invisible bridge to prevent dropdown from closing on hover gap */
+      .dropdown-custom-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 15px;
+      }
+
+      .dropdown-custom-wrapper:hover .dropdown-menu-custom {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .dropdown-link-custom {
+        display: block;
+        padding: 10px 20px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #333333;
+        text-decoration: none;
+        text-align: left;
+        text-transform: none; /* Classy casing */
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .dropdown-link-custom:hover {
+        background-color: #f5f5f5;
+        color: #095492; /* Premium brand blue highlight */
+      }
+
+      .chevron-down-custom {
+        font-size: 7px;
+        margin-left: 6px;
+        display: inline-block;
+        transition: transform 0.25s ease;
+        vertical-align: middle;
+      }
+
+      .dropdown-custom-wrapper:hover .chevron-down-custom {
+        transform: rotate(180deg);
+      }
+
+      /* Cart Badge Dot */
+      .cart-dot-custom {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: #095492;
+        border-radius: 50%;
+        margin-left: 4px;
+        vertical-align: super;
+      }
+
+      /* Main Layout for Scroll 1 */
+      .scroll-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: calc(100vh - 80px); /* Fill the viewport below header */
+        margin-top: 80px; /* Offset fixed header */
+        padding: 20px 4%; /* Reduced padding for maximum space */
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        background-color: #f1f1f1 !important;
+      }
+ 
+      /* Large Centered Shoe Photo Panel */
+      .product-visual-panel {
+        flex: 1.5; /* Expanded from 1.2 to give visual panel ~68% of page width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        padding-right: 0px; /* Removed offset padding */
+        background-color: #f1f1f1 !important;
+      }
+
+      .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .main-product-image {
+        width: 100% !important; /* Full width inside visual panel */
+        max-width: 100% !important;
+        max-height: 82% !important; /* Maximized vertical size */
+        object-fit: contain;
+        transform: scale(1.55) !important; /* Zoom in by 55% to cancel out built-in JPEG padding! */
+        transition: opacity 0.15s ease-in-out !important; /* Transition ONLY opacity for seamless fades! */
+        filter: none !important; /* No drop shadow to prevent showing image borders */
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        opacity: 1; /* Default fully visible */
+      }
+
+      .main-product-image:hover {
+        transform: scale(1.55) !important; /* No hover scale change to keep it completely instant */
+        transition: opacity 0.15s ease-in-out !important;
+      }
+
+      .main-product-image.scale-reduced {
+        transform: scale(1.28) !important; /* Lower scale for 2nd and 3rd Uruk Blue images */
+        transition: opacity 0.15s ease-in-out !important;
+      }
+
+      .main-product-image.scale-reduced:hover {
+        transform: scale(1.28) !important; /* Keep it level and static */
+        transition: opacity 0.15s ease-in-out !important;
+      }
+
+      .gallery-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px; /* Generous gap centered under shoe */
+        margin-top: 60px; /* Increased margin to push arrows safely below the scaled shoe */
+        z-index: 10;
+      }
+
+      .gallery-arrow {
+        background-color: #ffffff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .gallery-arrow:hover {
+        transform: scale(1.1);
+        background-color: #000000;
+        border-color: #000000;
+      }
+
+      .gallery-arrow:hover svg {
+        fill: #ffffff;
+      }
+
+      .gallery-arrow svg {
+        width: 22px;
+        height: 22px;
+        fill: #000000;
+        transition: fill 0.2s ease;
+      }
+
+      /* Floating Detail Card Panel (Positioned Bottom-Right of Right Flex Panel) */
+      .product-selection-panel {
+        flex: 0.7; /* Reduced from 0.8 to make left visual panel massive */
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; /* Align card to the bottom edge */
+        height: 100%;
+        z-index: 10;
+        padding-bottom: 24px; /* Perfectly aligned to the bottom */
+      }
+
+      .selection-card {
+        background: rgba(255, 255, 255, 0.88) !important; /* Premium E-commerce frosted glass */
+        backdrop-filter: blur(24px) !important;
+        -webkit-backdrop-filter: blur(24px) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        width: 480px; /* Wider rectangular horizontal aspect ratio */
+        padding: 18px 20px; /* Reduced vertical padding to decrease height */
+        display: flex;
+        flex-direction: column;
+        gap: 8px; /* Reduced gap to decrease height significantly */
+        animation: slideUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        max-height: calc(100vh - 120px); /* Fits perfectly inside viewport height without page scroll */
+        overflow-y: auto;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Card Elements */
+      .card-category {
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #8a8a8a;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+
+      .card-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        line-height: 1.1;
+        letter-spacing: 0.01em;
+      }
+
+      .card-rating-block {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: -4px;
+      }
+
+      .rating-stars {
+        color: #000000;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+      }
+
+      .rating-link {
+        font-size: 11px;
+        font-weight: 700;
+        color: #095492; /* Highlighted blue reviews */
+        text-decoration: underline;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .card-price-block {
+        font-size: 20px;
+        font-weight: 700;
+        color: #095492; /* Brand Blue Rupee and Amount color */
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Soft premium grey divider line */
+        padding-bottom: 8px; /* Reduced spacing */
+        margin-bottom: 2px;
+      }
+
+      .price-mrp {
+        font-size: 11px;
+        font-weight: 500;
+        color: #777777;
+      }
+
+      /* Section Labels */
+      .section-label {
+        font-size: 9px;
+        font-weight: 700;
+        color: #888888;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* Swatch Container */
+      .swatches-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .swatches-flex {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .swatch-circle {
+        width: 24px; /* More compact swatches */
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0,0,0,0.15);
+      }
+
+      .swatch-circle:hover {
+        transform: scale(1.15);
+      }
+
+      .swatch-circle.active {
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.9), 0 0 0 3px var(--swatch-color, #095492) !important; /* Premium thin outer ring */
+      }
+
+      /* Color swatch codes */
+      .swatch-blue { background-color: #3b6d9c; }
+      .swatch-darkgray { background-color: #333333; }
+      .swatch-olive { background-color: #4e6552; }
+      .swatch-beige { background-color: #e2d2ba; }
+
+      /* Gender Toggle */
+      .gender-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .gender-flex {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-start; /* Aligned left, not stretched */
+      }
+
+      .gender-pill {
+        width: 85px; /* Fixed compact width matching screenshot */
+        padding: 7px 0;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        background-color: rgba(0, 0, 0, 0.02) !important;
+        color: #555555;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        text-align: center;
+        border-radius: 6px; /* Rectangular with rounded edges */
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .gender-pill:hover {
+        background-color: rgba(9, 84, 146, 0.06) !important;
+        border-color: rgba(9, 84, 146, 0.3) !important;
+        color: #095492 !important;
+      }
+
+      .gender-pill.active {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border-color: #000000 !important;
+        font-weight: 700;
+      }
+
+      .gender-pill.active:hover {
+        background-color: #095492 !important;
+        border-color: #095492 !important;
+        box-shadow: 0 4px 10px rgba(9, 84, 146, 0.2) !important;
+      }
+
+      /* Size Grid */
+      .size-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .size-grid {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+      }
+
+      .size-box {
+        flex: 1;
+        padding: 8px 0; /* Compact vertical size padding */
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        background-color: rgba(0, 0, 0, 0.02) !important;
+        color: #555555;
+        font-size: 11px;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .size-box:hover {
+        background-color: rgba(9, 84, 146, 0.06) !important;
+        border-color: rgba(9, 84, 146, 0.3) !important;
+        color: #095492 !important;
+      }
+
+      .size-box.active {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border-color: #000000 !important;
+        font-weight: 700;
+      }
+
+      .size-box.active:hover {
+        background-color: #095492 !important;
+        border-color: #095492 !important;
+        box-shadow: 0 4px 10px rgba(9, 84, 146, 0.2) !important;
+      }
+
+      /* Action Buttons */
+      .actions-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .btn-add-to-cart {
+        width: 100%;
+        padding: 11px; /* Tighter premium padding */
+        border: 1px solid #000000 !important;
+        background-color: transparent;
+        color: #000000;
+        font-size: 13px; /* Bold prominent font */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        border-radius: 6px; /* Rectangular with rounded edges */
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-add-to-cart:hover {
+        background-color: #095492 !important;
+        border-color: #095492 !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(9, 84, 146, 0.2) !important;
+      }
+
+      .btn-buy-now {
+        width: 100%;
+        padding: 11px 20px; /* Tighter premium padding */
+        background-color: #000000 !important; /* Solid black default background */
+        color: #ffffff !important;
+        font-size: 13px; /* Bold prominent font */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        border-radius: 6px; /* Rectangular with rounded edges */
+        cursor: pointer;
+        border: 1px solid #000000 !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+      }
+
+      .btn-buy-now:hover {
+        background-color: #095492 !important; /* Transitions to solid brand blue on hover */
+        border-color: #095492 !important;
+        box-shadow: 0 6px 18px rgba(9, 84, 146, 0.28) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .buy-now-center {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+      }
+
+      .payment-badges-flex {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .payment-badge-circle {
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-buy-now:hover .payment-badge-circle {
+        transform: scale(1.08);
+      }
+
+      .payment-badge-circle img {
+        width: 14px;
+        height: auto;
+      }
+
+      .buy-now-arrow {
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: auto;
+      }
+
+      .shiprocket-attribution {
+        font-size: 7.5px;
+        color: #b0b0b0;
+        text-align: right;
+        margin-top: -6px;
+        margin-right: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* Snapmint EMI Box Style matching screenshot perfectly */
+      .snapmint-emi-box {
+        border: 1px solid rgba(0, 0, 0, 0.06) !important; /* Premium clean solid border */
+        background-color: rgba(0, 0, 0, 0.02) !important; /* Premium light grey blending backdrop */
+        border-radius: 8px !important;
+        padding: 10px 16px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 8px !important;
+        margin-top: 4px;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      .snapmint-row-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .snapmint-text-left {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .snapmint-green-badge {
+        background-color: #059669 !important; /* Elegant deep emerald green instead of neon green */
+        color: #ffffff;
+        font-size: 10px !important;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 4px; /* Rectangular with rounded edges */
+        display: inline-block;
+      }
+
+      .btn-snapmint-buy {
+        background-color: #000000 !important; /* Solid black default background */
+        color: #ffffff !important;
+        font-size: 9px !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em !important;
+        padding: 5px 12px !important;
+        border-radius: 20px; /* Pill shaped button matching screenshot */
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-snapmint-buy:hover {
+        background-color: #095492 !important; /* Transitions to solid brand blue on hover */
+        box-shadow: 0 3px 8px rgba(9, 84, 146, 0.2) !important;
+      }
+
+      .snapmint-row-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px dashed rgba(0,0,0,0.08) !important;
+        padding-top: 8px;
+      }
+
+      .snapmint-cards-accepted {
+        font-size: 9px;
+        font-weight: 500;
+        color: #777777;
+        letter-spacing: 0.05em;
+      }
+
+      .snapmint-logo-text {
+        font-size: 11px;
+        font-weight: 700;
+        color: #095492 !important; /* Snapmint brand blue */
+        letter-spacing: -0.02em;
+      }
+
+      /* Custom scrollbar for card */
+      .selection-card::-webkit-scrollbar {
+        width: 4px;
+      }
+      .selection-card::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .selection-card::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.1);
+        border-radius: 4px;
+      }
+
+      /* Mobile Layout */
+      @media screen and (max-width: 1024px) {
+        .scroll-container {
+          flex-direction: column;
+          height: auto;
+          overflow-y: auto;
+          padding: 100px 4% 40px 4%;
+          gap: 30px;
+        }
+
+        .product-visual-panel {
+          height: 350px;
+          padding-right: 0;
+          flex: none;
+          width: 100%;
+        }
+
+        .product-selection-panel {
+          height: auto;
+          width: 100%;
+          justify-content: center;
+          flex: none;
+        }
+
+        .selection-card {
+          max-width: 100%;
+          max-height: none;
+        }
+
+        .main-product-image {
+          max-height: 100%;
+        }
+      }
+
+      /* --- CSS Scroll Section Rules (Snapping Disabled) --- */
+      .scroll-section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+ 
+      /* --- Scroll 2 Layout & Elements --- */
+      .scroll2-container {
+        background: linear-gradient(to bottom, #f1f1f1 0%, #d8d8da 180px, #d8d8da 100%) !important; /* Seamlessly transitions from Scroll 1 without outlining shoe boxes */
+        width: 100%;
+        height: 100vh;
+        padding-top: 100px; /* Offset fixed header with luxury breathing room */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-left: 5%;
+        padding-right: 5%;
+        overflow: hidden;
+      }
+
+      .scroll2-header {
+        text-align: center;
+        margin-bottom: 40px; /* Enhanced spacious layout spacing */
+        max-width: 760px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .scroll2-stars {
+        color: #000000;
+        font-size: 15px;
+        letter-spacing: 8px;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .scroll2-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 46px; /* Elegant, premium, large headline */
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 16px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        text-transform: uppercase; /* Match Anton's blocky look */
+      }
+
+      .scroll2-body {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.65;
+        color: #555555; /* Subtle premium dark grey for readability */
+        margin: 0;
+        max-width: 680px;
+        letter-spacing: 0.01em;
+      }
+
+      /* Horizontal 3-card Grid */
+      .scroll2-grid {
+        display: flex;
+        gap: 48px; /* Luxury generous gap for breathing room */
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1300px; /* Cover most of the page horizontally */
+        margin-bottom: 40px;
+      }
+
+      /* Massive, solid cards matching the shoe backgrounds perfectly for a seamless single-unit look */
+      .scroll2-card {
+        background-color: #efefef !important; /* Solid light gray matching shoe backgrounds exactly (#EEEEEE / #EFEFEF) */
+        border-radius: 12px; /* Smooth rounded corners */
+        flex: 0 0 380px !important; /* Fixed sizing, prevents resizing on different image ratios */
+        width: 380px !important;
+        height: 520px; /* Tall majestic aspect ratio */
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important; /* Extremely soft, premium shadow */
+        border: none !important; /* Removed distinct borders to maintain single unit look */
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .scroll2-card:hover {
+        transform: translateY(-8px); /* Majestic lift on hover */
+      }
+
+      .scroll2-card-img-wrapper {
+        width: 100%;
+        height: 380px; /* Uniform height for image wrapper block */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #efefef !important; /* Seamlessly matches solid card background */
+        padding: 24px; /* Internal margin so shoes center perfectly and look completely uniform */
+        position: relative;
+      }
+
+      .scroll2-card-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Center the shoe inside the card frame */
+      }
+
+      /* Elegant, padded text block in the card bottom matching the shoe background */
+      .scroll2-card-text {
+        padding: 20px 24px 24px 24px; /* Luxury internal card padding */
+        background-color: #efefef !important; /* Seamlessly matches solid card background */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        flex-grow: 1;
+      }
+
+      .scroll2-card-subtitle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
+        color: #777777;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 6px; /* Spaced perfectly below the headline */
+        margin-bottom: 0;
+      }
+
+      .scroll2-card-headline {
+        font-family: 'Anton', sans-serif;
+        font-size: 24px; /* Clean, bold, readable titles */
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+      }
+
+      /* Bottom Block: Clinical study text and READ THE SCIENCE CTA */
+      .scroll2-bottom {
+        text-align: center;
+        max-width: 840px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .scroll2-bottom-text {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px !important; /* Perfect subtle font-size increase from original 12px */
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 0.06em;
+        line-height: 2.0; /* Generous breathing line height for inline highlights */
+        margin: 0;
+        max-width: 900px;
+      }
+
+      .science-highlight-line {
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        padding: 6px 18px !important;
+        border-radius: 20px !important;
+        display: inline-block !important;
+        margin-top: 10px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+        color: #000000 !important;
+        text-transform: uppercase;
+      }
+
+      .stat-highlight-pill-dark {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        padding: 2px 10px !important;
+        border-radius: 12px !important;
+        display: inline-block !important;
+        font-weight: 800 !important;
+        margin-left: 4px !important;
+        font-family: 'Roboto Mono', monospace !important;
+      }
+
+      .scroll2-cta {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 12px;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        cursor: pointer;
+        display: inline-block;
+        transition: opacity 0.25s ease;
+      }
+
+      .scroll2-cta:hover {
+        opacity: 0.6;
+      }
+
+      /* --- More From RARA Interstitial Section --- */
+      .more-rara-section {
+        height: auto !important;
+        overflow: visible !important;
+        background: linear-gradient(to bottom, #d8d8da 0%, #ececec 180px, #ececec 78%, #7e8285 100%) !important;
+        padding: 80px 6% 90px 6%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .more-rara-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .more-rara-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      .more-rara-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .more-rara-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .more-rara-card-img-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 0.85;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+
+      .more-rara-card-img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+      }
+
+      .more-rara-card:hover .more-rara-card-img {
+        transform: scale(1.05);
+      }
+
+      .more-rara-card-category {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 10px;
+        font-weight: 600;
+        color: #888888;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 6px;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .more-rara-card-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .more-rara-card-name {
+        font-family: 'Anton', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+
+      .more-rara-card-price {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        font-weight: 700;
+        color: #000000;
+        white-space: nowrap;
+      }
+
+      .more-rara-card-rating {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .more-rara-card-stars {
+        color: #000000;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .more-rara-card-reviews {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 10px;
+        font-weight: 500;
+        color: #888888;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .more-rara-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .more-rara-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* --- Scroll 3 Layout & Elements --- */
+      #scroll-3 {
+        background-color: #7e8285 !important; /* Deeper, darker gray backdrop than Scroll 2 */
+      }
+
+      .scroll3-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      /* Left Video Panel - 40% area */
+      .scroll3-video-panel {
+        flex: 0 0 40%;
+        width: 40%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background-color: #7e8285;
+      }
+
+      .scroll3-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Seamless Blending Overlay Mask */
+      .scroll3-blend-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Seamlessly merges the video with the dark gray background color #7e8285 (126, 130, 133) */
+        background: 
+          linear-gradient(to bottom, rgba(126, 130, 133, 1) 0%, rgba(126, 130, 133, 0) 18%),
+          linear-gradient(to top, rgba(126, 130, 133, 1) 0%, rgba(126, 130, 133, 0) 18%),
+          linear-gradient(to right, rgba(126, 130, 133, 0) 60%, rgba(126, 130, 133, 1) 98%);
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      /* Right Content Panel - 60% area */
+      .scroll3-content-panel {
+        flex: 0 0 60%;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 8%; /* Generous luxury indent */
+        padding-right: 10%;
+        background-color: #7e8285;
+        box-sizing: border-box;
+      }
+
+      .scroll3-text-block {
+        max-width: 640px;
+        display: flex;
+        flex-direction: column;
+        gap: 36px; /* Elegant luxury gap */
+        text-align: left;
+      }
+
+      /* Quote Block */
+      .scroll3-quote-block {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .scroll3-quote {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 38px;
+        font-weight: 500;
+        color: #ffffff; /* White text for great contrast */
+        line-height: 1.25;
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+
+      .scroll3-cite {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.6); /* Muted elegant white citation */
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-style: normal;
+      }
+
+      /* Body Text */
+      .scroll3-body {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85); /* Clean and highly readable body text */
+        margin: 0;
+        letter-spacing: 0.01em;
+      }
+
+      .scroll3-video-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10; /* Float above the video and overlay */
+        display: inline-block;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.45); /* Premium glass background */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 16px 36px;
+        border-radius: 30px;
+        text-decoration: none;
+        letter-spacing: 0.18em;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .scroll3-video-btn:hover {
+        background-color: #095492; /* Brand blue hover effect */
+        border-color: #095492;
+        box-shadow: 0 10px 30px rgba(9, 84, 146, 0.45);
+        transform: translate(-50%, -50%) scale(1.05);
+        color: #ffffff !important;
+      }
+
+      /* Mobile Sizing for Scroll 3 */
+      @media screen and (max-width: 1024px) {
+        .scroll3-container {
+          flex-direction: column;
+          height: auto;
+          overflow-y: auto;
+        }
+
+        .scroll3-video-panel {
+          width: 100%;
+          height: 350px;
+          flex: none;
+        }
+
+        .scroll3-blend-overlay {
+          background: linear-gradient(to bottom, rgba(126, 130, 133, 0) 60%, rgba(126, 130, 133, 1) 98%);
+        }
+
+        .scroll3-content-panel {
+          width: 100%;
+          height: auto;
+          padding: 60px 8%;
+          flex: none;
+        }
+
+        .scroll3-quote {
+          font-size: 30px;
+        }
+      }
+
+      /* --- Community Section (Barefoot Movement) --- */
+      .community-section {
+        height: auto !important;
+        overflow: visible !important;
+        background: linear-gradient(to bottom, #7e8285 0%, #1e1e1e 100px, #1e1e1e 100%) !important;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .community-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        min-height: 80vh;
+        padding: 100px 6% 60px 6%;
+        box-sizing: border-box;
+        gap: 60px;
+      }
+
+      /* Left Text Panel */
+      .community-text-panel {
+        flex: 0 0 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+      }
+
+      .community-headline {
+        font-family: 'Anton', sans-serif !important;
+        font-size: 75px !important; /* High-impact blocky headline size matching the uploaded image exactly */
+        font-weight: 400 !important; /* Anton is naturally bold */
+        text-transform: uppercase !important;
+        line-height: 0.95 !important;
+        letter-spacing: 0.02em !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        background-image: url(https://cdn.shopify.com/s/files/1/0688/5294/0974/files/HkEDr0jVekaZO.webp?v=1746089156) !important; /* Signature watercolor color GIF pattern background */
+        background-position: 50% !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        color: transparent !important;
+        position: relative;
+        margin-bottom: 12px;
+      }
+
+      .community-subtitle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        line-height: 1.6;
+        max-width: 420px;
+      }
+
+      .community-cta-row {
+        display: flex;
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      .community-btn {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 12px 28px;
+        border-radius: 30px;
+        border: 2px solid #ffffff;
+        background-color: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .community-btn:hover {
+        background-color: #095492 !important;
+        border-color: #095492 !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 18px rgba(9, 84, 146, 0.4) !important;
+      }
+
+      /* Right Video Mosaic Grid — symmetrical 3x2 */
+      .community-video-panel {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 12px;
+        height: 480px;
+        min-height: 0;
+      }
+
+      .community-video-tile {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        background-color: #121212;
+      }
+
+      /* 3rd video spans both rows to create the tall right column */
+      .community-video-tile:nth-child(3) {
+        grid-row: 1 / 3;
+      }
+
+      .community-video-tile video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* --- Premium Brand Footer (Charcoal/Black Luxury Vibe) --- */
+      .premium-footer {
+        background-color: #000000; /* Solid black matching uploaded image */
+        color: #ffffff;
+        padding: 80px 6% 40px 6%;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1.8fr;
+        gap: 40px;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      /* Column 1: Logo & Socials */
+      .footer-brand-column {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .footer-brand-logo img {
+        height: 90px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        filter: brightness(0) invert(1); /* Render white logo on dark background */
+      }
+
+      .footer-social-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .footer-social-label {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.05rem;
+        letter-spacing: 0.12em;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+
+      .footer-social-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.25s ease;
+      }
+
+      .footer-social-icons a:hover {
+        transform: scale(1.15);
+      }
+
+      .footer-social-icons img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+
+      /* Links Columns (Collections, Help, Company) */
+      .footer-links-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-links-column h4 {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 400;
+      }
+
+      .footer-links-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links-list a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+        display: inline-block;
+      }
+
+      .footer-links-list a:hover {
+        color: #ffffff;
+        padding-left: 2px;
+      }
+
+      /* Column 5: Contact Info & Address */
+      .footer-contact-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-contact-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .footer-contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .footer-contact-row img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .footer-contact-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 400;
+      }
+
+      .footer-contact-text a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+
+      .footer-contact-text a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      /* Bottom Row: Divider & Copyright */
+      .footer-bottom {
+        margin-top: 60px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 1300px;
+        margin-inline: auto;
+      }
+
+      .footer-copyright {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .footer-copyright a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+      }
+
+      .footer-copyright a:hover {
+        color: #ffffff;
+      }
+
+      /* Responsive Breakpoint handling for mobile/tablets */
+      @media (max-width: 1024px) {
+        .premium-footer {
+          padding: 60px 4% 30px 4%;
+        }
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+        .footer-brand-column {
+          grid-column: span 2;
+          align-items: center;
+          text-align: center;
+        }
+        .footer-contact-column {
+          grid-column: span 2;
+        }
+        .footer-bottom {
+          margin-top: 40px;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .footer-brand-column, .footer-contact-column {
+          grid-column: span 1;
+          align-items: flex-start;
+          text-align: left;
+        }
+        .footer-brand-logo img {
+          height: 80px;
+        }
+        .footer-links-column {
+          gap: 12px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .community-main {
+          flex-direction: column;
+          padding: 80px 6% 40px 6%;
+          gap: 40px;
+        }
+
+        .community-text-panel {
+          flex: none;
+          width: 100%;
+        }
+
+        .community-headline {
+          font-size: 48px;
+        }
+
+        .community-video-panel {
+          min-height: 400px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+        }
+      }
+
+      /* --- Footer Info Bar (Editorial Links in Black Row) --- */
+      .footer-info-bar {
+        background-color: #000000 !important;
+        padding: 35px 8% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 3px solid #ffffff !important; /* Thick white line matching reference image exactly */
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
+
+      .info-bar-item {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: center !important;
+      }
+
+      .info-bar-title {
+        color: #ffffff !important;
+        font-family: 'Roboto Mono', monospace !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.03em !important;
+        text-transform: none !important;
+      }
+
+      .info-bar-link {
+        color: #ffffff !important;
+        font-family: 'Roboto Mono', monospace !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        text-decoration: underline !important;
+        text-underline-offset: 4px !important;
+        letter-spacing: 0.03em !important;
+        transition: color 0.25s ease !important;
+      }
+
+      .info-bar-link:hover {
+        color: #095492 !important; /* Premium brand blue highlight */
+      }
+
+      @media (max-width: 768px) {
+        .footer-info-bar {
+          flex-direction: column !important;
+          gap: 24px !important;
+          padding: 25px 4% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Norda Header Layout -->
+    <x-header class="header color-scheme color-scheme--scheme-2">
+      <div class="header-custom-container">
+        <!-- Left: Dominant Logo -->
+        <div class="logo-custom">
+          <a href="/">
+            <img src="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&width=1500" alt="rarabarefoot" class="header__logo-image-custom">
+          </a>
+        </div>
+
+        <!-- Center: Core Navigation -->
+        <div class="nav-center-custom">
+          <a href="/collections/the-collection?gender=men" class="nav-link-custom">MEN</a>
+          <a href="/collections/the-collection?gender=women" class="nav-link-custom">WOMEN</a>
+          <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
+        </div>
+
+        <!-- Right: More and Cart -->
+        <div class="nav-right-custom">
+          <!-- More Dropdown Wrapper -->
+          <div class="dropdown-custom-wrapper">
+            <a href="#" class="nav-link-custom dropdown-trigger-custom" onclick="return false;">MORE <span class="chevron-down-custom">▼</span></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="/pages/help" class="dropdown-link-custom">Help</a></li>
+              <li><a href="/pages/barefoot-science" class="dropdown-link-custom">Barefoot Science</a></li>
+              <li><a href="/pages/blogs" class="dropdown-link-custom">Blog</a></li>
+            </ul>
+          </div>
+          <a href="/cart" aria-controls="cart-drawer" data-no-instant class="nav-link-custom">CART <span class="cart-dot-custom"></span></a>
+        </div>
+      </div>
+    </x-header>
+
+    <!-- Main Section for Snapping Scrolls -->
+    <main>
+      
+      <!-- Scroll 1 Section -->
+      <section class="scroll-section" id="scroll-1">
+        <div class="scroll-container">
+          
+          <!-- Left Panel: Large Center Product Image -->
+          <div class="product-visual-panel">
+            <div class="gallery-container">
+              <img id="product-hero-image" src="Uruk blue-1.JPG" alt="Uruk Blue Barefoot Shoes" class="main-product-image">
+              
+              <!-- Centered premium arrows beneath the shoe -->
+              <div class="gallery-controls">
+                <button type="button" class="gallery-arrow arrow-left" id="gallery-prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </button>
+                
+                <button type="button" class="gallery-arrow arrow-right" id="gallery-next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Panel: Floating Selection Card Box -->
+          <div class="product-selection-panel">
+            <div class="selection-card">
+              
+              <!-- Subtitle/Category -->
+              <div class="card-category">Walk / Jog / Play</div>
+              
+              <!-- Title -->
+              <h1 class="card-title" id="card-product-title">URUK BLUE</h1>
+              
+              <!-- Star Ratings with Highlighted Reviews link -->
+              <div class="card-rating-block">
+                <div class="rating-stars">★★★★☆</div>
+                <div class="rating-link">198 REVIEWS</div>
+              </div>
+              
+              <!-- Price Block -->
+              <div class="card-price-block">
+                <span id="card-price-amount">₹ 7,999.00</span>
+                <span class="price-mrp">MRP (inclusive of all taxes)</span>
+              </div>
+              
+              <!-- Swatches Block -->
+              <div class="swatches-wrapper">
+                <span class="section-label" id="swatch-color-label">COLOR: BLUE</span>
+                <div class="swatches-flex">
+                  <div class="swatch-circle swatch-blue active" data-color="BLUE" data-img="Uruk blue-1.JPG" data-title="URUK BLUE" style="--swatch-color: #3b6d9c;"></div>
+                  <div class="swatch-circle swatch-darkgray" data-color="DARK GRAY" data-img="Xanadu black -1.JPG" data-title="URUK BLACK" style="--swatch-color: #333333;"></div>
+                  <div class="swatch-circle swatch-olive" data-color="OLIVE GREEN" data-img="Uruk neo-1.JPG" data-title="URUK NEON" style="--swatch-color: #4e6552;"></div>
+                  <div class="swatch-circle swatch-beige" data-color="BEIGE WHITE" data-img="Uruk white-1.JPG" data-title="URUK WHITE" style="--swatch-color: #e2d2ba;"></div>
+                </div>
+              </div>
+              
+              <!-- Gender Toggle -->
+              <div class="gender-wrapper">
+                <span class="section-label">FOR</span>
+                <div class="gender-flex">
+                  <button type="button" class="gender-pill active" data-gender="MEN">MEN</button>
+                  <button type="button" class="gender-pill" data-gender="WOMEN">WOMEN</button>
+                </div>
+              </div>
+              
+              <!-- Size Selection Grid -->
+              <div class="size-wrapper">
+                <span class="section-label">SIZE</span>
+                <div class="size-grid">
+                  <button type="button" class="size-box" data-size="8">8</button>
+                  <button type="button" class="size-box active" data-size="9">9</button>
+                  <button type="button" class="size-box" data-size="10">10</button>
+                  <button type="button" class="size-box" data-size="11">11</button>
+                  <button type="button" class="size-box" data-size="12">12</button>
+                </div>
+              </div>
+              
+              <!-- Add to Cart & Buy Now Action Blocks -->
+              <div class="actions-wrapper">
+                <button type="button" class="btn-add-to-cart">Add to Cart</button>
+                
+                <button type="button" class="btn-buy-now">
+                  <div class="buy-now-center" style="display: flex; align-items: center; width: 100%; justify-content: space-between; padding-right: 10px;">
+                    <span style="letter-spacing: 0.15em; font-weight: 800;">BUY NOW</span>
+                    <!-- Real high-fidelity SVGs of Google Pay, PhonePe, Paytm matching screenshot exactly -->
+                    <div class="payment-badges-flex" style="margin-left: auto; margin-right: 24px; display: flex; gap: 6px; align-items: center;">
+                      <!-- Google Pay Logo in white circle -->
+                      <div class="payment-badge-circle logo-gpay" style="background-color: #ffffff; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(0,0,0,0.1); overflow: hidden;">
+                        <svg viewBox="0 0 24 24" width="13" height="13">
+                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.63-1.03-1.39-1.03-2.09z"/>
+                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                      </div>
+                      <!-- PhonePe Logo in purple circle -->
+                      <div class="payment-badge-circle logo-phonepe" style="background-color: #5f259f !important; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: none;">
+                        <span style="color: #ffffff; font-family: 'Roboto Mono', monospace; font-size: 8.5px; font-weight: 900; font-style: italic; line-height: 1; transform: translateY(-0.5px); letter-spacing: -0.05em;">pe</span>
+                      </div>
+                      <!-- Paytm Logo in wide white oval pill -->
+                      <div class="payment-badge-circle logo-paytm" style="border-radius: 12px; width: 34px; height: 22px; padding: 0 4px; display: flex; align-items: center; justify-content: center; background-color: #ffffff !important; border: 1px solid rgba(0,0,0,0.1); overflow: hidden;">
+                        <span style="color: #00baf2; font-family: 'Anton', sans-serif; font-size: 8px; font-weight: 900; letter-spacing: -0.04em; transform: scaleY(0.95);">Pay<span style="color: #002970;">tm</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="buy-now-arrow" style="font-weight: 800; font-size: 16px; margin-right: 4px;">&gt;</span>
+                </button>
+                <div class="shiprocket-attribution">Powered by Shiprocket</div>
+              </div>
+              
+              <!-- Snapmint EMI Box -->
+              <div class="snapmint-emi-box">
+                <div class="snapmint-row-top">
+                  <div class="snapmint-text-left">
+                    <span>OR</span>
+                    <span class="snapmint-green-badge">₹2666</span>
+                    <span>/MONTH (3 MONTHS)</span>
+                  </div>
+                  <button type="button" class="btn-snapmint-buy">Buy on EMI</button>
+                </div>
+                <div class="snapmint-row-bottom">
+                  <span class="snapmint-cards-accepted">UPI & CARDS ACCEPTED | 0 EXTRA COST</span>
+                  <span class="snapmint-logo-text">snapmint</span>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Scroll 2 Section -->
+      <section class="scroll-section" id="scroll-2">
+        <div class="scroll2-container">
+          
+          <!-- Section Header Block -->
+          <div class="scroll2-header">
+            <span class="scroll2-stars">★★★★★</span>
+            <h2 class="scroll2-title">Why RARA Barefoot?</h2>
+            <p class="scroll2-body">Your foot is an engineering masterpiece: 26 bones, 33 joints and nearly 200,000 nerve endings built to sense, balance and move. RARA Barefoot is built around the foot’s original natural design.</p>
+          </div>
+
+          <!-- Symmetrical 3-Card Grid -->
+          <div class="scroll2-grid">
+            
+            <!-- Card 1 -->
+            <div class="scroll2-card">
+              <div class="scroll2-card-img-wrapper">
+                <img src="dotted-1.png" alt="Zero Drop" class="scroll2-card-img">
+              </div>
+              <div class="scroll2-card-text">
+                <h4 class="scroll2-card-headline">Zero Drop</h4>
+                <span class="scroll2-card-subtitle">For natural posture</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="scroll2-card">
+              <div class="scroll2-card-img-wrapper">
+                <img src="Dotted-2.png" alt="Wide Toe Box" class="scroll2-card-img">
+              </div>
+              <div class="scroll2-card-text">
+                <h4 class="scroll2-card-headline">Wide Toe Box</h4>
+                <span class="scroll2-card-subtitle">For natural shape</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="scroll2-card">
+              <div class="scroll2-card-img-wrapper">
+                <img src="dotted-3.png" alt="Flexible" class="scroll2-card-img">
+              </div>
+              <div class="scroll2-card-text">
+                <h4 class="scroll2-card-headline">Flexible</h4>
+                <span class="scroll2-card-subtitle">For natural range of motion</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom block: Science placement and CTA -->
+          <div class="scroll2-bottom">
+            <p class="scroll2-bottom-text">
+              When feet are allowed to move naturally, they get stronger.
+              <br>
+              <span class="science-highlight-line">Six months in minimal barefoot footwear has been shown to increase foot muscle strength by <span class="stat-highlight-pill-dark">57.4%</span>.</span>
+            </p>
+            <a class="scroll2-cta" onclick="alert('Redirecting to Clinical Research study...');">READ THE SCIENCE</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- More From RARA Interstitial Section -->
+      <section class="more-rara-section" id="more-from-rara">
+        <h2 class="more-rara-title">More From RARA</h2>
+        <div class="more-rara-grid">
+
+          <!-- Card 1: Xanadu White -->
+          <div class="more-rara-card">
+            <div class="more-rara-card-img-wrapper">
+              <img src="xanadu white-1.JPG" alt="Xanadu White" class="more-rara-card-img">
+            </div>
+            <span class="more-rara-card-category">Training / Gym / Exercise</span>
+            <div class="more-rara-card-info">
+              <span class="more-rara-card-name">Xanadu White</span>
+              <span class="more-rara-card-price">₹ 8,499.00</span>
+            </div>
+            <div class="more-rara-card-rating">
+              <span class="more-rara-card-stars">★★★★☆</span>
+              <span class="more-rara-card-reviews">(117)</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Zanzibar Blue -->
+          <div class="more-rara-card">
+            <div class="more-rara-card-img-wrapper">
+              <img src="zanzibar blue-1.jpg" alt="Zanzibar Blue" class="more-rara-card-img">
+            </div>
+            <span class="more-rara-card-category">All Day / Everyday</span>
+            <div class="more-rara-card-info">
+              <span class="more-rara-card-name">Zanzibar Blue</span>
+              <span class="more-rara-card-price">₹ 7,499.00</span>
+            </div>
+            <div class="more-rara-card-rating">
+              <span class="more-rara-card-stars">★★★★☆</span>
+              <span class="more-rara-card-reviews">(94)</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Xanadu Black -->
+          <div class="more-rara-card">
+            <div class="more-rara-card-img-wrapper">
+              <img src="Xanadu black -1.JPG" alt="Xanadu Black" class="more-rara-card-img">
+            </div>
+            <span class="more-rara-card-category">Training / Gym / Exercise</span>
+            <div class="more-rara-card-info">
+              <span class="more-rara-card-name">Xanadu Black</span>
+              <span class="more-rara-card-price">₹ 8,499.00</span>
+            </div>
+            <div class="more-rara-card-rating">
+              <span class="more-rara-card-stars">★★★★☆</span>
+              <span class="more-rara-card-reviews">(117)</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Uruk White -->
+          <div class="more-rara-card">
+            <div class="more-rara-card-img-wrapper">
+              <img src="Uruk white-1.JPG" alt="Uruk White" class="more-rara-card-img">
+            </div>
+            <span class="more-rara-card-category">Walk / Jog / Play</span>
+            <div class="more-rara-card-info">
+              <span class="more-rara-card-name">Uruk White</span>
+              <span class="more-rara-card-price">₹ 7,999.00</span>
+            </div>
+            <div class="more-rara-card-rating">
+              <span class="more-rara-card-stars">★★★★☆</span>
+              <span class="more-rara-card-reviews">(158)</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Scroll 3 Section -->
+      <section class="scroll-section" id="scroll-3">
+        <div class="scroll3-container">
+          <div class="scroll3-video-panel">
+            <video class="scroll3-video" autoplay muted loop playsinline>
+              <source src="Factory video silent.mp4" type="video/mp4">
+            </video>
+            <div class="scroll3-blend-overlay"></div>
+            <a href="/pages/about-us" class="scroll3-video-btn">About Us</a>
+          </div>
+          <div class="scroll3-content-panel">
+            <div class="scroll3-text-block">
+              <div class="scroll3-quote-block">
+                <blockquote class="scroll3-quote">“There are no beautiful surfaces without a terrible depth”</blockquote>
+                <cite class="scroll3-cite">— Friedrich Nietzsche</cite>
+              </div>
+              <p class="scroll3-body">We make barefoot sneakers the hard way: custom wide moulds, flexible natural-rubber soles, premium recycled uppers, and repeated rounds of testing until the shoe feels right on your foot. The surface is simple because the work underneath is not.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Section: The Barefoot Movement -->
+      <section class="community-section" id="community">
+        <div class="community-main">
+          <div class="community-text-panel">
+            <h2 class="community-headline">THE BAREFOOT<br>MOVEMENT</h2>
+            <p class="community-subtitle">Meet runners, lifters, hikers, physios, coaches and the simply curious powering the barefoot movement.</p>
+            <div class="community-cta-row">
+              <a href="#" class="community-btn">Join Us</a>
+              <a href="#" class="community-btn">Explore Collection</a>
+            </div>
+          </div>
+          <div class="community-video-panel">
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-1 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-2 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-3 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-4 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-5 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER INFO BAR (EDITORIAL LINKS IN BLACK ROW) -->
+      <div class="footer-info-bar">
+        <div class="info-bar-item">
+          <span class="info-bar-title">Outside India?</span>
+          <a href="https://www.rarabarefoot.com/" target="_blank" class="info-bar-link">Visit rarabarefoot.com</a>
+        </div>
+        <div class="info-bar-item">
+          <span class="info-bar-title">Changed your mind?</span>
+          <a href="/pages/refund-and-return-policy" class="info-bar-link">Our returns are hassle-free</a>
+        </div>
+      </div>
+
+      <!-- PREMIUM BRAND FOOTER (CHARCOAL LUXURY VIBE) -->
+      <footer class="premium-footer">
+        <div class="footer-grid">
+          <!-- Column 1: Logo & Socials -->
+          <div class="footer-brand-column">
+            <div class="footer-brand-logo">
+              <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/NEW_ra_LOGO_2.png?v=1756875469" alt="Rara Barefoot Logo">
+            </div>
+            <div class="footer-social-wrapper">
+              <span class="footer-social-label">FOLLOW US:</span>
+              <div class="footer-social-icons">
+                <a href="https://x.com/rarabarefoot" target="_blank" aria-label="Follow us on X">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/x-removebg-preview.png?v=1749284179" alt="X (Twitter)">
+                </a>
+                <a href="https://www.instagram.com/rarabarefoot" target="_blank" aria-label="Follow us on Instagram">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/insta01-removebg-preview.png?v=1749284179" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank" aria-label="Follow us on Facebook">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/facebook01-removebg-preview.png?v=1749284179" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank" aria-label="Follow us on LinkedIn">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/linkedin.png?v=1759217170" alt="LinkedIn">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Collections -->
+          <div class="footer-links-column">
+            <h4>Collections</h4>
+            <ul class="footer-links-list">
+              <li><a href="/collections/the-collection">THE COLLECTION</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Help -->
+          <div class="footer-links-column">
+            <h4>HELP</h4>
+            <ul class="footer-links-list">
+              <li><a href="/pages/how-can-we-help">Help Centre</a></li>
+              <li><a href="/pages/why-barefoot">Why Barefoot?</a></li>
+              <li><a href="/pages/blogs">Blogs</a></li>
+              <li><a href="/pages/barefoot-science">Barefoot Science</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Company -->
+          <div class="footer-links-column">
+            <h4>COMPANY</h4>
+            <ul class="footer-links-list">
+              <li><a href="/pages/about-us">About Us</a></li>
+              <li><a href="/pages/grievance-redressal-process">Grievance Redressal</a></li>
+              <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/pages/terms-conditions">Terms Of Use</a></li>
+              <li><a href="/pages/refund-and-return-policy">Refund and Return Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Contact Info -->
+          <div class="footer-contact-column">
+            <div class="footer-contact-rows">
+              <!-- WhatsApp -->
+              <div class="footer-contact-row">
+                <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301" alt="WhatsApp Icon">
+                <div class="footer-contact-text">
+                  <a href="https://wa.me/918130096761" target="_blank">+91 81300 96761</a>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="footer-contact-row">
+                <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/email.png?v=1754449301" alt="Email Icon">
+                <div class="footer-contact-text">
+                  <a href="mailto:care@rarabarefoot.in">care@rarabarefoot.in</a>
+                </div>
+              </div>
+              <!-- GPS / Address -->
+              <div class="footer-contact-row">
+                <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/gps.png?v=1754449301" alt="GPS Icon">
+                <div class="footer-contact-text">
+                  AP2GP Pvt. Ltd.<br>
+                  NO 17, 2ND FLOOR, 7TH MAIN ROAD, II STAGE, INDIRANAGAR, Bengaluru - 560038
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 - <a href="/">RARABAREFOOT</a> POWERED BY SHOPIFY
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- Simple premium interactive behaviors -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        // 1. Premium Gallery Carousel Configuration
+        const colorGalleries = {
+          "BLUE": [
+            "Uruk blue-1.JPG",
+            "Uruk blue-3.JPG",
+            "Uruk blue-4.JPG",
+            "uruk blue new.JPG",
+            "uruk-blue model.png"
+          ],
+          "DARK GRAY": [
+            "Xanadu black -1.JPG",
+            "Xanadu black -2.JPG",
+            "Xanadu black -3.JPG",
+            "Xanadu black -4.JPG"
+          ],
+          "OLIVE GREEN": [
+            "Uruk neo-1.JPG",
+            "uruk neo-2.JPG",
+            "uruk neo-3.JPG",
+            "Uruk neo-4.jpg"
+          ],
+          "BEIGE WHITE": [
+            "Uruk white-1.JPG",
+            "Uruk white-2.JPG",
+            "Uruk white-3.JPG",
+            "Uruk white-4.JPG"
+          ]
+        };
+
+        let currentActiveColor = "BLUE";
+        let currentActiveIndex = 0;
+        let isTransitioning = false;
+
+        const heroImage = document.getElementById('product-hero-image');
+        const colorLabel = document.getElementById('swatch-color-label');
+        const titleLabel = document.getElementById('card-product-title');
+        const swatches = document.querySelectorAll('.swatch-circle');
+
+        // Preload all images across all galleries for instant, seamless transitions
+        function preloadAllGalleries() {
+          Object.values(colorGalleries).forEach(gallery => {
+            gallery.forEach(src => {
+              const img = new Image();
+              img.src = src;
+            });
+          });
+        }
+        preloadAllGalleries();
+
+        // Functions to manage carousel navigation
+        function updateHeroImage(index, force = false) {
+          if (isTransitioning && !force) return; // Prevent rapid clicking from queuing overlapping transitions
+          
+          const gallery = colorGalleries[currentActiveColor];
+          if (!gallery || index < 0 || index >= gallery.length) return;
+
+          currentActiveIndex = index;
+          const imagePath = gallery[currentActiveIndex];
+
+          isTransitioning = true;
+
+          // 1. Smoothly fade out the current shoe image
+          heroImage.style.opacity = '0';
+          
+          // 2. Perform the source swap and size change inside a timeout (while the image is fully invisible)
+          setTimeout(() => {
+            const tempImg = new Image();
+            tempImg.onload = () => {
+              heroImage.src = imagePath;
+              
+              // Apply a reduced scale for the 2nd and 3rd blue images to fit them perfectly
+              if (currentActiveColor === "BLUE" && (currentActiveIndex === 1 || currentActiveIndex === 2)) {
+                heroImage.classList.add('scale-reduced');
+              } else {
+                heroImage.classList.remove('scale-reduced');
+              }
+              
+              // 3. Smoothly fade back in once the new shoe is ready and in place
+              heroImage.style.opacity = '1';
+              
+              // Release the transition lock after the image has finished fading back in (150ms)
+              setTimeout(() => {
+                isTransitioning = false;
+              }, 150);
+            };
+            tempImg.onerror = () => {
+              // Safety fallback: swap src and restore opacity/lock state if load fails
+              heroImage.src = imagePath;
+              heroImage.style.opacity = '1';
+              isTransitioning = false;
+            };
+            tempImg.src = imagePath;
+          }, 150); // 150ms matches the CSS opacity transition duration
+        }
+
+        function nextImage() {
+          const gallery = colorGalleries[currentActiveColor];
+          if (!gallery) return;
+          let nextIdx = currentActiveIndex + 1;
+          if (nextIdx >= gallery.length) {
+            nextIdx = 0; // Wrap around
+          }
+          updateHeroImage(nextIdx);
+        }
+
+        function prevImage() {
+          const gallery = colorGalleries[currentActiveColor];
+          if (!gallery) return;
+          let prevIdx = currentActiveIndex - 1;
+          if (prevIdx < 0) {
+            prevIdx = gallery.length - 1; // Wrap around
+          }
+          updateHeroImage(prevIdx);
+        }
+
+        // Initialize Carousel Event Listeners
+        document.getElementById('gallery-prev').addEventListener('click', prevImage);
+        document.getElementById('gallery-next').addEventListener('click', nextImage);
+
+        // Keyboard arrow support for premium feel
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') {
+            prevImage();
+          } else if (e.key === 'ArrowRight') {
+            nextImage();
+          }
+        });
+
+        // Initialize swatches behavior
+        swatches.forEach(swatch => {
+          swatch.addEventListener('click', () => {
+            // Remove active classes
+            swatches.forEach(s => s.classList.remove('active'));
+            // Add active to clicked
+            swatch.classList.add('active');
+
+            // Get attributes
+            const color = swatch.getAttribute('data-color');
+            const title = swatch.getAttribute('data-title');
+
+            // Update text labels
+            colorLabel.textContent = `COLOR: ${color}`;
+            titleLabel.textContent = title;
+            
+            // Switch active gallery and reset index
+            currentActiveColor = color;
+            currentActiveIndex = 0;
+
+            // Force update display and override transition locks instantly
+            updateHeroImage(0, true);
+          });
+        });
+
+        // 2. Gender Toggle Selection
+        const genderButtons = document.querySelectorAll('.gender-pill');
+        genderButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            genderButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          });
+        });
+
+        // 3. Size Toggle Selection
+        const sizeButtons = document.querySelectorAll('.size-box');
+        sizeButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            sizeButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          });
+        });
+
+        // 4. Custom Star Interactions or link handling
+        const ratingLink = document.querySelector('.rating-link');
+        ratingLink.addEventListener('click', () => {
+          alert('198 Verified Customer Reviews average 4.7 stars!');
+        });
+
+        // 5. Checkout Alerts
+        document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
+          alert('Uruk Blue added to your cart successfully!');
+        });
+
+        document.querySelector('.btn-buy-now').addEventListener('click', () => {
+          alert('Initiating Shiprocket Checkout flow...');
+        });
+
+        document.querySelector('.btn-snapmint-buy').addEventListener('click', () => {
+          alert('Opening Snapmint EMI approval application...');
+        });
+
+      });
+    </script>
+  </body>
+</html>

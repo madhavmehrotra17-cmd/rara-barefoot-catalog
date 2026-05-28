@@ -1,0 +1,15 @@
+
+=== SECTION: template--19195983200430__video_CEhjzi ===
+Text Content Snippet: id="shopify-section-template--19195983200430__video_CEhjzi" class="shopify-section shopify-section--video"> BAREFOOT TRAINING SNEAKER SHOP THE COLLECTION #shopify-section-template--19195983200430__video_CEhjzi .video__button {margin: 0;} #shopify-section-template--19195983200430__video_CEhjzi .all-video-buttons {display: flex; gap: 15px;} #shopify-section-template--19195983200430__video_CEhjzi .place-self-center {align-self: end !important; margin-bottom: 50px !important;} #shopify-section-templ
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/101da7209a394c1a9a56008a29672b7c/101da7209a394c1a9a56008a29672b7c.HD-720p-4.5Mbps-58309404.mp4?v=0"
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/c061032c765d40feb35bdc389709d537/c061032c765d40feb35bdc389709d537.HD-1080p-7.2Mbps-58077564.mp4?v=0"
+
+=== SECTION: template--19195983200430__video_dC8hR9 ===
+Text Content Snippet: id="shopify-section-template--19195983200430__video_dC8hR9" class="shopify-section shopify-section--video"> FOR WALKS, JOGS, & PLAY SHOP THE COLLECTION #shopify-section-template--19195983200430__video_dC8hR9 .video__button {margin: 0;} #shopify-section-template--19195983200430__video_dC8hR9 .all-video-buttons {display: flex; gap: 15px;} #shopify-section-template--19195983200430__video_dC8hR9 .place-self-center {align-self: end !important; margin-bottom: 50px !important;} #shopify-section-templat
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/301c560ecc2a454d8eb72d1184a72832/301c560ecc2a454d8eb72d1184a72832.HD-720p-1.6Mbps-58538317.mp4?v=0"
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/7038a8e7326e4bc289fcd6094fa5e71b/7038a8e7326e4bc289fcd6094fa5e71b.HD-1080p-7.2Mbps-58077563.mp4?v=0"
+
+=== SECTION: template--19195983200430__video_QQD7EM ===
+Text Content Snippet: id="shopify-section-template--19195983200430__video_QQD7EM" class="shopify-section shopify-section--video"> SHOP THE COLLECTION #shopify-section-template--19195983200430__video_QQD7EM .video__button {margin: 0;} #shopify-section-template--19195983200430__video_QQD7EM .all-video-buttons {display: flex; gap: 15px;} #shopify-section-template--19195983200430__video_QQD7EM .place-self-center {align-self: end !important; margin-bottom: 50px !important;} #shopify-section-template--19195983200430__video
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/d656bd3a1abc4a4fa1508c21606ccfe2/d656bd3a1abc4a4fa1508c21606ccfe2.HD-1080p-7.2Mbps-58480989.mp4?v=0"
+Source: <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/6d70e342a9c24bb49618e76342757e72/6d70e342a9c24bb49618e76342757e72.HD-1080p-7.2Mbps-58481150.mp4?v=0"
