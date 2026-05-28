@@ -2,10 +2,6 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/catalog.html"
-    },
-    {
       "source": "/collections/:path*",
       "has": [
         {
