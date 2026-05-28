@@ -6,7 +6,14 @@
       "destination": "/catalog.html"
     },
     {
-      "source": "/collections/*women*",
+      "source": "/collections/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "gender",
+          "value": "women"
+        }
+      ],
       "destination": "/womens.html"
     },
     {
