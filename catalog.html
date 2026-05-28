@@ -9,7 +9,7 @@
     <!-- Google Fonts for Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
       /* Reset & Global Styles */
@@ -98,7 +98,7 @@
         font-weight: 700; /* Bold font weight */
         text-transform: uppercase;
         color: #000000;
-        letter-spacing: 0.08em; /* Clean tracking */
+        letter-spacing: 0.18em; /* Clean premium tracking */
         text-decoration: none;
         transition: opacity 0.25s ease, color 0.25s ease;
       }
@@ -329,6 +329,7 @@
         animation: slideUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
         max-height: calc(100vh - 120px); /* Fits perfectly inside viewport height without page scroll */
         overflow-y: auto;
+        font-family: 'Inter', sans-serif !important;
       }
 
       @keyframes slideUp {
@@ -348,7 +349,7 @@
         font-weight: 700;
         color: #8a8a8a;
         text-transform: uppercase;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.22em;
       }
 
       .card-title {
@@ -358,7 +359,7 @@
         color: #000000;
         text-transform: uppercase;
         line-height: 1.1;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.08em;
       }
 
       .card-rating-block {
@@ -379,7 +380,7 @@
         font-weight: 700;
         color: #095492; /* Highlighted blue reviews */
         text-decoration: underline;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
         cursor: pointer;
       }
@@ -394,6 +395,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Soft premium grey divider line */
         padding-bottom: 8px; /* Reduced spacing */
         margin-bottom: 2px;
+        letter-spacing: 0.04em;
       }
 
       .price-mrp {
@@ -408,7 +410,7 @@
         font-weight: 700;
         color: #888888;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.18em;
       }
 
       /* Swatch Container */
@@ -470,7 +472,7 @@
         font-size: 10px;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.15em;
         text-align: center;
         border-radius: 6px; /* Rectangular with rounded edges */
         cursor: pointer;
@@ -522,6 +524,7 @@
         border-radius: 6px;
         cursor: pointer;
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        letter-spacing: 0.08em;
       }
 
       .size-box:hover {
@@ -560,7 +563,7 @@
         font-size: 13px; /* Bold prominent font */
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.18em;
         border-radius: 6px; /* Rectangular with rounded edges */
         cursor: pointer;
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -581,7 +584,7 @@
         font-size: 13px; /* Bold prominent font */
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.18em;
         border-radius: 6px; /* Rectangular with rounded edges */
         cursor: pointer;
         border: 1px solid #000000 !important;
@@ -660,7 +663,7 @@
         flex-direction: column;
         gap: 8px !important;
         margin-top: 4px;
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'Inter', sans-serif;
       }
 
       .snapmint-row-top {
@@ -694,7 +697,7 @@
         font-size: 9px !important;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.08em !important;
+        letter-spacing: 0.15em !important;
         padding: 5px 12px !important;
         border-radius: 20px; /* Pill shaped button matching screenshot */
         border: none;
@@ -824,7 +827,7 @@
         color: #000000;
         margin-bottom: 16px;
         line-height: 1.15;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.08em;
         text-transform: uppercase; /* Match Anton's blocky look */
       }
 
@@ -904,7 +907,7 @@
         font-weight: 600;
         color: #777777;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.12em;
         margin-top: 6px; /* Spaced perfectly below the headline */
         margin-bottom: 0;
       }
@@ -917,7 +920,7 @@
         text-transform: uppercase;
         margin: 0;
         line-height: 1.1;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.08em;
       }
 
       /* Bottom Block: Clinical study text and READ THE SCIENCE CTA */
@@ -936,14 +939,14 @@
         font-weight: 700;
         text-transform: uppercase;
         color: #000000;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.12em;
         line-height: 2.0; /* Generous breathing line height for inline highlights */
         margin: 0;
         max-width: 900px;
       }
 
       .science-highlight-line {
-        background-color: rgba(255, 255, 255, 0.75) !important;
+        background-color: rgba(0, 0, 0, 0.05) !important; /* Soft premium grey highlight */
         border: 1px solid rgba(0, 0, 0, 0.08) !important;
         padding: 6px 18px !important;
         border-radius: 20px !important;
@@ -954,24 +957,13 @@
         text-transform: uppercase;
       }
 
-      .stat-highlight-pill-dark {
-        background-color: #000000 !important;
-        color: #ffffff !important;
-        padding: 2px 10px !important;
-        border-radius: 12px !important;
-        display: inline-block !important;
-        font-weight: 800 !important;
-        margin-left: 4px !important;
-        font-family: 'Roboto Mono', monospace !important;
-      }
-
       .scroll2-cta {
         font-family: 'Roboto Mono', monospace;
         font-size: 12px;
         font-weight: 700;
         color: #000000;
         text-transform: uppercase;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.24em;
         text-decoration: underline;
         text-underline-offset: 4px;
         cursor: pointer;
@@ -1000,7 +992,7 @@
         font-weight: 700;
         color: #000000;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.1em;
         margin-bottom: 40px;
         text-align: center;
       }
@@ -1054,7 +1046,7 @@
         font-weight: 600;
         color: #888888;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.1em;
         margin-bottom: 6px;
         text-decoration: underline;
         text-underline-offset: 2px;
@@ -1073,7 +1065,7 @@
         font-weight: 700;
         color: #000000;
         text-transform: uppercase;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.08em;
       }
 
       .more-rara-card-price {
@@ -1082,6 +1074,7 @@
         font-weight: 700;
         color: #000000;
         white-space: nowrap;
+        letter-spacing: 0.05em;
       }
 
       .more-rara-card-rating {
@@ -1208,7 +1201,7 @@
         font-weight: 700;
         color: rgba(255, 255, 255, 0.6); /* Muted elegant white citation */
         text-transform: uppercase;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.22em;
         font-style: normal;
       }
 
@@ -1225,9 +1218,9 @@
 
       .scroll3-video-btn {
         position: absolute;
-        top: 50%;
+        bottom: 40px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         z-index: 10; /* Float above the video and overlay */
         display: inline-block;
         font-family: 'Roboto Mono', monospace;
@@ -1242,7 +1235,7 @@
         padding: 16px 36px;
         border-radius: 30px;
         text-decoration: none;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.22em;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
@@ -1251,7 +1244,7 @@
         background-color: #095492; /* Brand blue hover effect */
         border-color: #095492;
         box-shadow: 0 10px 30px rgba(9, 84, 146, 0.45);
-        transform: translate(-50%, -50%) scale(1.05);
+        transform: translateX(-50%) scale(1.05);
         color: #ffffff !important;
       }
 
@@ -1320,7 +1313,7 @@
         font-weight: 400 !important; /* Anton is naturally bold */
         text-transform: uppercase !important;
         line-height: 0.95 !important;
-        letter-spacing: 0.02em !important;
+        letter-spacing: 0.06em !important;
         -webkit-background-clip: text !important;
         background-clip: text !important;
         background-image: url(https://cdn.shopify.com/s/files/1/0688/5294/0974/files/HkEDr0jVekaZO.webp?v=1746089156) !important; /* Signature watercolor color GIF pattern background */
@@ -1354,7 +1347,7 @@
         font-size: 12px;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.18em;
         padding: 12px 28px;
         border-radius: 30px;
         border: 2px solid #ffffff;
@@ -1449,7 +1442,7 @@
       .footer-social-label {
         font-family: 'Anton', sans-serif;
         font-size: 1.05rem;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.18em;
         color: #ffffff;
         text-transform: uppercase;
       }
@@ -1487,7 +1480,7 @@
       .footer-links-column h4 {
         font-family: 'Anton', sans-serif;
         font-size: 1.1rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #ffffff;
         font-weight: 400;
@@ -1935,7 +1928,7 @@
             <p class="scroll2-bottom-text">
               When feet are allowed to move naturally, they get stronger.
               <br>
-              <span class="science-highlight-line">Six months in minimal barefoot footwear has been shown to increase foot muscle strength by <span class="stat-highlight-pill-dark">57.4%</span>.</span>
+              <span class="science-highlight-line">Six months in minimal barefoot footwear has been shown to increase foot muscle strength by <strong style="font-weight: 800; letter-spacing: 0.05em;">57.4%</strong>.</span>
             </p>
             <a class="scroll2-cta" onclick="alert('Redirecting to Clinical Research study...');">READ THE SCIENCE</a>
           </div>
