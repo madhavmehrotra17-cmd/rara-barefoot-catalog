@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RARA Barefoot - Home</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* --- Base Style Sheet --- */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+        background-color: #05080c; /* Matches the vignette dark space background of the model image */
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+
+      /* Enable viewport-based vertical scroll container for snapping */
+      main {
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+      }
+
+      /* Individual Scroll Snapping Section base styling */
+      .scroll-section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Pushes content block to the bottom center, inspired by the March page */
+        padding-bottom: 7%; /* Elegant bottom padding for editorial breathing room */
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      /* --- Persistent Header Menu --- */
+      x-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
+      }
+
+      .header-custom-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 6%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Premium white logo matching high-fashion dark-mode branding */
+      .logo-custom img {
+        height: 60px;
+        width: auto;
+        display: block;
+        filter: brightness(0) invert(1);
+        transition: transform 0.25s ease;
+      }
+
+      .logo-custom img:hover {
+        transform: scale(1.02);
+      }
+
+      .nav-center-custom {
+        display: flex;
+        gap: 50px;
+      }
+
+      .nav-link-custom {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transition: opacity 0.25s ease;
+      }
+
+      .nav-link-custom:hover {
+        opacity: 0.6;
+      }
+
+      .nav-right-custom {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .dropdown-custom-wrapper {
+        position: relative;
+      }
+
+      .dropdown-menu-custom {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #0c0f13; /* Premium dark background for dropdown */
+        border: 1px solid rgba(255,255,255,0.08);
+        list-style: none;
+        padding: 10px 0;
+        margin-top: 15px;
+        min-width: 180px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .dropdown-link-custom {
+        display: block;
+        padding: 10px 24px;
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: color 0.2s ease, background-color 0.2s ease;
+      }
+
+      .dropdown-link-custom:hover {
+        color: #ffffff;
+        background-color: rgba(255,255,255,0.05);
+      }
+
+      .dropdown-custom-wrapper:hover .dropdown-menu-custom {
+        display: block;
+      }
+
+      .chevron-down-custom {
+        font-size: 8px;
+        margin-left: 4px;
+        vertical-align: middle;
+        opacity: 0.7;
+      }
+
+      /* --- Scroll 1: Hero Model Layer --- */
+      .hero-image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%; /* Spotlighted crops face/shoes elegantly */
+      }
+
+      /* Low-key cinematic spotlight overlay to blend photo edges seamlessly to deep space blue */
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(5, 8, 12, 0.45) 0%,
+          rgba(5, 8, 12, 0.05) 50%,
+          rgba(5, 8, 12, 0.85) 95%
+        );
+        z-index: 2;
+      }
+
+      /* --- bottom-aligned Editorial Typography & CTAs (March style) --- */
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+
+      /* Cormorant Garamond serif heading */
+      .hero-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 72px;
+        font-weight: 500;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Symmetrical CTAs wrapper */
+      .hero-actions {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Symmetrical hollow glassmorphic buttons */
+      .btn-hero {
+        display: inline-block;
+        padding: 15px 38px;
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #ffffff;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(4px);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        cursor: pointer;
+      }
+
+      .btn-hero:hover {
+        border-color: #ffffff;
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Scroll Guide Indicator at the very bottom center */
+      .scroll-indicator {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        opacity: 0.55;
+        transition: opacity 0.3s ease;
+      }
+
+      .scroll-indicator:hover {
+        opacity: 1;
+      }
+
+      .scroll-text {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      .scroll-chevron {
+        width: 14px;
+        height: 14px;
+        fill: #ffffff;
+        animation: bounce 1.8s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(5px);
+        }
+      }
+
+      /* --- Responsive media queries for absolute cross-device precision --- */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 42px;
+          padding: 0 20px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          gap: 15px;
+          width: 80%;
+        }
+
+        .btn-hero {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 14px 20px;
+          font-size: 11px;
+        }
+
+        .header-custom-container {
+          padding: 20px 6%;
+        }
+
+        .nav-center-custom {
+          display: none; /* Keep mobile header completely clean and minimalist */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Persistent Header Navigation -->
+    <x-header class="header">
+      <div class="header-custom-container">
+        <!-- Left: Logo -->
+        <div class="logo-custom">
+          <a href="/">
+            <img src="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&width=1500" alt="rarabarefoot">
+          </a>
+        </div>
+
+        <!-- Center: Core Navigation -->
+        <div class="nav-center-custom">
+          <a href="/collections/the-collection?gender=men" class="nav-link-custom">MEN</a>
+          <a href="/collections/the-collection?gender=women" class="nav-link-custom">WOMEN</a>
+          <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
+        </div>
+
+        <!-- Right: Dropdown & Cart -->
+        <div class="nav-right-custom">
+          <div class="dropdown-custom-wrapper">
+            <a href="#" class="nav-link-custom dropdown-trigger-custom" onclick="return false;">MORE <span class="chevron-down-custom">▼</span></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="/pages/help" class="dropdown-link-custom">Help</a></li>
+              <li><a href="/pages/barefoot-science" class="dropdown-link-custom">Barefoot Science</a></li>
+              <li><a href="/pages/blogs" class="dropdown-link-custom">Blog</a></li>
+            </ul>
+          </div>
+          <a href="/cart" class="nav-link-custom">CART</a>
+        </div>
+      </div>
+    </x-header>
+
+    <!-- Main Snapping Content Wrapper -->
+    <main>
+      
+      <!-- Scroll 1: Spotlighted Hero Model Section (March Inspired) -->
+      <section class="scroll-section" id="scroll-1">
+        <!-- Spotlighted Background Image -->
+        <div class="hero-image-wrapper">
+          <img src="homepage-hero-model.jpg" alt="The Barefoot Experience" class="hero-image">
+          <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Bottom Centered Editorial Content Block -->
+        <div class="hero-content">
+          <h1 class="hero-title">The Barefoot Experience.</h1>
+          <div class="hero-actions">
+            <a href="/collections/the-collection?gender=men" class="btn-hero">Shop Men</a>
+            <a href="/collections/the-collection?gender=women" class="btn-hero">Shop Women</a>
+          </div>
+        </div>
+
+        <!-- Floating Scroll Indicator -->
+        <div class="scroll-indicator">
+          <span class="scroll-text">Scroll to discover</span>
+          <svg class="scroll-chevron" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </section>
+      
+    </main>
+  </body>
+</html>
