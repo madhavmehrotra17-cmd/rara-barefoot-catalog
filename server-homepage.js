@@ -39,6 +39,26 @@ app.get('/', (req, res) => {
     }
 });
 
+// Explicit Route for Scroll 1
+app.get('/scroll1', (req, res) => {
+    const filePath = path.join(__dirname, 'homepage.html');
+    if (fs.existsSync(filePath)) {
+        res.send(fs.readFileSync(filePath, 'utf8'));
+    } else {
+        res.status(404).send('homepage.html not found.');
+    }
+});
+
+// Explicit Route for Scroll 3 (Community)
+app.get('/scroll3', (req, res) => {
+    const filePath = path.join(__dirname, 'homepage-scroll3.html');
+    if (fs.existsSync(filePath)) {
+        res.send(fs.readFileSync(filePath, 'utf8'));
+    } else {
+        res.status(404).send('homepage-scroll3.html not found.');
+    }
+});
+
 // Cache-bypassing routes for preview
 app.get('/fresh', (req, res) => {
     res.send(fs.readFileSync(path.join(__dirname, 'homepage.html'), 'utf8'));
