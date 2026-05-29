@@ -342,8 +342,15 @@
 
         <!-- Center: Core Navigation -->
         <div class="nav-center-custom">
-          <a href="/collections/the-collection?gender=men" class="nav-link-custom">MEN</a>
-          <a href="/collections/the-collection?gender=women" class="nav-link-custom">WOMEN</a>
+          <!-- Shop Dropdown Wrapper -->
+          <div class="dropdown-custom-wrapper">
+            <a href="#" class="nav-link-custom dropdown-trigger-custom" onclick="return false;">SHOP <span class="chevron-down-custom">▼</span></a>
+            <ul class="dropdown-menu-custom" style="left: 0; right: auto;">
+              <li><a href="/collections/the-collection?gender=men" class="dropdown-link-custom">MEN</a></li>
+              <li><a href="/collections/the-collection?gender=women" class="dropdown-link-custom">WOMEN</a></li>
+            </ul>
+          </div>
+          <a href="/pages/compare" class="nav-link-custom">COMPARE</a>
           <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
         </div>
 
