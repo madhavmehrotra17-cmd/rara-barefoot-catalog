@@ -317,6 +317,141 @@
         }
       }
 
+      /* --- Community Section (Barefoot Movement Scroll) --- */
+      .community-section {
+        height: 100vh;
+        width: 100%;
+        background-color: #0c0f13; /* Premium dark background from the brand palette */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 140px 8% 40px 8%; /* Generous 140px top padding gives space below header for merging later */
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .community-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 60px;
+      }
+
+      /* Left Text Panel */
+      .community-text-panel {
+        flex: 0 0 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        z-index: 10;
+      }
+
+      .community-headline {
+        font-family: 'Anton', sans-serif;
+        font-size: 72px;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 0.95;
+        letter-spacing: 0.05em;
+        margin: 0 0 12px 0;
+        padding: 0;
+        /* Premium custom watercolor linear gradient overlay */
+        background: linear-gradient(to right, #8b92f6 0%, #8b92f6 30%, #ffffff 30%, #ffffff 60%, #e6ec9c 60%, #e6ec9c 80%, #8b92f6 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .community-subtitle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.65);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        line-height: 1.7;
+        max-width: 420px;
+        margin: 0;
+      }
+
+      .community-cta-row {
+        display: flex;
+        gap: 20px;
+        margin-top: 8px;
+      }
+
+      .community-btn {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        padding: 14px 32px;
+        border-radius: 50px; /* Fully rounded rounded pill */
+        border: 1.5px solid #ffffff;
+        background-color: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .community-btn:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+      }
+
+      /* Right Video Mosaic Grid — 3x2 */
+      .community-video-panel {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 16px;
+        height: 480px;
+        max-height: 60vh;
+        min-height: 0;
+        z-index: 10;
+      }
+
+      .community-video-tile {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px; /* High fashion soft-rounded corners */
+        background-color: #12151a;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .community-video-tile:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      }
+
+      /* 1st video spans both rows to create the tall left column */
+      .community-video-tile:nth-child(1) {
+        grid-row: 1 / 3;
+      }
+
+      .community-video-tile video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
       /* --- Responsive media queries for absolute cross-device precision --- */
       @media (max-width: 768px) {
         .scroll-section {
@@ -348,6 +483,60 @@
 
         .nav-center-custom {
           display: none; /* Keep mobile header completely clean and minimalist */
+        }
+
+        /* Responsive Community Scroll */
+        .community-section {
+          height: auto;
+          min-height: 100vh;
+          padding: 120px 6% 60px 6%;
+          scroll-snap-align: none;
+          scroll-snap-stop: none;
+          overflow-y: visible;
+        }
+
+        .community-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .community-text-panel {
+          flex: 0 0 100%;
+          align-items: center;
+          text-align: center;
+        }
+
+        .community-headline {
+          font-size: 42px;
+          text-align: center;
+        }
+
+        .community-subtitle {
+          font-size: 10px;
+          text-align: center;
+        }
+
+        .community-cta-row {
+          flex-direction: column;
+          gap: 12px;
+          width: 80%;
+        }
+
+        .community-btn {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 12px 20px;
+        }
+
+        .community-video-panel {
+          width: 100%;
+          height: 380px;
+          max-height: 50vh;
+          gap: 10px;
+        }
+
+        .community-video-tile {
+          border-radius: 10px;
         }
       }
     </style>
@@ -420,7 +609,94 @@
           </svg>
         </div>
       </section>
+
+      <!-- Scroll 3: The Barefoot Movement Community Section -->
+      <section class="scroll-section community-section" id="scroll-3">
+        <div class="community-container">
+          <!-- Left: Editorial Content Panel -->
+          <div class="community-text-panel">
+            <h2 class="community-headline">THE BAREFOOT<br>MOVEMENT</h2>
+            <p class="community-subtitle">Meet runners, lifters, hikers, physios, coaches and the simply curious powering the barefoot movement.</p>
+            <div class="community-cta-row">
+              <a href="/pages/community" class="community-btn">Join Us</a>
+              <a href="/collections/the-collection" class="community-btn">Explore Collection</a>
+            </div>
+          </div>
+          
+          <!-- Right: Community Video Mosaic Grid (Symmetrical 3x2 with Left Column Tall) -->
+          <div class="community-video-panel">
+            <!-- 1. Tall Left Column (Yellow shoe floating) -->
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-3 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- 2. Top Middle (Blue shoe standing) -->
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-1 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- 3. Top Right (Crosswalk shoes) -->
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-2 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- 4. Bottom Middle (White shoe walking) -->
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-4 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- 5. Bottom Right (Green shoes on rug) -->
+            <div class="community-video-tile">
+              <video autoplay muted loop playsinline>
+                <source src="user gif-5 silent.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
       
     </main>
+
+    <!-- High-Performance Video Autoplay Controller to Prevent Lag -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const communitySection = document.getElementById('scroll-3');
+        const videos = communitySection.querySelectorAll('video');
+
+        // High-performance Intersection Observer to pause videos when out of view
+        const observerOptions = {
+          root: null,
+          threshold: 0.1 // Triggers when at least 10% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Play all videos when scroll 3 is visible
+              videos.forEach(video => {
+                video.play().catch(err => {
+                  console.log('Video autoplay interrupted:', err);
+                });
+              });
+            } else {
+              // Pause all videos when scroll 3 is out of view
+              videos.forEach(video => {
+                video.pause();
+              });
+            }
+          });
+        }, observerOptions);
+
+        observer.observe(communitySection);
+      });
+    </script>
   </body>
 </html>
