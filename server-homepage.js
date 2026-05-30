@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 // Explicit Route for the Compare Page
-app.get('/pages/compare', (req, res) => {
+app.get('/compare', (req, res) => {
     const filePath = path.join(__dirname, 'compare.html');
     if (fs.existsSync(filePath)) {
         res.setHeader('Cache-Control', 'no-store');
