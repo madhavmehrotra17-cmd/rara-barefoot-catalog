@@ -1032,6 +1032,7 @@
         width: 100%;
         position: relative;
         box-sizing: border-box;
+        display: none; /* Hidden by default; revealed only via COMPARE header button */
       }
 
       .compare-container {
@@ -1808,13 +1809,16 @@
           observer.observe(video);
         });
 
-        // Smooth scroll to comparison matrix when clicking COMPARE
+        // Smooth scroll and reveal comparison matrix when clicking COMPARE
         document.querySelectorAll('.scroll-to-compare').forEach(link => {
           link.addEventListener('click', (e) => {
             e.preventDefault();
             const target = document.getElementById('compare-section');
             if (target) {
-              target.scrollIntoView({ behavior: 'smooth' });
+              target.style.display = 'block'; // Reveal the comparison section dynamically
+              setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }, 50); // Small delay to let display:block layout calculate
             }
           });
         });
