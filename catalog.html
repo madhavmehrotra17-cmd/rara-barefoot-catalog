@@ -240,8 +240,8 @@
 
       .main-product-image {
         width: 100% !important; /* Full width inside visual panel */
-        max-width: 100% !important;
-        max-height: 82% !important; /* Maximized vertical size */
+        max-width: 580px !important; /* Bounded width to keep shoe elegant on wide monitors */
+        max-height: 450px !important; /* Bounded height to prevent expansion in auto-height layout */
         object-fit: contain;
         transform: scale(1.55) !important; /* Zoom in by 55% to cancel out built-in JPEG padding! */
         transition: opacity 0.15s ease-in-out !important; /* Transition ONLY opacity for seamless fades! */
