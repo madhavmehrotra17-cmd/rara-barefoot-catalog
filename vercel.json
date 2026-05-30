@@ -8,6 +8,14 @@
   ],
   "rewrites": [
     {
+      "source": "/products/:path*",
+      "destination": "/catalog.html"
+    },
+    {
+      "source": "/catalog",
+      "destination": "/catalog.html"
+    },
+    {
       "source": "/collections/:path*",
       "has": [
         {
