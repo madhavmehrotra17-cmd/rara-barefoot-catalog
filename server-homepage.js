@@ -39,6 +39,17 @@ app.get('/', (req, res) => {
     }
 });
 
+// Explicit Route for the Compare Page
+app.get('/pages/compare', (req, res) => {
+    const filePath = path.join(__dirname, 'compare.html');
+    if (fs.existsSync(filePath)) {
+        res.setHeader('Cache-Control', 'no-store');
+        res.send(fs.readFileSync(filePath, 'utf8'));
+    } else {
+        res.status(404).send('compare.html is currently being built by the developer. Please refresh in a moment.');
+    }
+});
+
 // Explicit Route for Scroll 1
 app.get('/scroll1', (req, res) => {
     const filePath = path.join(__dirname, 'homepage.html');
