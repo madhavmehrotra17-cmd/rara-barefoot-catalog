@@ -968,7 +968,7 @@
         font-family: 'Roboto Mono', monospace;
         font-size: 12px;
         font-weight: 700;
-        color: #000000;
+        color: #095492 !important; /* Premium brand Royal Blue color */
         text-transform: uppercase;
         letter-spacing: 0.24em;
         text-decoration: underline;
@@ -1282,11 +1282,110 @@
       }
 
       .scroll3-about-btn:hover {
-        background-color: #095492; /* Brand blue hover effect */
-        border-color: #095492;
-        box-shadow: 0 10px 30px rgba(9, 84, 146, 0.4);
-        transform: scale(1.04);
-        color: #ffffff !important;
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      }
+
+      /* --- Custom Accordions for scroll3 (Dark Background) --- */
+      #scroll-3 .accordion {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+        margin-bottom: 0 !important;
+        width: 100%;
+      }
+
+      #scroll-3 .accordion__disclosure {
+        border: none !important;
+      }
+
+      #scroll-3 .accordion__toggle {
+        padding: 16px 0 !important;
+        cursor: pointer !important;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff !important; /* Pristine white text */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        transition: color 0.25s ease !important;
+      }
+
+      #scroll-3 .accordion__toggle:hover,
+      #scroll-3 details[open] .accordion__toggle {
+        color: #8b92f6 !important; /* Soft premium lavender matching community watercolor typography */
+      }
+
+      #scroll-3 .animated-plus {
+        position: relative !important;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+      }
+
+      #scroll-3 .animated-plus::before,
+      #scroll-3 .animated-plus::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.6) !important;
+        transition: transform 0.25s ease, background-color 0.25s ease !important;
+      }
+
+      /* Horizontal line */
+      #scroll-3 .animated-plus::before {
+        top: 6px;
+        left: 0;
+        width: 14px;
+        height: 2px;
+      }
+
+      /* Vertical line */
+      #scroll-3 .animated-plus::after {
+        top: 0;
+        left: 6px;
+        width: 2px;
+        height: 14px;
+      }
+
+      #scroll-3 details[open] .animated-plus::after {
+        transform: rotate(90deg);
+        background-color: transparent !important; /* Convert plus to minus on open */
+      }
+
+      #scroll-3 details[open] .animated-plus::before {
+        background-color: #8b92f6 !important;
+      }
+
+      #scroll-3 .accordion__content {
+        padding: 15px 0 25px 0 !important;
+        font-family: 'Inter', sans-serif;
+        font-size: 13.5px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+
+      #scroll-3 .accordion__content a {
+        color: #8b92f6 !important;
+        text-decoration: underline;
+      }
+
+      #scroll-3 .product-meta-details ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 0 10px;
+        padding: 0;
+        justify-content: space-between;
+      }
+
+      #scroll-3 .product-meta-details li {
+        width: 45%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 0 12px;
+        padding-bottom: 10px;
       }
 
       /* Mobile Sizing for Scroll 3 */
@@ -1935,8 +2034,7 @@
           <div class="scroll2-header">
             <span class="scroll2-stars">★★★★★</span>
             <h2 class="scroll2-title">Why RARA Barefoot?</h2>
-            <p class="scroll2-body">Your foot is an engineering masterpiece: 26 bones, 33 joints and nearly 200,000 nerve endings built to sense, balance and move.</p>
-            <p class="scroll2-body" style="margin-top: 12px; font-weight: 700; color: #000000;">RARA Barefoot is built around the foot’s original natural design.</p>
+            <span class="science-highlight-line" style="margin-top: 12px; margin-bottom: 24px;">Six months in minimal barefoot footwear has been shown to increase foot muscle strength by <strong style="font-weight: 800; letter-spacing: 0.05em;">57.4%</strong>.</span>
           </div>
 
           <!-- Symmetrical 3-Card Grid -->
@@ -1980,9 +2078,10 @@
           <!-- Bottom block: Science placement and CTA -->
           <div class="scroll2-bottom">
             <p class="scroll2-bottom-text">
-              When feet are allowed to move naturally, they get stronger.
+              Your foot is an engineering masterpiece.
               <br>
-              <span class="science-highlight-line">Six months in minimal barefoot footwear has been shown to increase foot muscle strength by <strong style="font-weight: 800; letter-spacing: 0.05em;">57.4%</strong>.</span>
+              <strong style="font-weight: 700; color: #000000; display: block; margin: 10px 0;">RARA Barefoot is built around the foot’s original natural design.</strong>
+              When feet are allowed to move naturally, they get stronger.
             </p>
             <a class="scroll2-cta" onclick="alert('Redirecting to Clinical Research study...');">READ THE SCIENCE</a>
           </div>
@@ -2073,12 +2172,108 @@
           </div>
           <div class="scroll3-content-panel">
             <div class="scroll3-text-block">
+              <!-- Quote Block moved to the top side -->
               <div class="scroll3-quote-block">
                 <blockquote class="scroll3-quote">“There are no beautiful surfaces without a terrible depth”</blockquote>
                 <cite class="scroll3-cite">— Friedrich Nietzsche</cite>
               </div>
-              <p class="scroll3-body">We make barefoot sneakers the hard way: custom wide moulds, flexible natural-rubber soles, premium recycled uppers, and repeated rounds of testing until the shoe feels right on your foot. The surface is simple because the work underneath is not.</p>
-              <a href="/pages/about-us" class="scroll3-about-btn">About Us</a>
+              
+              <!-- Core Properties, Product Specs, Care, Other Info, FAQs Accordions -->
+              <div class="scroll3-accordions-group" style="width: 100%; display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                
+                <!-- 1. Core Properties -->
+                <div class="accordion">
+                  <details class="accordion__disclosure group" name="factory-specs">
+                    <summary><span class="accordion__toggle"><span>Core Properties</span><span class="animated-plus" aria-hidden="true"></span></span></summary>
+                    <div class="accordion__content">
+                      <strong>OPTIMAL USE-CASE</strong><br>Perfect stylish partner to all types of activities including walks, light runs and outings!<br><br>
+                      <strong>UPPER MATERIAL</strong><br>Soft flyknit no-sew upper (100% recycled)<p>Super soft flyknit surface, elastic stretch, lightweight build, steady ground traction.</p>
+                      <strong>HOW DOES THE SHOE FEEL</strong><p>The flyknit based upper is breathable with an elastic feel that makes the shoe feel one with the feet. Its no-sew (with a single seam) built ensures the shoe has high endurance and is perfect for light runs and play. </p><p>The toe-counter and heel-grip provides additional reinforcement around the toes and heel. This further improves the viability of the shoe for wearing in all types of movement. </p>
+                      <strong>NATURAL FOOT SHAPE</strong><p>Wide toe box ensures the feet have room to flex and be in their natural state. </p>
+                      <strong>GROUNDED OUTSOLE</strong><p>Stand firm on multiple terrains with our zero drop (heel to toe) outsoles.</p>
+                    </div>
+                  </details>
+                </div>
+
+                <!-- 2. Product Specs -->
+                <div class="accordion">
+                  <details class="accordion__disclosure group" name="factory-specs">
+                    <summary><span class="accordion__toggle"><span>Product Specs</span><span class="animated-plus" aria-hidden="true"></span></span></summary>
+                    <div class="accordion__content">
+                      <div class="product-meta-details">
+                        <ul>
+                          <li>Brand Name: <br><b>RARA Barefoot</b></li>
+                          <li>Product Name: <br><b>URUK BLUE</b></li>
+                          <li>Gender: <br><b>Men</b></li>
+                          <li>Quantity: <br><b>1 pair</b></li>
+                          <li>Product Dimensions: <br><b>32.5 * 17.5 * 12 cm (L * B * H)</b></li>
+                          <li>Net Weight: <br><b>600 gms</b></li>
+                          <li>Heel to Toe Drop: <br><b>0%</b></li>
+                          <li>Outsole Stack Height: <br><b>5 mm</b></li>
+                          <li>Insole: <br><b>100% RPET, Turned insole backer (100% RPET)</b></li>
+                          <li>Outsole: <br><b>100% solid rubber</b></li>
+                          <li>Lining: <br><b>100% polyester</b></li>
+                          <li>Laces: <br><b>100% polyester</b></li>
+                        </ul>
+                        <p>Upper: <br><b>Soft flyknit no-sew upper (100% recycled)</b></p>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+
+                <!-- 3. Care -->
+                <div class="accordion">
+                  <details class="accordion__disclosure group" name="factory-specs">
+                    <summary><span class="accordion__toggle"><span>Care</span><span class="animated-plus" aria-hidden="true"></span></span></summary>
+                    <div class="accordion__content">
+                      <ol>
+                        <li>Brush off mud and clean with a damp cloth</li>
+                        <li>Hand wash only, Line dry only</li>
+                      </ol>
+                    </div>
+                  </details>
+                </div>
+
+                <!-- 4. Other Information -->
+                <div class="accordion">
+                  <details class="accordion__disclosure group" name="factory-specs">
+                    <summary><span class="accordion__toggle"><span>Other Information</span><span class="animated-plus" aria-hidden="true"></span></span></summary>
+                    <div class="accordion__content">
+                      <p><strong>COUNTRY OF ORIGIN</strong></p><p>India</p><br>
+                      <p><strong>DESIGNED & MARKETED BY</strong></p><p>AP2GP Private Limited</p>
+                      <p>D3-404, Parshavnath Exotica, Golf Course Road, Sec 53, Gurugram, Haryana - 122011</p><br>
+                      <p><strong>MANUFACTURED & PACKED BY</strong></p><p>N.M. ZACKRIAH LLP</p>
+                      <p>No - 74,75 & 78, Gudiyattam Road, Thutipet, Ambur-TK, Tamil Nadu - 635811</p><br>
+                      <p><strong>CUSTOMER CARE DETAILS</strong></p><p>Email: <a href="mailto:care@rarabarefoot.in">care@rarabarefoot.in</a></p><br>
+                      <p><strong>SHIPPING</strong></p>
+                      <ol>
+                        <li>PAN India deliveries </li>
+                        <li>Delivery timeline: 1-5 days</li>
+                        <li>No shipping charges on prepaid orders</li>
+                      </ol><br>
+                      <p><strong>RETURNS & EXCHANGES</strong></p>
+                      <p>No questions asked return and exchange policy. Please refer to details <a href="/pages/refund-and-return-policy">here</a></p>
+                      <p>Whatsapp: 81300 96761</p>
+                    </div>
+                  </details>
+                </div>
+
+                <!-- 5. FAQS -->
+                <div class="accordion">
+                  <details class="accordion__disclosure group" name="factory-specs">
+                    <summary><span class="accordion__toggle"><span>FAQS</span><span class="animated-plus" aria-hidden="true"></span></span></summary>
+                    <div class="accordion__content">
+                      <p><strong>What makes RARA different from regular sneakers?<br></strong>RARA shoes are built on barefoot science with zero drop soles, a wide toe box, and flexible design that let your feet move naturally while improving strength, balance, and comfort.</p>
+                      <p><strong><br>Are barefoot shoes safe for beginners?<br></strong>Yes. They may feel different at first because more muscles get activated, just like your first workout at the gym, but that’s how your feet get stronger.</p>
+                      <p><strong><br>Do barefoot shoes need special insoles or socks?<br></strong>No. They’re designed to work best without added support so your feet can move and feel naturally. Thin socks are fine if you prefer them.</p>
+                      <p><strong><br>How do I keep these shoes clean?</strong><br>Wipe with a damp cloth for daily care. For deeper cleaning, remove the insoles and hand wash with mild soap, then air dry.</p><br>
+                      <p>For more information, pls read our <a href="/pages/blogs">Blog</a></p>
+                    </div>
+                  </details>
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -2435,6 +2630,19 @@
 
         document.querySelector('.btn-snapmint-buy').addEventListener('click', () => {
           alert('Opening Snapmint EMI approval application...');
+        });
+
+        // Exclusive accordion behavior for factory specs
+        document.querySelectorAll('#scroll-3 details').forEach(details => {
+          details.addEventListener('toggle', (e) => {
+            if (details.open) {
+              document.querySelectorAll('#scroll-3 details').forEach(other => {
+                if (other !== details) {
+                  other.open = false;
+                }
+              });
+            }
+          });
         });
 
       });
