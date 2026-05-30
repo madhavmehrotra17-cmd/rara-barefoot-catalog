@@ -448,10 +448,10 @@
       }
 
       /* Color swatch codes */
-      .swatch-blue { background-color: #3b6d9c; }
-      .swatch-darkgray { background-color: #333333; }
-      .swatch-olive { background-color: #4e6552; }
-      .swatch-beige { background-color: #e2d2ba; }
+      .swatch-blue { background-color: #2A426A; }
+      .swatch-neon { background-color: #9BCD24; }
+      .swatch-white { background-color: #FFFFFF; border: 1px solid rgba(18, 21, 26, 0.15) !important; }
+      .swatch-black { background-color: #12151A; }
 
       /* Gender Toggle */
       .gender-wrapper {
@@ -515,25 +515,25 @@
       }
 
       .size-box {
-        flex: 1;
-        padding: 8px 0; /* Compact vertical size padding */
-        border: 1px solid rgba(0, 0, 0, 0.08) !important;
-        background-color: rgba(0, 0, 0, 0.02) !important;
-        color: #555555;
+        padding: 10px 0;
+        border: 1px solid #000000 !important;
+        background-color: #ffffff !important;
+        color: #000000 !important;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 700;
         font-family: 'Inter', sans-serif;
         text-align: center;
-        border-radius: 6px;
+        border-radius: 0px !important; /* Sharp, crisp rectangular corners */
         cursor: pointer;
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        letter-spacing: 0.08em;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
       .size-box:hover {
-        background-color: rgba(9, 84, 146, 0.06) !important;
-        border-color: rgba(9, 84, 146, 0.3) !important;
-        color: #095492 !important;
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        color: #000000 !important;
+        border-color: #000000 !important;
       }
 
       .size-box.active {
@@ -544,9 +544,9 @@
       }
 
       .size-box.active:hover {
-        background-color: #095492 !important;
-        border-color: #095492 !important;
-        box-shadow: 0 4px 10px rgba(9, 84, 146, 0.2) !important;
+        background-color: #12151A !important;
+        border-color: #12151A !important;
+        box-shadow: none !important;
       }
 
       /* Action Buttons */
@@ -1251,6 +1251,35 @@
         color: #ffffff !important;
       }
 
+      .scroll3-about-btn {
+        display: inline-block;
+        align-self: center; /* Center-aligned below the body copy */
+        font-family: 'Roboto Mono', monospace;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.35); /* Premium glass background */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 16px 36px;
+        border-radius: 30px;
+        text-decoration: none;
+        letter-spacing: 0.22em;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: 10px;
+      }
+
+      .scroll3-about-btn:hover {
+        background-color: #095492; /* Brand blue hover effect */
+        border-color: #095492;
+        box-shadow: 0 10px 30px rgba(9, 84, 146, 0.4);
+        transform: scale(1.04);
+        color: #ffffff !important;
+      }
+
       /* Mobile Sizing for Scroll 3 */
       @media screen and (max-width: 1024px) {
         .scroll3-container {
@@ -1730,7 +1759,7 @@
               <li><a href="/collections/the-collection?gender=women" class="dropdown-link-custom">WOMEN</a></li>
             </ul>
           </div>
-          <a href="/pages/compare" class="nav-link-custom">COMPARE</a>
+          <a href="/pages/compare" class="nav-link-custom">DIFFERENCE</a>
           <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
         </div>
 
@@ -1801,10 +1830,10 @@
               <div class="swatches-wrapper">
                 <span class="section-label" id="swatch-color-label">COLOR: BLUE</span>
                 <div class="swatches-flex">
-                  <div class="swatch-circle swatch-blue active" data-color="BLUE" data-img="Uruk blue-1.JPG" data-title="URUK BLUE" style="--swatch-color: #3b6d9c;"></div>
-                  <div class="swatch-circle swatch-darkgray" data-color="DARK GRAY" data-img="Xanadu black -1.JPG" data-title="URUK BLACK" style="--swatch-color: #333333;"></div>
-                  <div class="swatch-circle swatch-olive" data-color="OLIVE GREEN" data-img="Uruk neo-1.JPG" data-title="URUK NEON" style="--swatch-color: #4e6552;"></div>
-                  <div class="swatch-circle swatch-beige" data-color="BEIGE WHITE" data-img="Uruk white-1.JPG" data-title="URUK WHITE" style="--swatch-color: #e2d2ba;"></div>
+                  <div class="swatch-circle swatch-blue active" data-color="BLUE" data-img="Uruk blue-1.JPG" data-title="URUK BLUE" style="--swatch-color: #2A426A;"></div>
+                  <div class="swatch-circle swatch-neon" data-color="NEON" data-img="Uruk neo-1.JPG" data-title="URUK NEON" style="--swatch-color: #9BCD24;"></div>
+                  <div class="swatch-circle swatch-white" data-color="WHITE" data-img="Uruk white-1.JPG" data-title="URUK WHITE" style="--swatch-color: #12151A;"></div>
+                  <div class="swatch-circle swatch-black" data-color="BLACK" data-img="Xanadu black -1.JPG" data-title="URUK BLACK" style="--swatch-color: #12151A;"></div>
                 </div>
               </div>
               
@@ -1819,13 +1848,18 @@
               
               <!-- Size Selection Grid -->
               <div class="size-wrapper">
-                <span class="section-label">SIZE</span>
-                <div class="size-grid">
-                  <button type="button" class="size-box" data-size="8">8</button>
-                  <button type="button" class="size-box active" data-size="9">9</button>
-                  <button type="button" class="size-box" data-size="10">10</button>
-                  <button type="button" class="size-box" data-size="11">11</button>
-                  <button type="button" class="size-box" data-size="12">12</button>
+                <div class="size-label-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; width: 100%;">
+                  <span class="section-label" id="size-gender-label">MENS SIZE</span>
+                  <a href="#" class="size-chart-link" style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #000000; text-decoration: underline; letter-spacing: 0.05em; text-transform: uppercase;" onclick="alert('Size Chart Guide: RARA Barefoot shoes fit true to UK sizes. If you are between sizes, we recommend sizing up.'); return false;">What's my size?</a>
+                </div>
+                <div class="size-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; width: 100%;">
+                  <button type="button" class="size-box" data-size="5">UK 5</button>
+                  <button type="button" class="size-box" data-size="6">UK 6</button>
+                  <button type="button" class="size-box" data-size="7">UK 7</button>
+                  <button type="button" class="size-box" data-size="8">UK 8</button>
+                  <button type="button" class="size-box active" data-size="9">UK 9</button>
+                  <button type="button" class="size-box" data-size="10">UK 10</button>
+                  <button type="button" class="size-box" data-size="11">UK 11</button>
                 </div>
               </div>
               
@@ -1892,7 +1926,8 @@
           <div class="scroll2-header">
             <span class="scroll2-stars">★★★★★</span>
             <h2 class="scroll2-title">Why RARA Barefoot?</h2>
-            <p class="scroll2-body">Your foot is an engineering masterpiece: 26 bones, 33 joints and nearly 200,000 nerve endings built to sense, balance and move. RARA Barefoot is built around the foot’s original natural design.</p>
+            <p class="scroll2-body">Your foot is an engineering masterpiece: 26 bones, 33 joints and nearly 200,000 nerve endings built to sense, balance and move.</p>
+            <p class="scroll2-body" style="margin-top: 12px; font-weight: 700; color: #000000;">RARA Barefoot is built around the foot’s original natural design.</p>
           </div>
 
           <!-- Symmetrical 3-Card Grid -->
@@ -2026,7 +2061,6 @@
               <source src="Factory video silent.mp4" type="video/mp4">
             </video>
             <div class="scroll3-blend-overlay"></div>
-            <a href="/pages/about-us" class="scroll3-video-btn">About Us</a>
           </div>
           <div class="scroll3-content-panel">
             <div class="scroll3-text-block">
@@ -2035,6 +2069,7 @@
                 <cite class="scroll3-cite">— Friedrich Nietzsche</cite>
               </div>
               <p class="scroll3-body">We make barefoot sneakers the hard way: custom wide moulds, flexible natural-rubber soles, premium recycled uppers, and repeated rounds of testing until the shoe feels right on your foot. The surface is simple because the work underneath is not.</p>
+              <a href="/pages/about-us" class="scroll3-about-btn">About Us</a>
             </div>
           </div>
         </div>
@@ -2203,19 +2238,19 @@
             "uruk blue new.JPG",
             "uruk-blue model.png"
           ],
-          "DARK GRAY": [
+          "BLACK": [
             "Xanadu black -1.JPG",
             "Xanadu black -2.JPG",
             "Xanadu black -3.JPG",
             "Xanadu black -4.JPG"
           ],
-          "OLIVE GREEN": [
+          "NEON": [
             "Uruk neo-1.JPG",
             "uruk neo-2.JPG",
             "uruk neo-3.JPG",
             "Uruk neo-4.jpg"
           ],
-          "BEIGE WHITE": [
+          "WHITE": [
             "Uruk white-1.JPG",
             "Uruk white-2.JPG",
             "Uruk white-3.JPG",
@@ -2349,10 +2384,17 @@
 
         // 2. Gender Toggle Selection
         const genderButtons = document.querySelectorAll('.gender-pill');
+        const sizeGenderLabel = document.getElementById('size-gender-label');
         genderButtons.forEach(btn => {
           btn.addEventListener('click', () => {
             genderButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            
+            // Dynamically update the size category label (MENS SIZE / WOMENS SIZE)
+            const gender = btn.getAttribute('data-gender');
+            if (sizeGenderLabel) {
+              sizeGenderLabel.textContent = `${gender}S SIZE`;
+            }
           });
         });
 
@@ -2373,7 +2415,9 @@
 
         // 5. Checkout Alerts
         document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
-          alert('Uruk Blue added to your cart successfully!');
+          const activeSize = document.querySelector('.size-box.active').getAttribute('data-size');
+          const activeColor = document.querySelector('.swatch-circle.active').getAttribute('data-color');
+          alert(`Uruk ${activeColor} (UK ${activeSize}) added to your cart successfully!`);
         });
 
         document.querySelector('.btn-buy-now').addEventListener('click', () => {

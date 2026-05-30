@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare - RARA Barefoot</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* --- Base Style Sheet --- */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-family: 'Inter', sans-serif;
+        background-color: #F1F1F1; /* Warm studio light clay background (synchronized with newly scanned GIF background) */
+        color: #12151a; /* Dark charcoal text for pristine readability */
+        box-sizing: border-box;
+      }
+
+      main {
+        width: 100%;
+        position: relative;
+        min-height: 60vh;
+        padding-top: 140px; /* Space below header */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* --- Persistent Header Menu --- */
+      x-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
+        background-color: rgba(241, 241, 241, 0.7); /* Frosted light translucent background */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(18, 21, 26, 0.04);
+      }
+
+      .header-custom-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 6%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+      }
+
+      .logo-custom img {
+        height: 60px;
+        width: auto;
+        display: block;
+        filter: none; /* Removed white invert filter so the dark RARA logo displays clearly */
+        transition: transform 0.25s ease;
+      }
+
+      .logo-custom img:hover {
+        transform: scale(1.02);
+      }
+
+      .nav-center-custom {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .nav-link-custom {
+        color: #12151a; /* Clean dark text for contrast on light warm gray */
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transition: opacity 0.25s ease;
+      }
+
+      .nav-link-custom:hover {
+        opacity: 0.6;
+      }
+
+      .nav-right-custom {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .dropdown-custom-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .dropdown-custom-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 20px;
+      }
+
+      .dropdown-trigger-custom {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .dropdown-menu-custom {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.85); /* Frosted light glassmorphism card */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        list-style: none;
+        padding: 10px 0;
+        margin-top: 15px;
+        min-width: 180px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 100000;
+      }
+
+      .dropdown-link-custom {
+        display: block;
+        padding: 10px 24px;
+        color: rgba(18, 21, 26, 0.8);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: color 0.2s ease, background-color 0.2s ease;
+      }
+
+      .dropdown-link-custom:hover {
+        color: #000000;
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      .dropdown-custom-wrapper:hover .dropdown-menu-custom {
+        display: block;
+      }
+
+      .chevron-down-custom {
+        font-size: 8px;
+        margin-left: 6px;
+        display: inline-block;
+        opacity: 0.7;
+      }
+
+      /* --- Global Footer Styles --- */
+      .footer {
+        background: linear-gradient(to bottom, #F1F1F1 0%, #000000 100%);
+        padding: 80px 8%;
+        border-top: none;
+        box-sizing: border-box;
+        width: 100%;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .footer__inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .footer__block-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .footer__block {
+        flex: 1 1 200px;
+      }
+
+      .footer__block--liquid {
+        max-width: 300px;
+      }
+
+      .footer .h6 {
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0 0 25px 0;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer a.link-faded {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.25s ease;
+      }
+
+      .footer a.link-faded:hover {
+        color: #ffffff;
+      }
+
+      .footer__aside {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer__aside p {
+        margin: 0;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .footer__aside a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+      }
+
+      /* Mobile styles for header and footer */
+      @media (max-width: 768px) {
+        .header-custom-container {
+          padding: 20px 6%;
+        }
+
+        .nav-center-custom {
+          display: none;
+        }
+
+        .footer {
+          padding: 60px 6%;
+        }
+
+        .footer__block-list {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .footer__block {
+          max-width: 100%;
+        }
+      }
+
+      /* --- Interactive Compare Grid Styles --- */
+      main {
+        width: 100%;
+        position: relative;
+        min-height: 60vh;
+        padding-top: 150px; /* Space below header */
+        padding-bottom: 100px;
+        box-sizing: border-box;
+      }
+
+      .compare-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 3%;
+        box-sizing: border-box;
+      }
+
+      .compare-header-row {
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .compare-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #12151a;
+        margin: 0;
+      }
+
+      .compare-grid-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        border-top: 1px solid rgba(18, 21, 26, 0.08);
+      }
+
+      /* Hide native scrollbar but preserve swipe */
+      .compare-grid-wrapper::-webkit-scrollbar {
+        height: 6px;
+      }
+      .compare-grid-wrapper::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .compare-grid-wrapper::-webkit-scrollbar-thumb {
+        background: rgba(18, 21, 26, 0.1);
+        border-radius: 3px;
+      }
+
+      .compare-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .compare-row {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 1.5fr 1.5fr;
+        border-bottom: 1px solid rgba(18, 21, 26, 0.08);
+        align-items: center;
+        padding: 24px 0;
+        gap: 40px;
+      }
+
+      .compare-row.media-row {
+        align-items: center;
+        padding-top: 20px;
+      }
+
+      .compare-row.name-row {
+        padding: 16px 0;
+      }
+
+      .compare-row.swatch-row {
+        padding: 16px 0;
+      }
+
+      .compare-row.action-row {
+        border-bottom: none;
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
+
+      .compare-cell {
+        box-sizing: border-box;
+      }
+
+      .label-cell {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(18, 21, 26, 0.4);
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Make label column sticky on mobile horizontal scroll */
+      @media (max-width: 768px) {
+        .compare-grid {
+          min-width: 1000px;
+        }
+        
+        .label-cell {
+          position: sticky;
+          left: 0;
+          background-color: #F1F1F1;
+          z-index: 10;
+          box-shadow: 8px 0 8px -8px rgba(0,0,0,0.06);
+        }
+      }
+
+      .product-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .product-media-container {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
+        mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
+      }
+
+      .product-media-container:hover {
+        /* Borderless and transparent hover to blend seamlessly */
+      }
+
+      .product-gif {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Ensures the shoe is completely visible and no part is cropped */
+        display: block;
+      }
+
+      .watermark-patch {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 28%;
+        height: 16%;
+        background-color: #F1F1F1; /* Invisible cover matching the background exactly */
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .placeholder-media {
+        background-color: rgba(0, 0, 0, 0.015);
+        border: 1.5px dashed rgba(18, 21, 26, 0.08);
+      }
+
+      .placeholder-text {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        color: rgba(18, 21, 26, 0.35);
+        padding: 20px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .product-title-link {
+        font-family: 'Anton', sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.06em;
+        color: #12151a;
+        text-decoration: none;
+        transition: opacity 0.25s ease;
+        margin-bottom: 6px;
+      }
+
+      .product-title-link:hover {
+        opacity: 0.7;
+      }
+
+      .product-subtitle-cta {
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: rgba(18, 21, 26, 0.45);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.25s ease;
+      }
+
+      .product-subtitle-cta:hover {
+        color: #000000;
+      }
+
+      .swatches-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swatch {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+      }
+
+      .swatch:hover {
+        transform: scale(1.25);
+        box-shadow: 0 0 0 2px #E8E6E1, 0 0 0 3.5px #12151a;
+      }
+
+      .spec-value {
+        font-family: 'Inter', sans-serif;
+        font-size: 13.5px;
+        font-weight: 500;
+        color: #12151a;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+      }
+
+      .shop-now-btn {
+        width: 85%;
+        background-color: #12151a;
+        color: #ffffff;
+        border: none;
+        padding: 14px 18px;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.25s ease, transform 0.25s ease;
+      }
+
+      .shop-now-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Persistent Header Navigation -->
+    <x-header class="header">
+      <div class="header-custom-container">
+        <!-- Left: Logo -->
+        <div class="logo-custom">
+          <a href="/">
+            <img src="https://www.rarabarefoot.in/cdn/shop/files/2_-_Copy_2.png?v=1747044324&width=1500" alt="rarabarefoot">
+          </a>
+        </div>
+
+        <!-- Center: Core Navigation -->
+        <div class="nav-center-custom">
+          <div class="dropdown-custom-wrapper">
+            <a href="#" class="nav-link-custom dropdown-trigger-custom" onclick="return false;">SHOP <span class="chevron-down-custom">▼</span></a>
+            <ul class="dropdown-menu-custom" style="left: 0; right: auto;">
+              <li><a href="/collections/the-collection?gender=men" class="dropdown-link-custom">MEN</a></li>
+              <li><a href="/collections/the-collection?gender=women" class="dropdown-link-custom">WOMEN</a></li>
+            </ul>
+          </div>
+          <a href="/pages/compare" class="nav-link-custom">DIFFERENCE</a>
+          <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
+        </div>
+
+        <!-- Right: Dropdown & Cart -->
+        <div class="nav-right-custom">
+          <div class="dropdown-custom-wrapper">
+            <a href="#" class="nav-link-custom dropdown-trigger-custom" onclick="return false;">MORE <span class="chevron-down-custom">▼</span></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="/pages/help" class="dropdown-link-custom">Help</a></li>
+              <li><a href="/pages/barefoot-science" class="dropdown-link-custom">Barefoot Science</a></li>
+              <li><a href="/pages/blogs" class="dropdown-link-custom">Blog</a></li>
+            </ul>
+          </div>
+          <a href="/cart" class="nav-link-custom">CART</a>
+        </div>
+      </div>
+    </x-header>
+
+    <!-- Main Content Canvas -->
+    <main>
+      <div class="compare-container">
+        <!-- Title Row -->
+        <div class="compare-header-row">
+          <h1 class="compare-title">Know your Barefoot</h1>
+        </div>
+        
+        <!-- Comparison Matrix Grid -->
+        <div class="compare-grid-wrapper">
+          <div class="compare-grid">
+            
+            <!-- Row 1: Product GIF renders -->
+            <div class="compare-row media-row">
+              <div class="compare-cell label-cell">Product</div>
+              
+              <!-- Xanadu (Active GIF Render) -->
+              <div class="compare-cell product-cell">
+                <div class="product-media-container">
+                  <video autoplay loop muted playsinline class="product-gif">
+                    <source src="/xanadu%20black%20final%20gif-2.mp4" type="video/mp4">
+                  </video>
+                  <div class="watermark-patch"></div>
+                </div>
+              </div>
+              
+              <!-- Uruk (Active GIF Render) -->
+              <div class="compare-cell product-cell">
+                <div class="product-media-container">
+                  <video autoplay loop muted playsinline class="product-gif">
+                    <source src="/uruk final gif.mp4" type="video/mp4">
+                  </video>
+                  <div class="watermark-patch"></div>
+                </div>
+              </div>
+              
+              <!-- Zanzibar (Active GIF Render) -->
+              <div class="compare-cell product-cell">
+                <div class="product-media-container">
+                  <video autoplay loop muted playsinline class="product-gif">
+                    <source src="/zanzibar%20yellow%20gif.mp4" type="video/mp4">
+                  </video>
+                  <div class="watermark-patch"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Product Name & Category CTA -->
+            <div class="compare-row name-row">
+              <div class="compare-cell label-cell"></div>
+              
+              <!-- Xanadu -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="product-title-link">XANADU</a>
+                <a href="/collections/the-collection" class="product-subtitle-cta">View Collection →</a>
+              </div>
+              
+              <!-- Uruk -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="product-title-link">URUK</a>
+                <a href="/collections/the-collection" class="product-subtitle-cta">View Collection →</a>
+              </div>
+              
+              <!-- Zanzibar -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="product-title-link">ZANZIBAR</a>
+                <a href="/collections/the-collection" class="product-subtitle-cta">View Collection →</a>
+              </div>
+            </div>
+
+            <!-- Row 3: Circular Color Swatches -->
+            <div class="compare-row swatch-row">
+              <div class="compare-cell label-cell">Color options</div>
+              
+              <!-- Xanadu -->
+              <div class="compare-cell product-cell">
+                <div class="swatches-container">
+                  <span class="swatch" style="background-color: #9C9A94; border: 1px solid #9C9A94;" title="Grey"></span>
+                  <span class="swatch" style="background-color: #FFFFFF; border: 1px solid rgba(18, 21, 26, 0.15);" title="White"></span>
+                  <span class="swatch" style="background-color: #12151A; border: 1px solid #12151A;" title="Black"></span>
+                </div>
+              </div>
+              
+              <!-- Uruk -->
+              <div class="compare-cell product-cell">
+                <div class="swatches-container">
+                  <span class="swatch" style="background-color: #12151A; border: 1px solid #12151A;" title="Black"></span>
+                  <span class="swatch" style="background-color: #2A426A; border: 1px solid #2A426A;" title="Blue"></span>
+                  <span class="swatch" style="background-color: #9BCD24; border: 1px solid #9BCD24;" title="Neon"></span>
+                  <span class="swatch" style="background-color: #FFFFFF; border: 1px solid rgba(18, 21, 26, 0.15);" title="White"></span>
+                </div>
+              </div>
+              
+              <!-- Zanzibar -->
+              <div class="compare-cell product-cell">
+                <div class="swatches-container">
+                  <span class="swatch" style="background-color: #7A9BBA; border: 1px solid #7A9BBA;" title="Blue"></span>
+                  <span class="swatch" style="background-color: #F2AC26; border: 1px solid #F2AC26;" title="Yellow"></span>
+                  <span class="swatch" style="background-color: #9C9A94; border: 1px solid #9C9A94;" title="Gray"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: Best For -->
+            <div class="compare-row spec-row">
+              <div class="compare-cell label-cell">Best for</div>
+              <div class="compare-cell product-cell spec-value">Gym, lifting, training</div>
+              <div class="compare-cell product-cell spec-value">Light runs, walks, casual sports</div>
+              <div class="compare-cell product-cell spec-value">Casual wear, travel, long hours</div>
+            </div>
+
+            <!-- Row 5: Feels Like -->
+            <div class="compare-row spec-row">
+              <div class="compare-cell label-cell">Feels like</div>
+              <div class="compare-cell product-cell spec-value">Secure and stable</div>
+              <div class="compare-cell product-cell spec-value">Soft and cozy</div>
+              <div class="compare-cell product-cell spec-value">Light and relaxed</div>
+            </div>
+
+            <!-- Row 6: Fit -->
+            <div class="compare-row spec-row">
+              <div class="compare-cell label-cell">Fit</div>
+              <div class="compare-cell product-cell spec-value">Snug ankle and midfoot hold</div>
+              <div class="compare-cell product-cell spec-value">Stretchy, sock-like fit</div>
+              <div class="compare-cell product-cell spec-value">Easy, roomy fit</div>
+            </div>
+
+            <!-- Row 7: Material Build -->
+            <div class="compare-row spec-row">
+              <div class="compare-cell label-cell">Material build</div>
+              <div class="compare-cell product-cell spec-value">Mesh with KPU panels</div>
+              <div class="compare-cell product-cell spec-value">Top-grade flyknit</div>
+              <div class="compare-cell product-cell spec-value">Super-light engineered mesh</div>
+            </div>
+
+            <!-- Row 8: Why It Matters -->
+            <div class="compare-row spec-row">
+              <div class="compare-cell label-cell">Why it matters</div>
+              <div class="compare-cell product-cell spec-value">Better hold during workouts</div>
+              <div class="compare-cell product-cell spec-value">Soft wraparound comfort</div>
+              <div class="compare-cell product-cell spec-value">Keeps the shoe airy and light</div>
+            </div>
+
+            <!-- Row 9: Bottom CTA "Shop Now" Buttons -->
+            <div class="compare-row action-row">
+              <div class="compare-cell label-cell"></div>
+              
+              <!-- Xanadu -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="shop-now-btn">SHOP NOW</a>
+              </div>
+              
+              <!-- Uruk -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="shop-now-btn">SHOP NOW</a>
+              </div>
+              
+              <!-- Zanzibar -->
+              <div class="compare-cell product-cell">
+                <a href="/collections/the-collection" class="shop-now-btn">SHOP NOW</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="footer bordered-section">
+      <div class="footer__inner">
+        <div class="footer__block-list">
+          <div class="footer__block footer__block--liquid">
+            <div class="liquid" style="display: flex; gap: 20px; flex-direction: column;">
+              <div>
+                <img class="footer-logo-image" src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/NEW_ra_LOGO_2.png?v=1756875469" alt="rarabarefoot" style="height: 60px; max-width: 100%; filter: brightness(0) invert(1);">
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
+                <span style="font-size: 14px; color: #fff; font-family:'Anton'; letter-spacing: 0.08em;">FOLLOW US:</span>
+                <a href="https://x.com/rarabarefoot" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/x-removebg-preview.png?v=1749284179" alt="X" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                </a>
+                <a href="https://www.instagram.com/rarabarefoot" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/insta01-removebg-preview.png?v=1749284179" alt="Instagram" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                </a>
+                <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/facebook01-removebg-preview.png?v=1749284179" alt="Facebook" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                </a>
+                <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/linkedin.png?v=1759217170" alt="LinkedIn" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__block footer__block--links">
+            <div class="v-stack gap-4">
+              <p class="h6">Collections</p>
+              <ul class="unstyled-list" role="list">
+                <li><a href="/collections/the-collection" class="link-faded">THE COLLECTION</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__block footer__block--links">
+            <div class="v-stack gap-4">
+              <p class="h6">HELP</p>
+              <ul class="unstyled-list" role="list">
+                <li><a href="/pages/how-can-we-help" class="link-faded">Help Centre</a></li>
+                <li><a href="/pages/why-barefoot" class="link-faded">Why Barefoot?</a></li>
+                <li><a href="/pages/blogs" class="link-faded">Blogs</a></li>
+                <li><a href="/pages/barefoot-science" class="link-faded">Barefoot Science</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__block footer__block--links">
+            <div class="v-stack gap-4">
+              <p class="h6">COMPANY</p>
+              <ul class="unstyled-list" role="list">
+                <li><a href="/pages/about-us" class="link-faded">About Us</a></li>
+                <li><a href="/pages/grievance-redressal-process" class="link-faded">Grievance Redressal</a></li>
+                <li><a href="/pages/privacy-policy" class="link-faded">Privacy Policy</a></li>
+                <li><a href="/pages/terms-conditions" class="link-faded">Terms Of Use</a></li>
+                <li><a href="/pages/refund-and-return-policy" class="link-faded">Refund and Return Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__block footer__block--liquid">
+            <div class="liquid">
+              <style>
+                .contact-row {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 15px;
+                  font-size: 14px;
+                }
+                .contact-row img {
+                  margin-right: 12px;
+                  filter: brightness(0) invert(1);
+                }
+                .contact-text {
+                  word-break: break-word;
+                  font-weight: 500;
+                  color: rgba(255, 255, 255, 0.85);
+                }
+                .deloit-footer-logo h2 {
+                  font-family: 'Inter', sans-serif;
+                  font-size: 13px;
+                  font-weight: 700;
+                  letter-spacing: 0.2em;
+                  color: white;
+                  text-transform: uppercase;
+                  margin: 0 0 15px 0;
+                  line-height: 1.5;
+                }
+              </style>
+              <div class="deloit-footer-logo">
+                <h2>EVOLUTION. NOW IN YOUR SIZE</h2>
+              </div>
+              <div class="contact-container-1">
+                <div class="contact-row">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301" width="22" height="22" alt="Whatsapp">
+                  <div class="contact-text">+91 81300 96761</div>
+                </div>
+                <div class="contact-row">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/email.png?v=1754449301" width="22" height="22" alt="Email">
+                  <div class="contact-text">care@rarabarefoot.in</div>
+                </div>
+                <div class="contact-row" style="align-items: flex-start;">
+                  <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/gps.png?v=1754449301" width="22" height="22" alt="Address" style="margin-top: 3px;">
+                  <div class="contact-text" style="font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.75);">
+                    AP2GP Pvt. Ltd. <br>
+                    NO 17, 2ND FLOOR, 7TH MAIN ROAD, II STAGE, INDIRANAGAR, Bengaluru - 560038
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__aside">
+          <p>© 2026 - rarabarefoot. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

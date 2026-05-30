@@ -314,6 +314,160 @@
         }
       }
 
+      /* --- Scroll 2: Categories Section (Train, Move, All Day Everyday) --- */
+      .scroll2-split-section {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100vh;
+        width: 100%;
+        background-color: #000000;
+      }
+
+      .scroll2-horizontal-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 100vh;
+        width: 100%;
+        background-color: #000000;
+      }
+
+      .category-card {
+        position: relative;
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 80px;
+        padding-left: 8%;
+        box-sizing: border-box;
+      }
+
+      .horizontal-card {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 80px;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 0;
+      }
+
+      .horizontal-card .category-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .category-media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .category-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .category-card:hover .category-video {
+        transform: scale(1.04);
+      }
+
+      .category-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.85) 100%
+        );
+        z-index: 2;
+        transition: background-color 0.4s ease;
+      }
+
+      .category-card:hover .category-overlay {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      .category-content {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        max-width: 80%;
+      }
+
+      .category-title {
+        font-family: 'Anton', sans-serif;
+        font-size: clamp(32px, 4vw, 56px); /* Fluid scaling to prevent text clipping on medium viewports */
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0;
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .horizontal-card .category-title {
+        font-size: clamp(40px, 5vw, 72px);
+      }
+
+      .category-subtitle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        margin: 0 0 10px 0;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .category-btn {
+        display: inline-block;
+        padding: 14px 34px;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #ffffff;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        cursor: pointer;
+      }
+
+      .category-btn:hover {
+        border-color: #ffffff;
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
       /* --- Community Section (Barefoot Movement Scroll) --- */
       .community-section {
         height: 100vh;
@@ -447,11 +601,214 @@
         display: block;
       }
 
+      /* --- Scroll 4: We Are RARA Barefoot Section --- */
+      .brand-section {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        height: 100vh;
+        width: 100%;
+        background-color: #091222; /* Deep space royal blue background */
+        position: relative;
+        overflow: hidden;
+      }
+
+      .brand-image-col {
+        flex: 0 0 50%;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .brand-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .brand-image-fade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+          linear-gradient(to right, rgba(9, 18, 34, 0) 50%, rgba(9, 18, 34, 0.45) 75%, rgba(9, 18, 34, 1) 100%),
+          linear-gradient(to bottom, rgba(9, 18, 34, 0) 60%, rgba(9, 18, 34, 0.5) 85%, rgba(9, 18, 34, 1) 100%);
+        pointer-events: none;
+      }
+
+      .brand-content-col {
+        flex: 0 0 50%;
+        background-color: #091222;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 8%;
+        box-sizing: border-box;
+        z-index: 10;
+        text-align: center;
+        position: relative; /* Contain smoky background overlays */
+        overflow: hidden;
+      }
+
+      /* Premium Smoky Background Overlay Elements */
+      .brand-smoke-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+        opacity: 0.55; /* Slightly increased smoky background visibility */
+      }
+
+      .smoke-cloud {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        filter: blur(100px);
+        mix-blend-mode: screen;
+      }
+
+      .smoke-1 {
+        background: radial-gradient(circle, rgba(16, 76, 153, 0.85) 0%, rgba(16, 76, 153, 0) 70%);
+        top: -15%;
+        left: 10%;
+        animation: smokeFloat1 24s infinite alternate ease-in-out;
+      }
+
+      .smoke-2 {
+        background: radial-gradient(circle, rgba(10, 48, 96, 0.95) 0%, rgba(10, 48, 96, 0) 70%);
+        bottom: -20%;
+        right: 15%;
+        animation: smokeFloat2 30s infinite alternate ease-in-out;
+      }
+
+      .smoke-3 {
+        background: radial-gradient(circle, rgba(56, 120, 196, 0.55) 0%, rgba(56, 120, 196, 0) 70%);
+        top: 30%;
+        right: -10%;
+        animation: smokeFloat3 26s infinite alternate ease-in-out;
+      }
+
+      @keyframes smokeFloat1 {
+        0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+        100% { transform: translate(60px, 40px) scale(1.25) rotate(180deg); }
+      }
+
+      @keyframes smokeFloat2 {
+        0% { transform: translate(0, 0) scale(1.2) rotate(0deg); }
+        100% { transform: translate(-50px, -70px) scale(0.95) rotate(-180deg); }
+      }
+
+      @keyframes smokeFloat3 {
+        0% { transform: translate(0, 0) scale(0.9) rotate(0deg); }
+        100% { transform: translate(-70px, 50px) scale(1.2) rotate(90deg); }
+      }
+
+      .brand-content-inner {
+        position: relative;
+        z-index: 2; /* Sits above background smoke overlay */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .brand-eyebrow {
+        font-family: 'Anton', sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+        line-height: 1;
+      }
+
+      .brand-headline {
+        font-family: 'Anton', sans-serif;
+        font-size: clamp(36px, 4.5vw, 64px);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 10px 0 24px 0;
+        line-height: 1.05;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .brand-description {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        max-width: 480px;
+        margin: 0 0 32px 0;
+        letter-spacing: 0.01em;
+      }
+
+      .brand-btn {
+        display: inline-block;
+        padding: 14px 40px;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #ffffff;
+        text-decoration: none;
+        border: 1.5px solid #ffffff;
+        background-color: transparent;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        cursor: pointer;
+      }
+
+      .brand-btn:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+      }
+
       /* --- Responsive media queries for absolute cross-device precision --- */
       @media (max-width: 768px) {
         .scroll-section {
           padding-left: 6%; /* Adjust mobile margins */
           padding-bottom: 12%;
+        }
+
+        .scroll2-split-section {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .scroll2-split-section .category-card {
+          width: 100%;
+          height: 80vh;
+          padding-bottom: 60px;
+          padding-left: 6%;
+        }
+
+        .scroll2-horizontal-section {
+          height: 80vh;
+        }
+
+        .scroll2-horizontal-section .category-card {
+          padding-left: 0;
+          padding-bottom: 60px;
+        }
+
+        .category-title {
+          font-size: 40px;
+        }
+
+        .horizontal-card .category-title {
+          font-size: 44px;
         }
 
         .hero-title {
@@ -533,6 +890,136 @@
         .community-video-tile {
           border-radius: 10px;
         }
+
+        .brand-section {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .brand-image-col {
+          width: 100%;
+          height: 50vh;
+        }
+
+        .brand-image-fade {
+          background: linear-gradient(
+            to bottom,
+            rgba(9, 18, 34, 0) 50%,
+            rgba(9, 18, 34, 0.45) 75%,
+            rgba(9, 18, 34, 1) 100%
+          );
+        }
+
+        .brand-content-col {
+          width: 100%;
+          padding: 60px 8%;
+        }
+
+        .brand-headline {
+          font-size: 44px;
+        }
+      }
+
+      /* --- Global Footer Styles --- */
+      .footer {
+        background: linear-gradient(to bottom, #091222 0%, #000000 100%);
+        padding: 80px 8%;
+        border-top: none;
+        box-sizing: border-box;
+        width: 100%;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .footer__inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .footer__block-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .footer__block {
+        flex: 1 1 200px;
+      }
+
+      .footer__block--liquid {
+        max-width: 300px;
+      }
+
+      .footer .h6 {
+        font-family: 'Anton', sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0 0 20px 0;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer a.link-faded {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.25s ease;
+      }
+
+      .footer a.link-faded:hover {
+        color: #ffffff;
+      }
+
+      .footer__aside {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer__aside p {
+        margin: 0;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .footer__aside a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+      }
+
+      /* Mobile styles for footer */
+      @media (max-width: 768px) {
+        .footer {
+          padding: 60px 6%;
+        }
+
+        .footer__block-list {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .footer__block {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
@@ -557,7 +1044,7 @@
               <li><a href="/collections/the-collection?gender=women" class="dropdown-link-custom">WOMEN</a></li>
             </ul>
           </div>
-          <a href="/pages/compare" class="nav-link-custom">COMPARE</a>
+          <a href="/pages/compare" class="nav-link-custom">DIFFERENCE</a>
           <a href="/pages/why-barefoot" class="nav-link-custom">WHY BAREFOOT</a>
         </div>
 
@@ -602,6 +1089,58 @@
           <svg class="scroll-chevron" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
+        </div>
+      </section>
+
+      <!-- Scroll 2a: Category split banners (Train & Move) -->
+      <section class="scroll-section scroll2-split-section" id="scroll-2a">
+        <!-- Train Card -->
+        <div class="category-card" id="card-train">
+          <div class="category-media">
+            <video muted loop playsinline preload="metadata" class="category-video">
+              <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/101da7209a394c1a9a56008a29672b7c/101da7209a394c1a9a56008a29672b7c.HD-720p-4.5Mbps-58309404.mp4?v=0" type="video/mp4">
+            </video>
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <h2 class="category-title">TRAIN</h2>
+            <p class="category-subtitle">BAREFOOT TRAINING SNEAKER</p>
+            <a href="/collections/the-collection?filter=training" class="category-btn">SHOP NOW</a>
+          </div>
+        </div>
+
+        <!-- Move Card -->
+        <div class="category-card" id="card-move">
+          <div class="category-media">
+            <video muted loop playsinline preload="metadata" class="category-video">
+              <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/7038a8e7326e4bc289fcd6094fa5e71b/7038a8e7326e4bc289fcd6094fa5e71b.HD-1080p-7.2Mbps-58077563.mp4?v=0" type="video/mp4" media="(min-width: 769px)">
+              <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/301c560ecc2a454d8eb72d1184a72832/301c560ecc2a454d8eb72d1184a72832.HD-720p-1.6Mbps-58538317.mp4?v=0" type="video/mp4">
+            </video>
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <h2 class="category-title">MOVE</h2>
+            <p class="category-subtitle">FOR WALKS, JOGS, & PLAY</p>
+            <a href="/collections/the-collection?filter=running" class="category-btn">SHOP NOW</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll 2b: All Day Everyday (Horizontal banner) -->
+      <section class="scroll-section scroll2-horizontal-section" id="scroll-2b">
+        <div class="category-card horizontal-card" id="card-everyday">
+          <div class="category-media">
+            <video muted loop playsinline preload="metadata" class="category-video">
+              <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/6d70e342a9c24bb49618e76342757e72/6d70e342a9c24bb49618e76342757e72.HD-1080p-7.2Mbps-58481150.mp4?v=0" type="video/mp4" media="(min-width: 769px)">
+              <source src="https://www.rarabarefoot.in/cdn/shop/videos/c/vp/d656bd3a1abc4a4fa1508c21606ccfe2/d656bd3a1abc4a4fa1508c21606ccfe2.HD-1080p-7.2Mbps-58480989.mp4?v=0" type="video/mp4">
+            </video>
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <h2 class="category-title">ALL DAY EVERYDAY</h2>
+            <p class="category-subtitle">THE SNEAKER YOU NEVER TAKE OFF</p>
+            <a href="/collections/the-collection?filter=everyday" class="category-btn">SHOP NOW</a>
+          </div>
         </div>
       </section>
 
@@ -657,40 +1196,195 @@
           </div>
         </div>
       </section>
+
+      <!-- Scroll 4: We Are RARA Barefoot Section -->
+      <section class="brand-section" id="scroll-4">
+        <!-- Left: Image with seamless overlay blend -->
+        <div class="brand-image-col">
+          <img src="https://www.rarabarefoot.in/cdn/shop/files/RARA_Team_601d1832-0051-4402-8249-1f7d543c16dd.jpg?v=1767788948" alt="RARA Barefoot Team" class="brand-image">
+          <div class="brand-image-fade"></div>
+        </div>
+        
+        <!-- Right: Brand Vision Text Block -->
+        <div class="brand-content-col">
+          <!-- Premium Smoky Background Overlay -->
+          <div class="brand-smoke-bg">
+            <div class="smoke-cloud smoke-1"></div>
+            <div class="smoke-cloud smoke-2"></div>
+            <div class="smoke-cloud smoke-3"></div>
+          </div>
+          
+          <div class="brand-content-inner">
+            <h3 class="brand-eyebrow">WE ARE</h3>
+            <h2 class="brand-headline">RARA BAREFOOT</h2>
+            <p class="brand-description">Our vision is to build a global barefoot movement by creating footwear that aligns with human biomechanics, strengthens the body, and feels as good as nature intended.</p>
+            <a href="/pages/about-us" class="brand-btn">OUR STORY</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Footer -->
+      <footer class="footer bordered-section">
+        <div class="footer__inner">
+          <div class="footer__block-list">
+            <!-- Logo & Social Links Block -->
+            <div class="footer__block footer__block--liquid">
+              <div class="liquid" style="display: flex; gap: 20px; flex-direction: column;">
+                <div>
+                  <img class="footer-logo-image" src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/NEW_ra_LOGO_2.png?v=1756875469" alt="rarabarefoot" style="height: 60px; max-width: 100%; filter: brightness(0) invert(1);">
+                </div>
+
+                <!-- Follow Us + Icons -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
+                  <span style="font-size: 14px; color: #fff; font-family:'Anton'; letter-spacing: 0.08em;">FOLLOW US:</span>
+
+                  <!-- X/Twitter -->
+                  <a href="https://x.com/rarabarefoot" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/x-removebg-preview.png?v=1749284179" alt="X" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                  </a>
+
+                  <!-- Instagram -->
+                  <a href="https://www.instagram.com/rarabarefoot" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/insta01-removebg-preview.png?v=1749284179" alt="Instagram" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                  </a>
+
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com/share/17HxuMbYPF/" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/facebook01-removebg-preview.png?v=1749284179" alt="Facebook" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/company/rara-barefoot/" target="_blank" style="color: #fff; display: inline-flex; align-items: center;">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/linkedin.png?v=1759217170" alt="LinkedIn" style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collections Links Block -->
+            <div class="footer__block footer__block--links">
+              <div class="v-stack gap-4">
+                <p class="h6">Collections</p>
+                <ul class="unstyled-list" role="list">
+                  <li><a href="/collections/the-collection" class="link-faded">THE COLLECTION</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Help Links Block -->
+            <div class="footer__block footer__block--links">
+              <div class="v-stack gap-4">
+                <p class="h6">HELP</p>
+                <ul class="unstyled-list" role="list">
+                  <li><a href="/pages/how-can-we-help" class="link-faded">Help Centre</a></li>
+                  <li><a href="/pages/why-barefoot" class="link-faded">Why Barefoot?</a></li>
+                  <li><a href="/pages/blogs" class="link-faded">Blogs</a></li>
+                  <li><a href="/pages/barefoot-science" class="link-faded">Barefoot Science</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Company Links Block -->
+            <div class="footer__block footer__block--links">
+              <div class="v-stack gap-4">
+                <p class="h6">COMPANY</p>
+                <ul class="unstyled-list" role="list">
+                  <li><a href="/pages/about-us" class="link-faded">About Us</a></li>
+                  <li><a href="/pages/grievance-redressal-process" class="link-faded">Grievance Redressal</a></li>
+                  <li><a href="/pages/privacy-policy" class="link-faded">Privacy Policy</a></li>
+                  <li><a href="/pages/terms-conditions" class="link-faded">Terms Of Use</a></li>
+                  <li><a href="/pages/refund-and-return-policy" class="link-faded">Refund and Return Policy</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contact Links Block -->
+            <div class="footer__block footer__block--liquid">
+              <div class="liquid">
+                <style>
+                  .contact-row {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                  }
+                  .contact-row img {
+                    margin-right: 12px;
+                    filter: brightness(0) invert(1);
+                  }
+                  .contact-text {
+                    word-break: break-word;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.85);
+                  }
+                  .deloit-footer-logo h2 {
+                    font-family: 'Anton', sans-serif;
+                    font-size: 24px;
+                    letter-spacing: 0.05em;
+                    color: white;
+                    margin: 0 0 15px 0;
+                  }
+                </style>
+                <div class="deloit-footer-logo">
+                  <h2>EVOLUTION. NOW IN YOUR SIZE</h2>
+                </div>
+                <div class="contact-container-1">
+                  <div class="contact-row">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/whatsapp_fd17f3f8-fa57-40a1-a924-aa104eb31b77.png?v=1754449301" width="22" height="22" alt="Whatsapp">
+                    <div class="contact-text">+91 81300 96761</div>
+                  </div>
+                  <div class="contact-row">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/email.png?v=1754449301" width="22" height="22" alt="Email">
+                    <div class="contact-text">care@rarabarefoot.in</div>
+                  </div>
+                  <div class="contact-row" style="align-items: flex-start;">
+                    <img src="https://cdn.shopify.com/s/files/1/0688/5294/0974/files/gps.png?v=1754449301" width="22" height="22" alt="Address" style="margin-top: 3px;">
+                    <div class="contact-text" style="font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.75);">
+                      AP2GP Pvt. Ltd. <br>
+                      NO 17, 2ND FLOOR, 7TH MAIN ROAD, II STAGE, INDIRANAGAR, Bengaluru - 560038
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Footer Copyright -->
+          <div class="footer__aside">
+            <p>© 2026 - rarabarefoot. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
       
     </main>
 
     <!-- High-Performance Video Autoplay Controller to Prevent Lag -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const communitySection = document.getElementById('scroll-3');
-        const videos = communitySection.querySelectorAll('video');
+        const videos = document.querySelectorAll('video');
 
-        // High-performance Intersection Observer to pause videos when out of view
+        // Universal high-performance Intersection Observer to play only visible videos
         const observerOptions = {
           root: null,
-          threshold: 0.1 // Triggers when at least 10% of the section is visible
+          threshold: 0.1 // Triggers when at least 10% of the video is visible
         };
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
+            const video = entry.target;
             if (entry.isIntersecting) {
-              // Play all videos when scroll 3 is visible
-              videos.forEach(video => {
-                video.play().catch(err => {
-                  console.log('Video autoplay interrupted:', err);
-                });
+              video.play().catch(err => {
+                // Silently swallow autoplay interruption errors
               });
             } else {
-              // Pause all videos when scroll 3 is out of view
-              videos.forEach(video => {
-                video.pause();
-              });
+              video.pause();
             }
           });
         }, observerOptions);
 
-        observer.observe(communitySection);
+        videos.forEach(video => {
+          observer.observe(video);
+        });
       });
     </script>
   </body>
